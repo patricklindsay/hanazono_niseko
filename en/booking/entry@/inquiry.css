@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/**
+ * フォーム用のスタイルシート。
+ *
+ * CSS level 2.1
+ */
+div#inquiry_form input#name { width:10em; padding:3px; }
+div#inquiry_form input#kana { width:10em; }
+div#inquiry_form input#pref_code1 { width:3em; margin-right:3px; }
+div#inquiry_form input#pref_code2 { width:4em; }
+div#inquiry_form input#pref { width:5em; }
+div#inquiry_form input#city { width:28em; }
+div#inquiry_form input#email { width:22em; }
+div#inquiry_form input#email2 { width:22em; }
+div#inquiry_form input#tel { width:16em; }
+div#inquiry_form input#fax { width:16em; }
+div#inquiry_form input#accommodation { width:28em; }
+
+table.layout td { padding:3px 6px; border:none; }
+
+img.ui-datepicker-trigger { vertical-align:middle; cursor:pointer; }

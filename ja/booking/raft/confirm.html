@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<meta name="author" content="HANAZONO NISEKO JAPAN" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="shortcut icon" href="../../favicon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+	<link rel="start" href="../../" />
+	<link rel="stylesheet" type="text/css" media="screen,print" href="../../common2/css/default.css" />
+	<link rel="stylesheet" type="text/css" media="screen,print" href="../../common2/css/design.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/fancybox/jquery.fancybox-1.3.4.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/jquery-ui/css/custom-theme/jquery-ui-1.9.2.custom.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/jquery-ui/css/jquery-ui-fix.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/flexslider/flexslider.fix.css" />
+	<link rel="stylesheet" href="../../common2/css/fontello.css" />
+	<link rel="stylesheet" href="../../common2/css/animation.css" /><!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+	<link rel="stylesheet" href="style.css" />
+	<title>予約フォーム（入力内容確認） | グリーンシーズン | ニセコHANAZONOリゾート</title>
+</head>
+<body class="fix tab">
+<div id="preloader">&nbsp;</div>
+
+	<ul class="reader">
+		<li><a id="TOP" name="TOP">ページの先頭です</a></li>
+		<li><a href="#BODY" accesskey="C">本文まで進みます</a></li>
+	</ul>
+
+	<div id="contents">
+		<div id="contents_inner">
+
+			<div class="box theme1">
+				<h1 class="type1 c1 mb"><small class="c2">グリーンシーズン</small>予約フォーム</h1>
+				<div class="inner">
+					<table class="full sp4 tc">
+						<tr class="ratio">
+							<th class="arr u3">ステップ１<br /><span class="black l">情報入力</span></th>
+							<th class="arr u3 b5 c0">ステップ２<br /><span class="black l">入力内容確認</span></th>
+							<th class="arr u3">ステップ３<br /><span class="black l">仮予約完了</span></th>
+						</tr>
+					</table>
+				</div>
+				<h2 class="type2 c2 mb">この内容でよろしければ送信ボタンをクリックしてください。<br />内容を変更する場合は入力画面に戻るボタンをクリックしてください。</h2>
+				<div class="inner intxt">
+					<ul class="bullet notice">
+						<li>※インターネット上でのご予約は、スタッフからのご予約確定のメールを送信するまで、あくまでも仮予約となりますことをご了承ください。</li>
+						<li>※前日・当日のご予約はお電話にてお問合せください。<br /><a href="tel:0136-21-3333">Tel:0136-21-3333</a></li>
+						<!-- <li>※インターネット上での予約は、スタッフが確認のご連絡をさし上げて時間などの内容を確認するまでは、あくまでも仮予約だということをご了承ください。</li>
+						<li>※前日・当日のご予約はお電話でお願い致します。</li> -->
+					</ul>
+					<dl class="ma10 pa10 b0 c0">
+						<dd>
+							<p>携帯のアドレスを登録されるお客様は、携帯電話の迷惑メール受信拒否設定によっては、本サイトからのお知らせメールが届かない場合があります。しばらくしてもメールが届かない場合は、お客様の携帯に迷惑メール受信拒否がされている可能性がございますので以下の方法で受信拒否設定を解除して下さい。</p>
+							<p class="ma5 pa3 tc" style="border:2px solid #ea553a;">受信拒否解除設定をする<br class="sumaho" />メールアドレス：<br class="sumaho" />raft@harmonyresorts.com</p>
+							<ul class="mark02 ma5 lb">
+								<li>【docomoの場合】⇒<a href="http://www.nttdocomo.co.jp/info/spam_mail/measure/domain/" target="_blank">受信／拒否設定</a></li>
+								<li>【auの場合】⇒<a href="http://www.au.kddi.com/support/mobile/trouble/forestalling/mail/anti-spam/fillter/function-03/" target="_blank">指定受信リスト設定</a></li>
+								<li>【ソフトバンクの場合】⇒<a href="http://www.softbank.jp/mobile/support/antispam/settings/indivisual/whiteblack/" target="_blank">迷惑メールの対策の流れや設定方法について</a></li>
+							</ul>
+							<p>リンク先は各携帯電話会社様のホームページです。ページ内容やURLが変更になっている場合がございます。詳しくは各携帯電話の取扱説明書をご確認下さい。</p>
+						</dd>
+					</dl>
+				</div>
+				<div class="inner">
+
+					<form action="index.php" method="post" enctype="multipart/form-data">
+						<table class="theme1 type2 sp3 full thtc oneline">
+							<tr>
+								<th class="bg1">{$アクティビティ.key}</th>
+								<td class="bg3">{$アクティビティ.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">{$アクティビティ内容.key}</th>
+								<td class="bg3">{$アクティビティ内容.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">{$予定日.key}</th>
+								<td class="bg3">{$予定日.value}{if:$割引.value}<p class="s mt5 notice bullet">{$割引.value}</p>{/if:$割引.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">{$「親子割」.key}</th>
+								<td class="bg3">{$「親子割」.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">{$時間帯.key}</th>
+								<td class="bg3">{$時間帯.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">参加人数</th>
+								<td class="bg3">{$大人人数の表記.value} {$参加人数（大人）.value}<br />小人(12歳以下) {$参加人数（小人）.value}<span id="tr_kodomo_nenrei">　（小人全員の年齢：{$小人全員の年齢.value}）</span><br />シニア(60歳以上) {$参加人数（シニア）.value}　学割 {$参加人数（学割）.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">{$料金.key}</th>
+								<td class="bg3">
+									<p>{$内訳.value.nl2br}</p>
+									<p>合計：　{$料金.value}（税込）</p>
+								</td>
+							</tr>
+							<tr>
+								<th class="bg1">{$送迎.key}</th>
+								<td class="bg3">
+									{$送迎.value}<br />
+									{$宿泊先名.key}：{$宿泊先名.value}
+								</td>
+							</tr>
+							<tr>
+								<th class="bg1">{$お名前.key}</th>
+								<td class="bg3">{$お名前.value} 様</td>
+							</tr>
+							<tr>
+								<th class="bg1">{$ふりがな.key}</th>
+								<td class="bg3">{$ふりがな.value} 様</td>
+							</tr>
+							<tr>
+								<th class="bg1">{$郵便番号.key}</th>
+								<td class="bg3">〒{$郵便番号.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">{$ご住所.key}</th>
+								<td class="bg3">{$ご住所.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">{$電話番号.key}</th>
+								<td class="bg3">{$電話番号.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">{$電話番号（確認用）.key}</th>
+								<td class="bg3">{$電話番号（確認用）.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">{$電話による前日のご予約内容の確認.key}</th>
+								<td class="bg3">{$電話による前日のご予約内容の確認.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">{$FAX番号.key}</th>
+								<td class="bg3">{$FAX番号.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">{$メールアドレス.key}</th>
+								<td class="bg3">{$メールアドレス.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">{$メールアドレス（確認用）.key}</th>
+								<td class="bg3">{$メールアドレス（確認用）.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">{$備考・ご質問等.key}</th>
+								<td class="bg3">{$備考・ご質問等.value}</td>
+							</tr>
+						</table>
+						<div class="tc">
+							<form method="post" action="index.php" enctype="multipart/form-data" class="inline">
+								{$hiddens}
+								<input type="hidden" name="page" value="input" />
+								<input class="submit l w15em" type="submit" value="入力画面に戻る" />
+							</form>
+							&nbsp;
+							<form method="post" action="index.php" enctype="multipart/form-data" class="inline">
+								{$hiddens}
+								<input type="hidden" name="page" value="finish" />
+								<input class="submit l w15em" type="submit" value="送信する" />
+							</form>
+						</div>
+					</form>
+
+				</div>
+			</div>
+
+			<ul class="fix theme1">
+				<li class="fr btn"><a href="javascript:window.close();" class="b1 pa10"><span class="icon-close">&nbsp;このウィンドウを閉じる</span></a></li>
+			</ul>
+
+		</div><!-- contents_inner -->
+	</div><!-- contents -->
+
+	<ul class="reader">
+		<li><a id="END" name="END">ページの最後です</a></li>
+		<li><a href="#TOP" accesskey="T">先頭へ戻ります</a></li>
+	</ul>
+
+	<script type="text/javascript" src="../../common2/js/libs/sugar-1.4.1.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-ui/js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-ui/js/jquery.ui.datepicker-ja.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/gcalendar-holidays.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery.cookie.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/underscore-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/base64.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery.easing.1.3.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/bxslider/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jscrollpane/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jscrollpane/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/flexslider/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="../../common2/js/ga.js"></script>
+	<script type="text/javascript" src="../../common2/js/common.js"></script>
+
+	<script type="text/javascript">
+	$(function(){
+		
+		// ボタンUIを設定。
+		$('input.submit').button();
+		
+	});
+	</script>
+
+</body>
+</html>

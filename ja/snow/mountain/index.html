@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<meta name="author" content="HANAZONO NISEKO JAPAN" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="shortcut icon" href="../../favicon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+	<link rel="start" href="../../snow/index.html" />
+	<link rel="stylesheet" type="text/css" media="screen,print" href="../../common2/css/default.css" />
+	<link rel="stylesheet" type="text/css" media="screen,print" href="../../common2/css/design.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/fancybox/jquery.fancybox-1.3.4.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/jquery-ui/css/custom-theme/jquery-ui-1.9.2.custom.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/jquery-ui/css/jquery-ui-fix.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/flexslider/flexslider.fix.css" />
+	<link rel="stylesheet" href="../../common2/css/fontello.css" />
+	<link rel="stylesheet" href="../../common2/css/animation.css" /><!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+	<title>ようこそHANAZONOへ | スノーシーズン | ニセコHANAZONOリゾート</title>
+</head>
+<body class="fix">
+<div id="preloader">&nbsp;</div>
+
+	<ul class="reader">
+		<li><a id="TOP" name="TOP">ページの先頭です</a></li>
+		<li><a href="#BODY" accesskey="C">本文まで進みます</a></li>
+	</ul>
+
+	<div id="header" class="fix">
+		<h1 id="header_logo"><a href="../../../ja/"><img src="../../common2/img/logo_hanazono.png" alt="ニセコHANAZONOリゾート" class="fit" /></a></h1>
+		<div id="nav_btn" class="sumaho fr"><a href="./"><img src="../../common2/img/nav_btn.png" alt="Menu" class="fit" /></a></div>
+		<div id="header_english" class="sumaho fr"><a href="../../../en/snow/index.html" class="lv1"><i class="icon-nav"><span class="reader">&raquo;</span></i><span>English</span></a></div>
+		<div id="header_summer" class="sumaho fr"><a href="../../green/index.html" class="lv1 fix"><i class="icon-nav"><span class="reader">&raquo;</span></i><span>グリーン<br />シーズン</span></a></div>
+
+		<ul id="nav" class="fix">
+			<li id="nav_whats_new" class="nav_li">
+				<a href="../../snow/nav_whats_new.html" class="lv1 fix"><i class="icon-nav nosumaho"><span class="reader">&raquo;</span></i><span>リゾート<br class="nosumaho" />最新情報</span></a>
+				<div class="nav_box none"><div class="pa">Loading...</div></div>
+			</li>
+			<li id="nav_weather" class="nav_li">
+				<a href="../../snow/nav_weather.html" class="lv1 fix"><i class="icon-na weather nosumaho" id="nav_weather_icon"><span class="reader">&mdash;</span></i><span class="nosumaho" id="nav_temperature">&mdash;&#8451;</span><span class="sumaho">積雪と天気</span></a>
+				<div class="nav_box none"><div class="pa">Loading...</div></div>
+			</li>
+			<li id="nav_lift_status" class="nav_li">
+				<a href="../../snow/nav_lift_status.html" class="lv1 fix"><i class="icon-lift-quad nosumaho"><span class="reader">リフト</span></i><span>リフト<br class="nosumaho" />運行情報</span></a>
+				<div class="nav_box none"><div class="pa">Loading...</div></div>
+			</li>
+			<li id="nav_activity_status" class="nav_li">
+				<a href="../../snow/nav_activity_status.html" class="lv1 fix"><i class="icon-activity-status nosumaho"><span class="reader">&raquo;</span></i><span>アクティビティ<br class="nosumaho" />営業状況</span></a>
+				<div class="nav_box none"><div class="pa">Loading...</div></div>
+			</li>
+			<li id="nav_packages_deals" class="nav_li">
+				<a href="../../snow/nav_packages_deals.html" class="lv1 fix"><i class="icon-nav nosumaho"><span class="reader">&raquo;</span></i><span>お得なおすすめ<br class="nosumaho" />宿泊パッケージ</span></a>
+				<div class="nav_box none"><div class="pa">Loading...</div></div>
+			</li>
+			<li id="nav_events" class="nav_li">
+				<a href="../../snow/nav_events.html" class="lv1 fix"><i class="icon-nav nosumaho"><span class="reader">&raquo;</span></i><span>イベント情報</span></a>
+				<div class="nav_box none"><div class="pa">Loading...</div></div>
+			</li>
+			<li id="nav_blog" class="nav_li">
+				<a href="../../snow/nav_blog.html" class="lv1 fix"><i class="icon-nav nosumaho"><span class="reader">&raquo;</span></i><span>ブログ</span></a>
+				<div class="nav_box none"><div class="pa">Loading...</div></div>
+			</li>
+			<li id="nav_english" class="nav_li nosumaho">
+				<a href="../../../en/snow/index.html" class="lv1"><i class="icon-nav nosumaho"><span class="reader">&raquo;</span></i><span>English</span></a>
+			</li>
+			<li id="nav_summer" class="nav_li nosumaho">
+				<a href="../../green/index.html" class="lv1 fix"><i class="icon-nav nosumaho"><span class="reader">&raquo;</span></i><span>グリーン<br />シーズン</span></a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="wrap" class="fix">
+		<ul id="menu">
+			<li class="theme1"><a href="../../snow/mountain/index.html" class="lv1"><span>スキー場<em>&emsp;</em></span></a>
+				<ul class="none b1">
+					<li><a href="../../snow/mountain/index.html" class="lv2"><span class="n">スキー場 概要</span></a></li>
+					<li><a href="../../snow/mountain/index.html#snow-report-and-weather" class="lv2"><span class="n">積雪と天気</span></a></li>
+					<li><a href="../../snow/mountain/index.html#lift-status" class="lv2"><span class="n">リフト運行状況</span></a></li>
+					<li><a href="../../snow/mountain/lift-tickets.html" class="lv2"><span class="n">リフト券</span></a></li>
+					<li><a href="../../snow/mountain/trail-map.html" class="lv2"><span class="n">ゲレンデマップ</span></a></li>
+					<li>
+						<a href="../../snow/mountain/terrain-parks.html" class="lv2"><span>テレインパーク<em>&emsp;</em></span></a>
+						<ul class="none b2">
+							<li><a href="../../snow/mountain/terrain-parks.html#park-events" class="lv3"><span>パークイベント</span></a></li>
+						</ul>
+					</li>
+					<li><a href="../../snow/mountain/hanazono-bowl.html" class="lv2"><span class="n">HANAZONOボウル</span></a></li>
+					<li><a href="../../snow/mountain/powder-safety.html" class="lv2" target="_blank"><span class="e">安全に関する情報<em>&emsp;</em></span></a></li>
+					<li>
+						<a href="../../snow/mountain/getting-to-hanazono.html" class="lv2"><span>アクセス<em>&emsp;</em></span></a>
+						<ul class="none b2">
+							<li><a href="../../snow/mountain/getting-to-hanazono.html#by-car" class="lv3"><span>車によるアクセス</span></a></li>
+							<li><a href="../../snow/mountain/getting-to-hanazono.html#by-coach" class="lv3"><span>高速バスによるアクセス</span></a></li>
+							<li><a href="../../snow/mountain/getting-to-hanazono.html#by-train" class="lv3"><span>鉄道によるアクセス</span></a></li>
+							<li><a href="../../snow/mountain/getting-to-hanazono.html#hanazono-shuttle-bus" class="lv3"><span>HANAZONOシャトルバス</span></a></li>
+							<li><a href="../../snow/mountain/getting-to-hanazono.html#ski-down-to-hanazono" class="lv3"><span>スキー場からのアクセス</span></a></li>
+						</ul>
+					</li>
+					<li><a href="../../snow/backcountry-guiding/index.html" class="lv2"><span class="n">バックカントリーガイド</span></a></li>
+					<li><a href="../../snow/ski-school/index.html" class="lv2"><span class="n">スキースクール</span></a></li>
+				</ul>
+			</li>
+			<li class="theme2"><a href="../../snow/ski-school/index.html" class="lv1"><span>スキースクール<em>&emsp;</em></span></a>
+				<ul class="none b1">
+					<li><a href="../../snow/ski-school/index.html" class="lv2"><span class="n">スキースクール 概要</span></a></li>
+					<li>
+						<a href="../../snow/ski-school/kids.html" class="lv2"><span class="pa"><img src="../../common2/img/menu_niss_kids.jpg" alt="" class="fit" /></span><span>キッズプログラム<em>&emsp;</em></span></a>
+						<ul class="none b2">
+							<li><a href="../../snow/ski-school/kids.html#age3-6" class="lv3"><span class="n">3-6才</span></a></li>
+							<li><a href="../../snow/ski-school/kids.html#age7-14" class="lv3"><span class="n">7-14才</span></a></li>
+							<li><a href="../../snow/ski-school/kids.html#kids-private-lessons" class="lv3"><span class="n">プライベートレッスン</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="../../snow/ski-school/adult.html" class="lv2"><span class="pa"><img src="../../common2/img/menu_niss_adult.jpg" alt="" class="fit" /></span><span>大人向けプログラム<em>&emsp;</em></span></a>
+						<ul class="none b2">
+							<li><a href="../../snow/ski-school/adult.html#group" class="lv3"><span class="n">グループレッスン</span></a></li>
+							<li><a href="../../snow/ski-school/adult.html#private" class="lv3"><span class="n">プライベートレッスン</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="theme3"><a href="../../snow/rental-and-retail/index.html" class="lv1"><span>レンタル &amp; ショップ<em>&emsp;</em></span></a>
+				<ul class="none b1">
+					<li><a href="../../snow/rental-and-retail/index.html" class="lv2"><span class="n">レンタル &amp; ショップ 概要</span></a></li>
+					<li>
+						<a href="../../snow/rental-and-retail/rentals.html" class="lv2"><span class="pa"><img src="../../common2/img/menu_rental.jpg" alt="" class="fit" /></span><span>レンタル<em>&emsp;</em></span></a>
+						<ul class="none b2">
+							<li><a href="../../snow/rental-and-retail/rentals.html#adult-premium-range" class="lv3"><span class="n">アダルトプレミアムレンジ</span></a></li>
+							<li><a href="../../snow/rental-and-retail/rentals.html#adult-mid-range" class="lv3"><span class="n">アダルトミッドレンジ</span></a></li>
+							<li><a href="../../snow/rental-and-retail/rentals.html#kids-gear" class="lv3"><span class="n">キッズギア</span></a></li>
+							<li><a href="../../snow/rental-and-retail/rentals.html#bca-float-22-system" class="lv3"><span class="n">BCAフロート22システム</span></a></li>
+							<li><a href="../../snow/rental-and-retail/rentals.html#clothing" class="lv3"><span class="n">スキー/スノーボードウェア</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="../../snow/rental-and-retail/retail-stores.html" class="lv2"><span class="pa"><img src="../../common2/img/menu_retail.jpg" alt="" class="fit" /></span><span class="n">ショップ</span></a>
+					</li>
+				</ul>
+			</li>
+			<li class="theme4"><a href="../../snow/backcountry-guiding/index.html" class="lv1"><span>バックカントリーガイド<em>&emsp;</em></span></a>
+				<ul class="none b1">
+					<li><a href="../../snow/backcountry-guiding/index.html" class="lv2"><span class="n">バックカントリーガイドツアー</span></a></li>
+					<li><a href="../../snow/backcountry-guiding/group.html" class="lv2"><span class="pa"><img src="../../common2/img/menu_bg_group.jpg" alt="" class="fit" /></span><span class="n">グループツアー</span></a></li>
+					<li><a href="../../snow/backcountry-guiding/private.html" class="lv2"><span class="pa"><img src="../../common2/img/menu_bg_private.jpg" alt="" class="fit" /></span><span class="n">プライベートツアー</span></a></li>
+				</ul>
+			</li>
+			<li class="theme10"><a href="../../snow/weiss-cat-skiing/index.html" class="lv1"><span>ワイスCATスキー<em>&emsp;</em></span></a>
+				<ul class="none b1">
+					<li><a href="../../snow/weiss-cat-skiing/index.html" class="lv2"><span class="n">ワイスCATスキー 概要</span></a></li>
+				</ul>
+			</li>
+			<li class="theme5"><a href="../../snow/snowmobile/index.html" class="lv1"><span>スノーモービルツアー<em>&emsp;</em></span></a>
+				<ul class="none b1">
+					<li><a href="../../snow/snowmobile/index.html" class="lv2"><span class="pa"><img src="../../common2/img/menu_snowmobile.jpg" alt="" class="fit" /></span><span class="n">スノーモービルツアー 概要</span></a></li>
+				</ul>
+			</li>
+			<li class="theme6"><a href="../../snow/family-activities/index.html" class="lv1"><span>ファミリーアクティビティ<em>&emsp;</em></span></a>
+				<ul class="none b1">
+					<li><a href="../../snow/family-activities/index.html" class="lv2"><span class="n">ファミリーアクティビティ 概要</span></a></li>
+					<li><a href="../../snow/family-activities/zipline.html" class="lv2"><span class="pa"><img src="../../common2/img/menu_zipline.jpg" alt="" class="fit" /></span><span class="n">ジップライン</span></a></li>
+					<li><a href="../../snow/family-activities/snowtubing-sledding.html" class="lv2"><span class="pa"><img src="../../common2/img/menu_snowtubing.jpg" alt="" class="fit" /></span><span class="n">スノーチュービングとそり</span></a></li>
+					<!-- <li><a href="../../snow/family-activities/winter-rafting.html" class="lv2"><span class="pa"><img src="../../common2/img/menu_winter_rafting.jpg" alt="" class="fit" /></span><span class="n">ウィンターラフティング</span></a></li> -->
+				</ul>
+			</li>
+			<li class="theme7"><a href="../../snow/restaurants/index.html" class="lv1"><span>レストランとバー、カフェ<em class="l2">&emsp;</em></span></a>
+				<ul class="none b1">
+					<li><a href="../../snow/restaurants/index.html" class="lv2"><span class="n">レストラン、バー、カフェ 概要</span></a></li>
+					<li><a href="http://hanazononiseko.com/ja/asperges/" class="lv2" target="_blank"><span class="pa"><img src="../../common2/img/menu_asperges.jpg" alt="" class="fit" /></span><span class="e">レストラン アスペルジュ HANAZONO<em>&emsp;</em></span></a></li>
+					<li><a href="../../snow/restaurants/hanazono308.html" class="lv2" target="_blank"><span class="pa"><img src="../../common2/img/menu_hanazono308.jpg" alt="" class="fit" /></span><span class="n">レストラン &amp; カフェ 308</span></a></li>
+					<li><a href="../../snow/restaurants/hana1cafe.html" class="lv2" target="_blank"><span class="pa"><img src="../../common2/img/menu_hana1cafe.jpg" alt="" class="fit" /></span><span class="n">HANA1 カフェ</span></a></li>
+				</ul>
+			</li>
+			<li class="theme1"><a href="http://hanazononiseko.com/nms/" class="lv1" target="_blank"><span class="e">ご宿泊と宿泊パッケージ</span></a></li>
+			<li class="theme8"><a href="../../aboutus/index.html" class="lv1"><span>リゾート運営会社について<em>&emsp;</em></span></a>
+				<ul class="none b1">
+					<li><a href="../../aboutus/index.html" class="lv2"><span>会社概要<em>&emsp;</em></span></a>
+						<ul class="none b2">
+							<li><a href="../../aboutus/contact.html" class="lv3" target="_blank"><span class="e">お問い合わせ先</span></a></li>
+						</ul>
+					</li>
+					<li><a href="../../aboutus/development.html" class="lv2"><span>リゾート開発<em>&emsp;</em></span></a>
+						<ul class="none b2">
+							<li><a href="../../aboutus/development.html#investment" class="lv3"><span class="n">投資機会</span></a></li>
+						</ul>
+					</li>
+					<li><a href="../../aboutus/employment.html" class="lv2"><span class="n">求人情報</span></a></li>
+					<li><a href="../../aboutus/download.html" class="lv2"><span class="n">ダウンロードセンター</span></a></li>
+					<li><a href="../../aboutus/releases.html" class="lv2"><span class="n">ニュースリリース</span></a></li>
+					<li><a href="../../aboutus/request.html" class="lv2"><span class="n">取材のお問い合わせ</span></a></li>
+					<li><a href="../../aboutus/privacy.html" class="lv2"><span class="n">個人情報保護について</span></a></li>
+				</ul>
+			</li>
+		</ul>
+
+		<div id="wrap_inner" class="fix" style="background-image:url(img/top/page_bg.jpg);">
+
+			<div id="contents">
+				<div id="contents_inner">
+					<p class="reader"><a id="BODY" name="BODY">ここから本文です</a></p>
+
+					<div class="box theme1">
+						<h1 class="type1 c1 mb">ようこそHANAZONOへ</h1>
+						<p>上質なパウダースノーを求めて世界中を旅する情熱的なスキーヤー・スノーボーダーが絶賛する雪質、シーズンを通して継続するまとまった降雪... クチコミで世界へ広がった評判は、今やニセコをワールドクラスのウィンターリゾートとして躍進させる原動力となりました。常に進化し続けるNISEKOを、さあ楽しみましょう。</p>
+						<br />
+						<h2 class="type2 c2 mb">ニセコの中でも抜群の雪質 - それがHANAZONOです</h2>
+						<p>北海道一の豪雪地帯として名を馳せるニセコアンヌプリ山(標高1,308m)には４つのスキー場がまたがり、NISEKO UNITED.として共通リフト券を発行しており、その広大なスキーエリアを自由に行き来して楽しむことができます。<br />ニセコHANAZONOリゾートは、山の東斜面という恵まれた立地により一日中パウダースノーが続くスキー場として愛されています。</p>
+						<br />
+						<div class="inner">
+							<div class="flexslider">
+								<ul class="slides">
+									<li><img src="img/top/s1_1.jpg" alt="" class="fit" /></li>
+									<li><img src="img/top/s1_2.jpg" alt="" class="fit" /></li>
+									<li><img src="img/top/s1_3.jpg" alt="" class="fit" /></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="box theme1">
+						<h1 class="type1 c1 mb">ニセコHANAZONOリゾート</h1>
+						<h2 class="type2 c2 mb">2015-2016 スノーシーズン</h2>
+						<table class="type1 full black l sp3">
+							<tr class="hr">
+								<th class="b2 c0">営業期間</th>
+								<td>2015年12月5日 - 2016年4月3日</td>
+							</tr>
+							<tr class="hr">
+								<th class="b2 c0">営業時間</th>
+								<td>8:30am - 4:00pm</td>
+							</tr>
+						</table>
+						<ul class="type1">
+							<li>営業終了時間は、期間により約30分前後します。</li>
+							<li>HANAZONOエリアのナイター営業はありません。</li>
+							<li>気象条件などにより一時休止する場合がございます。</li>
+						</ul>
+					</div>
+
+					<div class="box theme1">
+						<h2 class="type2 c2 mb">さらに詳しくご覧になりたい項目を選択してください</h2>
+						<div class="grid fs3">
+							<div class="inner g6 sg6 ssg6 fst sfst ssfst">
+								<div class="btn"><a href="../../snow/mountain/lift-tickets.html" class="b1"><span class="lh2">リフト券</span></a></div>
+							</div>
+							<div class="inner g6 sg6 ssg6">
+								<div class="btn"><a href="../../snow/mountain/trail-map.html" class="b1"><span class="lh2">ゲレンデマップ</span></a></div>
+							</div>
+							<div class="inner g6 sg6 ssg6 fst sfst ssfst">
+								<div class="btn"><a href="../../snow/mountain/terrain-parks.html" class="b1"><span class="lh2">テレインパーク</span></a></div>
+							</div>
+							<div class="inner g6 sg6 ssg6">
+								<div class="btn"><a href="../../snow/mountain/hanazono-bowl.html" class="b1"><span class="lh2 slh1">HANAZONOボウル</span></a></div>
+							</div>
+							<div class="inner g6 sg6 ssg6 fst sfst ssfst">
+								<div class="btn"><a href="../../snow/mountain/powder-safety.html" target="_blank" class="b1"><span class="lh2 slh1 icon-r-popup">安全に関する情報</span></a></div>
+							</div>
+							<div class="inner g6 sg6 ssg6">
+								<div class="btn"><a href="../../snow/mountain/getting-to-hanazono.html" class="b1"><span class="lh2">アクセス</span></a></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="box theme1">
+						<div class="grid">
+							<div class="inner g6 sg6 ssg12 fst sfst ssfst">
+								<h2 class="type2 c2 mb">極上のパウダースノー</h2>
+								<div class="inner">
+									<div class="flexslider">
+										<ul class="slides">
+											<li><img src="img/top/s2_1.jpg" alt="" class="fit" /></li>
+											<li><img src="img/top/s2_2.jpg" alt="" class="fit" /></li>
+											<li><img src="img/top/s2_3.jpg" alt="" class="fit" /></li>
+										</ul>
+									</div>
+								</div>
+								<p>ニセコのパウダースノーの含水率は厳冬期で約８％という世界でも類を見ないほどのエキストラドライパウダーと言われており、訪れる世界中からのスキーヤー・ボーダーを驚かせています。<br />
+								シーズン中は100日を超える降雪日を数え、高い確率で、非圧雪コースやツリーランコースを滑走中に舞い上がる雪にすっぽりと包まれる感覚「ホワイトルーム」の静寂と躍動感を体験していただけることでしょう。</p>
+							</div>
+							<div class="inner g6 sg6 ssg12 ssfst">
+								<h2 class="type2 c2 mb">家族で楽しいスキー場</h2>
+								<div class="inner">
+									<div class="flexslider">
+										<ul class="slides">
+											<li><img src="img/top/s3_1.jpg" alt="" class="fit" /></li>
+											<li><img src="img/top/s3_2.jpg" alt="" class="fit" /></li>
+											<li><img src="img/top/s3_3.jpg" alt="" class="fit" /></li>
+										</ul>
+									</div>
+								</div>
+								<p>リゾートの麓に広がるすり鉢状の緩斜面「HANAZONOボウル」は、無料で利用できる動く歩道「マジックカーペット」と合わせて、これからスキーを初める人に最適な環境を備えています。自分でスキーやボードをコントロールできるようになったら花園第一リフトで3.3kmの初心者用ゲレンデ「シルバードリーム」でさらなるスキルアップを目指しましょう。その他、チューブ滑りやそり遊び、ジップラインなど家族で楽しめるアクティビティをご利用いただけます。</p>
+							</div>
+							<div class="inner g6 sg6 ssg12 fst sfst ssfst">
+								<h2 class="type2 c2 mb">スキーセンター HANAZONO 308</h2>
+								<div class="inner">
+									<div class="flexslider">
+										<ul class="slides">
+											<li><img src="img/top/s4_1.jpg" alt="" class="fit" /></li>
+											<li><img src="img/top/s4_2.jpg" alt="" class="fit" /></li>
+											<li><img src="img/top/s4_3.jpg" alt="" class="fit" /></li>
+										</ul>
+									</div>
+								</div>
+								<p class="mb">天然木のぬくもり溢れるモダンなHANAZONO308スキーセンターには、更衣室、ロッカー、レンタル、ショップがあり、身支度を快適に整えることができます。ゲレンデを眺めながらくつろげるテラス席を備えた330席のレストランにカフェではワンランク上のカジュアルダイニングとカフェメニューをお楽しみいただけます。受付デスクではHANAZONOで提供するすべてのアクティビティの予約・受付することができます。</p>
+								<ul class="fix">
+									<li class="btn2 fr w20em"><a href="../../snow/restaurants/index.html"><span class="sp4">レストラン・カフェの詳細を見る</span></a></li>
+								</ul>
+							</div>
+							<div class="inner g6 sg6 ssg12 ssfst">
+								<h2 class="type2 c2 mb">無料シャトルバス</h2>
+								<div class="inner">
+									<div class="flexslider">
+										<ul class="slides">
+											<li><img src="img/top/s5_1.jpg" alt="" class="fit" /></li>
+										</ul>
+									</div>
+								</div>
+								<p class="mb">ヒラフ地区へお泊りのお客様は無料シャトルバスをご利用ください。リゾートの中心街ヒラフ地区アッパービレッジとローワービレッジをそれぞれ巡回する便が、20分間隔で全6台ピストン運行しています。運行時間は7:50am~5:10pm、ヒラフ地区からの始発7:50amは8:20amにHANAZONOへ到着し、8:30am始発のリフトにちょうど間に合います。HANAZONO発の最終バスはリフトクローズ後に慌てずカフェでブレイクできる余裕のあるスケジュールです。</p>
+								<ul class="fix mt">
+									<li class="btn2 fr w16em"><a href="../../snow/pdf/busmap.pdf?1421241194#view=Fit" target="_blank" title="PDF:2.22MB"><span class="icon-r-file-pdf sp4">バスルートマップを見る</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="box theme1">
+						<h2 class="type2 c2 mb">数字で見るHANAZONO</h2>
+						<table class="tc l black full type1 ratio tb3 lr1 sfs85p">
+							<tr class="hr">
+								<td class="hr u3">
+									<h3 class="c2 lh1">総ゲレンデ面積</h3>
+									<p class="c1 fs5 lh1">560</p>
+									<p class="c1 lh1">ヘクタール</p>
+								</td>
+								<td class="hr u3">
+									<h3 class="c2 lh1 mb5">バックカントリー<br />総エリア面積</h3>
+									<p class="c2 lh1 ss">HANAZONOリゾートから<br />アクセス可能なゲートからの面積</p>
+									<p class="c1 fs5 lh1">300+</p>
+									<p class="c1 lh1">ヘクタール</p>
+								</td>
+								<td class="u3">
+									<h3 class="c2 lh1">総滑走距離</h3>
+									<p class="c1 fs5 lh1">10<span class="sss">&thinsp;km+</span></p>
+								</td>
+							</tr>
+							<tr class="hr">
+								<td class="hr u3">
+									<h3 class="c2 lh1">山頂標高</h3>
+									<p class="c1 fs5 lh1">1,308</p>
+									<p class="c1 lh1">メートル</p>
+								</td>
+								<td class="hr u3">
+									<h3 class="c2 lh1">山麓標高</h3>
+									<p class="c1 fs5 lh1">308</p>
+									<p class="c1 lh1">メートル</p>
+								</td>
+								<td class="u3">
+									<h3 class="c2 lh1">標高差</h3>
+									<p class="c1 fs5 lh1">1,000</p>
+									<p class="c1 lh1">メートル</p>
+								</td>
+							</tr>
+							<tr class="hr">
+								<td class="hr u3">
+									<h3 class="c2 lh1">リフト数</h3>
+									<p class="c1 fs5 lh1">3</p>
+									<p class="c1 lh1 s">フード付4人乗り：２<br />
+									1 フードなし4人乗り：１</p>
+								</td>
+								<td class="hr u3">
+									<h3 class="c2 lh1">年間平均降雪</h3>
+									<p class="c1 fs5 lh1">16</p>
+									<p class="c1 lh1">メートル</p>
+								</td>
+								<td class="u3">
+									<h3 class="c2 lh1 mb5">スキーシーズン</h3>
+									<p class="c1 l lh1">12月初旬～4月初旬</p>
+								</td>
+							</tr>
+							<tr class="hr">
+								<td>
+									<h3 class="c2 lh1">コース数</h3>
+									<p class="c1 fs5 lh1">8</p>
+									<p class="c1 lh1">コース</p>
+								</td>
+								<td colspan="2">
+									<div class="grid">
+										<p class="g4 sg4 ssg4 fst sfst ssfst fs5 c1 lh1">25<span class="sss">&thinsp;%</span><br /><span class="sss">初級者コース</span></p>
+										<p class="g4 sg4 ssg4 fs5 c1 lh1">63<span class="sss">&thinsp;%</span><br /><span class="sss">中級者コース</span></p>
+										<p class="g4 sg4 ssg4 fs5 c1 lh1">12<span class="sss">&thinsp;%</span><br /><span class="sss">上級者コース</span></p>
+									</div>
+								</td>
+							</tr>
+							<tr class="hr">
+								<td class="hr u3">
+									<h3 class="c2 lh1">最長コース</h3>
+									<p class="c1 fs5 lh1">3.3<span class="sss">&thinsp;km</span></p>
+									<p class="c1 lh1">シルバードリーム</p>
+								</td>
+								<td class="hr u3">
+									<h3 class="c2 lh1 mb">人気の上級者コース</h3>
+									<p class="c1 l lh1">羊蹄サンセット<br />レジェンド・オブ<br />シンヤ</p>
+								</td>
+								<td class="u3">
+									<h3 class="c2 lh1 mb">人気のツリーラン</h3>
+									<p class="c1 s lh1">ストロベリーフィールズ<br />ブルーベリーフィールズ<br />ウォーターフォール</p>
+								</td>
+							</tr>
+							<tr class="hr">
+								<td class="hr u3">
+									<h3 class="c2 lh1 mb">人気の初級者コース</h3>
+									<p class="c1 l lh1">シルバードリーム<br />
+									HANAZONOボウル</p>
+								</td>
+								<td class="hr u3">
+									<h3 class="c2 lh1 mb">ゲレンデからの景観が<br />
+									人気のコース</h3>
+									<p class="c1 l lh1">クリスタルガーデン</p>
+								</td>
+								<td class="u3">
+									<h3 class="c2 lh1">テレインパーク数</h3>
+									<p class="c1 fs5 lh1">2</p>
+									<p class="c2 lh1 s">北海道最大級の<br />
+									テレインパーク</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<div class="box theme1">
+						<h2 class="type2 c2 mb icon-r-flickr">フォトギャラリー</h2>
+						<div style='position: relative; padding-bottom: 71%; height: 0; overflow: hidden;'><iframe id='iframe' src='https://www.flickr.com/photos/hanazononiseko/albums/72157647472826515/player' scrolling='no' frameborder='0'style='width:100%; height:100%; position: absolute; top:0; left:0;' ></iframe></div>
+					</div>
+
+					<div class="box theme1">
+						<hr class="type1 inner" />
+						<h2 class="type2 c1 mb">その他の役立つ情報</h2>
+						<div class="grid">
+							<div class="inner g6 sg6 ssg12 fst sfst ssfst">
+								<h3 class="type3 mb">バックカントリーガイドツアー</h3>
+								<p class="mb">HANAZONOパウダーガイドは安全かつ効率良くニセコのバックカントリーエリアをご案内します。バックカントリーに挑戦したいファミリーからニセコへ初めて訪れる上級者までお客様のニーズにお応えします。</p>
+								<div class="btn r w8em"><a href="../../snow/backcountry-guiding/index.html" class="b1"><span>詳しく見る</span></a></div>
+							</div>
+							<div class="inner g6 sg6 ssg12 ssfst">
+								<h3 class="type3 mb">スノーモービルツアー</h3>
+								<p class="mb">ハイパフォーマンスなスノーモービルでニセコの広大な雪原を雪煙を上げてクルージングしませんか？初めての方でもインストラクターが指導、伴走するので安心して楽しんでいただけます。</p>
+								<div class="btn r w8em"><a href="../../snow/snowmobile/index.html" class="b1"><span>詳しく見る</span></a></div>
+							</div>
+							<div class="inner g6 sg6 ssg12 fst sfst ssfst">
+								<h3 class="type3 mb">レストラン、バー、カフェ</h3>
+								<p class="mb">リニューアルされたスキーセンターのテラス席でのカジュアルダイニングから、ミシュラン星付レストランシェフの創る本格フレンチまで、ワンランク上のスキー場でのランチをお楽しみください。</p>
+								<div class="btn r w8em"><a href="../../snow/restaurants/index.html" class="b1"><span>詳しく見る</span></a></div>
+							</div>
+							<div class="inner g6 sg6 ssg12 ssfst">
+								<h3 class="type3 mb">ファミリーアクティビティ</h3>
+								<p class="mb">子供達と童心に帰って楽しめるアクティビティはいかがですか？200mの空中滑走ジップラインに、専用スロープで安全に楽しめるチューブ滑りやそり遊びと家族で楽しい時間をお過ごしください。</p>
+								<div class="btn r w8em"><a href="../../snow/family-activities/index.html" class="b1"><span>詳しく見る</span></a></div>
+							</div>
+						</div>
+					</div>
+
+					<div id="to_top" class="notablet"><a href="#TOP"><img src="../../common2/img/nav_close.png" alt="ページの先頭へ" /></a></div>
+				</div><!-- contents_inner -->
+			</div><!-- contents -->
+
+			<div id="sidebar" class="fix">
+				<div id="booking">
+					<div class="inbox">
+						<div id="booking_form">
+							<a href="../../snow/booking_form.html" class="c0">Loading...</a>
+						</div>
+					</div>
+				</div>
+				<div class="sidebox">
+					<a href="../../snow/backcountry-guiding/index.html" class="highlight"><img src="img/sidebar_hpg2.jpg" alt="安全かつ効率よくとっておきの場所へお連れします" class="fit" /></a>
+				</div>
+				<div class="sidebox">
+					<a href="../../snow/rental-and-retail/rentals.html" class="highlight"><img src="img/sidebar_rental.jpg" alt="レンタル期間中なんどでも乗り換えOK!!最新ギアをいろいろ試しちゃおう!!" class="fit" /></a>
+				</div>
+			</div><!-- sidebar -->
+
+			<div id="footer" class="fix">
+			
+				<div id="contact_hanazono">
+					<div class="inbox">
+						<h2 class="type2 c0 mb">ニセコHANAZONOリゾート</h2>
+						<address>
+							〒044-0082　北海道虻田郡倶知安町字岩尾別328-1
+						</address>
+						<ul>
+							<li>スノーシーズンアクティビティ：0136-21-6688</li>
+							<li>グリーンシーズンアクティビティ：0136-21-3333</li>
+						</ul>
+						<div class="btn r w9em mt15"><a href="../../aboutus/index.html"><span>会社概要</span></a></div>
+					</div>
+				</div>
+			
+				<div id="book_accommodation">
+					<div class="inbox">
+						<h2 class="type2 c0 mb">ご宿泊のご予約はこちら</h2>
+						<p>ご宿泊と各種アクティビティのお得なパッケージも<br />バケーション ニセコ</p>
+						<ul>
+							<li>0136-21-7788</li>
+							<li>info@vacationniseko.com</li>
+						</ul>
+						<div class="btn r w10em mt15"><a href="http://hanazononiseko.com/nms/" target="_blank"><span>今すぐ予約する</span></a></div>
+					</div>
+				</div>
+			
+				<div id="search">
+					<div class="inbox">
+						<h2 class="type2 c0 mb">サイト内検索</h2>
+						<form action="http://www.google.com/cse" id="cse-search-box" name="cse-search-box" target="_blank">
+							<input type="hidden" name="cx" value="003080879582333711453:gklfodhnsaq" />
+							<input type="hidden" name="ie" value="UTF-8" />
+							<div class="textbox mb10">
+								<input type="text" name="q" id="srchInput" value="例：リフト料金" />
+							</div>
+							<div class="fix">
+								<button type="submit" name="sa" id="srchBtn" class="type1 submit fr">検索</button>
+							</div>
+						</form>
+						<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&amp;lang=en"></script>
+					</div>
+				</div>
+			
+				<div id="newsletter">
+					<div class="inbox">
+						<h2 class="type2 c0 mb">リゾート最新情報を配信！<br class="sumaho" />メールマガジン登録</h2>
+						<form action="//hanazononiseko.us1.list-manage.com/subscribe/post?u=ddba0d8bc0489dc836c64885f&amp;id=51b53404a0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+							<div class="textbox mb10">
+								<input type="text" value="example@harmonyresorts.com" name="EMAIL" class="email w100p" id="mce-EMAIL" />
+								<span class="reader"><input type="text" name="b_ddba0d8bc0489dc836c64885f_51b53404a0" tabindex="-1" value="" /></span>
+							</div>
+							<div class="fix">
+								<button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="type2 submit fr">送信</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			
+				<div id="hanazono" class="tc">
+					<div class="inbox">
+						<img src="../../common2/img/hanazono.png" alt="HANAZONO NISEKO JAPAN" class="fit" />
+					</div>
+				</div>
+			
+				<div id="nihon_harmony" class="tc">
+					<div class="inbox">
+						<img src="../../common2/img/nihon_harmony.png" alt="NIHON HARMONY RESORTS KK" class="fit" />
+					</div>
+				</div>
+			
+				<div id="tripadvisor" class="tc">
+					<div class="inbox">
+						<div id="TA_certificateOfExcellence473" class="TA_certificateOfExcellence"><ul id="KZSXcjyEQ" class="TA_links K8WhcN"><li id="spDc51OXimJA" class="rSniWxlOA"><a target="_blank" href="http://www.tripadvisor.jp/Attraction_Review-g1025639-d1992578-Reviews-Niseko_Hanazono_Resort-Kutchan_cho_Abuta_gun_Hokkaido.html"><img src="http://www.tripadvisor.jp/img/cdsi/img2/awards/CoE2015_WidgetAsset-14348-2.png" alt="TripAdvisor" class="widCOEImg" id="CDSWIDCOELOGO"/></a></li></ul></div><script src="http://www.jscache.com/wejs?wtype=certificateOfExcellence&amp;uniq=473&amp;locationId=1992578&amp;lang=ja&amp;year=2015&amp;display_version=2"></script>
+					</div>
+				</div>
+
+			</div><!-- footer -->
+		</div><!-- wrap_inner -->
+
+	</div><!-- wrap -->
+
+	<div id="nav_close" class="sumaho"><a href="./"><img src="../../common2/img/nav_close.png" alt="Close" class="fit" /></a></div>
+
+	<ul class="reader">
+		<li><a id="END" name="END">ページの最後です</a></li>
+		<li><a href="#TOP" accesskey="T">先頭へ戻ります</a></li>
+	</ul>
+
+	<script type="text/javascript" src="../../common2/js/libs/sugar-1.4.1.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-ui/js/jquery-ui-1.9.2.custom.min.js"></script>
+	<!-- <script type="text/javascript" src="../../common2/js/libs/jquery-ui/js/jquery.ui.datepicker-ja.min.js"></script> -->
+	<!-- <script type="text/javascript" src="../../common2/js/libs/gcalendar-holidays.min.js"></script> -->
+	<script type="text/javascript" src="../../common2/js/libs/jquery.cookie.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/underscore-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/base64.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery.easing.1.3.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/bxslider/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jscrollpane/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jscrollpane/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/flexslider/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="../../common2/js/ga.js"></script>
+	<script type="text/javascript" src="../../common2/js/common.js"></script>
+
+</body>
+</html>

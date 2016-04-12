@@ -1,0 +1,43 @@
+Email has been sent from the booking form.
+
+============================================================
+
+[Activity]
+{$Activity.value}
+[Activity Type]
+{$ActivityType.value}
+[Tour date]
+{$Tourdate.value}
+{$Waribiki.value}
+[Time slot]
+{$Timeslot.value}
+[Number of participants]
+Adult (13 years old and above): {$Adult.value}
+Child (4 ~ 12 years old): {$Child.value} (Children's age: {$ChildrenAge.value})
+[Accommodation pickup]
+{$Pickup.value}
+[Accommodation name]
+{$AccommodationName.value}
+[Name]
+{$Name.value}
+[Post Code]
+{$PostCode.value}
+[Address]
+{$Address.value}
+[Phone]
+{$Phone.value}
+[FAX]
+{$FAX.value}
+[Email address]
+{$EmailAddress.value}
+[Email Address (confirmation)]
+{$EmailAddress2.value}
+[Notes]
+{$Notes.value}
+
+============================================================
+
+[Source]
+IP : {$_SERVER.REMOTE_ADDR}
+HOST : {$_SERVER.REMOTE_HOST}
+USER_AGENT : {$_SERVER.HTTP_USER_AGENT}

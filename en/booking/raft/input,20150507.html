@@ -1,0 +1,1277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<meta name="author" content="HANAZONO NISEKO JAPAN" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="shortcut icon" href="../../favicon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+	<link rel="start" href="../../" />
+	<link rel="stylesheet" type="text/css" media="screen,print" href="../../common2/css/default.css" />
+	<link rel="stylesheet" type="text/css" media="screen,print" href="../../common2/css/design.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/fancybox/jquery.fancybox-1.3.4.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/jquery-ui/css/custom-theme/jquery-ui-1.9.2.custom.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/jquery-ui/css/jquery-ui-fix.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/flexslider/flexslider.fix.css" />
+	<link rel="stylesheet" href="../../common2/css/fontello.css" />
+	<link rel="stylesheet" href="../../common2/css/animation.css" /><!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+	<link rel="stylesheet" href="style.css" />
+	<title>Online Booking Form | Green Season | Niseko HANAZONO Resort</title>
+</head>
+<body class="fix tab">
+<div id="preloader">&nbsp;</div>
+
+	<ul class="reader">
+		<li><a id="TOP" name="TOP">Top of page</a></li>
+		<li><a href="#BODY" accesskey="C">Go to Main contents</a></li>
+	</ul>
+
+	<div id="contents">
+		<div id="contents_inner">
+
+			<div class="box theme1">
+				<h1 class="type1 c1 mb"><small class="c2">Green Season</small>Online Booking Form</h1>
+				<div class="inner">
+					<table class="full sp4 tc">
+						<tr class="ratio">
+							<th class="arr u3 b5 c0">Step 1<br /><span class="black l">Fill out form</span></th>
+							<th class="arr u3">Step 2<br /><span class="black l">Confirm details</span></th>
+							<th class="arr u3">Step 3<br /><span class="black l">Create booking</span></th>
+						</tr>
+					</table>
+				</div>
+				<h2 class="type2 c2 mb">Please fill out the inquiry form below and click the &ldquo;Confirm details&rdquo; button.</h2>
+				<div class="inner intxt">
+					<ul class="bullet notice">
+						<li>* Please note on receipt of the booking inquiry, our staff will contact you and provide a confirmation of availability. Until such time the booking remains tentative.</li>
+						<li>* For bookings on the day or one day before the tour, please call (0136) 21 3333</li>
+					</ul>
+				</div>
+				<div class="inner">
+
+					<form action="index.php" method="post" enctype="multipart/form-data" id="frm">
+						<table class="theme1 type2 sp3 full thtc oneline">
+							<!-- <colgroup>
+								<col width="33%">
+								<col width="67%">
+							</colgroup> -->
+							<tr class="tr_act"><th class="bg1 w10em">Activity<em class="must">Required</em></th>
+								<td class="bg3">
+									<select name="Activity" id="act">
+										<option value="" {$selected.default}>Please select an activity</option>
+										<option value="Rafting" {$selected.Activity.Rafting}>Rafting</option>
+										<option value="Ducky" {$selected.Activity.Ducky}>Ducky</option>
+										<option value="Canyoning" {$selected.Activity.Canyoning}>Canyoning</option>
+										<option value="SeaKayak" {$selected.Activity.SeaKayak}>Sea Kayak</option>
+										<option value="FunKayak" {$selected.Activity.FunKayak}>Fun Kayak</option>
+										<option value="RoadBike" {$selected.Activity.RoadBike}>Road Bike</option>
+										<option value="MTBScenicRiding" {$selected.Activity.MTBScenicRiding}>MTB Scenic Riding</option>
+									</select>
+									
+									<input type="hidden" name="Waribiki" value="{$Waribiki}" id="waribiki" />
+									
+									<input type="hidden" name="required[]" value="Activity" />
+									{if:$required.Activity}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.Activity}</p></div>
+									{/if:$required.Activity}
+								</td>
+							</tr>
+							<tr class="tr_cont"><th class="bg1">Activity Type<em class="must">Required</em></th>
+								<td class="bg3">
+									<select name="RaftingType" id="cont_raft">
+										<option value="">Please select a tour</option>
+										<option value="Rafting">Rafting</option>
+										<option value="Kids Rafting">Kids Rafting</option>
+										<option value="Rafting and Lunch Package">Rafting and Lunch Package</option>
+										<option value="Rafting, Lunch and Onsen Package">Rafting, Lunch and Onsen Package</option>
+										<option value="Rafting, BBQ and Lunch Package">Rafting, BBQ and Lunch Package</option>
+										<option value="Rafting and Hanazono Package">Rafting and Hanazono Package</option>
+									</select>
+									
+									<select name="RoadBikeType" id="cont_bike">
+										<option value="">Please select a tour</option>
+										<option value="Annupuri Downhill Course">Annupuri Downhill Course</option>
+										<option value="Kutchan Jagaimo Course">Kutchan Jagaimo Course</option>
+										<option value="Niseko Ski Resort Course (Niseko Milk Kobo round trip)">Niseko Ski Resort Course (Niseko Milk Kobo round trip)</option>
+										<option value="Mt Yotei Loop">Mt Yotei Loop</option>
+									</select>
+									
+									<input type="hidden" name="ActivityType" value="{$ActivityType}" id="cont" />
+									
+									<input type="hidden" name="required[]" value="ActivityType" />
+									{if:$required.ActivityType}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.ActivityType}</p></div>
+									{/if:$required.ActivityType}
+								</td>
+							</tr>
+							<tr class="tr_yoteibi"><th class="bg1">Tour date<em class="must">Required</em></th>
+								<td class="bg3">
+									<input type="text" name="Tourdate" value="{$Tourdate}" class="text w11em date" id="yoteibi" readonly="readonly" />
+									
+									<input type="hidden" name="required[]" value="Tourdate" />
+									{if:$required.Tourdate}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.Tourdate}</p></div>
+									{/if:$required.Tourdate}
+									
+									<ul class="mt5 s notice">
+										<li>*Dates not shown for selection are either fully booked or not available to book online.</li>
+									</ul>
+								</td>
+							</tr>
+							<tr class="tr_oyakowari"><th class="bg1">Family Discount<em class="must">Required</em></th>
+								<td class="bg3">
+									<select name="FamilyDiscount" id="oyakowari_menu">
+										<option value="DoNotApplyFamilyDiscount" {$selected.FamilyDiscount.DoNotApplyFamilyDiscount}>Do not apply Family Discount</option>
+										<option value="ApplyFamilyDiscount" {$selected.FamilyDiscount.ApplyFamilyDiscount}>Apply Family Discount</option>
+									</select>
+									
+									<!-- <input type="hidden" name="親子割" value="{$親子割}" id="oyakowari" /> -->
+									
+									<p class="bold mt10 c3">The Family Discount offers 1 free child per every 2 paying adults. <br />Cannot be used in conjunction with other discounts.</p>
+									<ul class="mt5 s notice">
+										<li>* Please note the Family Discount may not be the cheapest option if you have a group of adults, children and seniors. We recommend you compare discount combinations before booking.</li>
+									</ul>
+								</td>
+							</tr>
+							<tr class="tr_jikantai"><th class="bg1">Time slot<em class="must">Required</em></th>
+								<td class="bg3">
+									<select name="Time slot (AM)" id="jikantai_am">
+										<option value="AM">AM</option>
+									</select>
+									
+									<select name="Time slot (AMPM)" id="jikantai_ampm">
+										<option value="">Please select a starting time</option>
+										<option value="AM">AM</option>
+										<option value="PM">PM</option>
+									</select>
+									
+									<select name="Time slot (Rafting and Hanazono Package)" id="jikantai_hanapack">
+										<option value="">Please select a starting time</option>
+										<option value="AM Rafting, PM Activity">AM Rafting, PM Activity</option>
+										<option value="AM Activity, PM Rafting">AM Activity, PM Rafting</option>
+									</select>
+									
+									<select name="Time slot (Fun Kayak)" id="jikantai_funkayak">
+										<option value="">Please select a starting time</option>
+										<option value="9:00">9:00</option>
+										<option value="9:30">9:30</option>
+										<option value="10:00">10:00</option>
+										<option value="10:30">10:30</option>
+										<option value="11:00">11:00</option>
+										<option value="11:30">11:30</option>
+										<option value="12:00">12:00</option>
+										<option value="12:30">12:30</option>
+										<option value="13:00">13:00</option>
+										<option value="13:30">13:30</option>
+										<option value="14:00">14:00</option>
+										<option value="14:30">14:30</option>
+										<option value="15:00">15:00</option>
+										<option value="15:30">15:30</option>
+									</select>
+									
+									<select name="Time slot (Fun Kayak August)" id="jikantai_funkayak_aug">
+										<option value="">Please select a starting time</option>
+										<option value="9:00">9:00</option>
+										<option value="9:30">9:30</option>
+										<option value="10:00">10:00</option>
+										<option value="10:30">10:30</option>
+										<option value="11:00">11:00</option>
+										<option value="11:30">11:30</option>
+										<option value="12:00">12:00</option>
+										<option value="12:30">12:30</option>
+										<option value="13:00">13:00</option>
+										<option value="13:30">13:30</option>
+										<option value="14:00">14:00</option>
+										<option value="14:30">14:30</option>
+										<option value="15:00">15:00</option>
+										<option value="15:30">15:30</option>
+										<option value="16:00">16:00</option>
+										<option value="16:30">16:30</option>
+									</select>
+									
+									<input type="hidden" name="Timeslot" value="{$Timeslot}" id="jikantai" />
+									
+									<input type="hidden" name="required[]" value="Timeslot" />
+									{if:$required.Timeslot}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.Timeslot}</p></div>
+									{/if:$required.Timeslot}
+								</td>
+							</tr>
+							<tr class="tr_sougei"><th class="bg1">Accommodation pickup<em class="must">Required</em></th>
+								<td class="bg3">
+									<select name="Accommodation pickup Menu" id="sougei_menu">
+										<option value="">Do you require a pickup?</option>
+										<option value="Yes">Yes</option>
+										<option value="No">No</option>
+									</select>
+									
+									<input type="hidden" name="Pickup" value="{$Pickup}" id="sougei" />
+									
+									<input type="hidden" name="required[]" value="Pickup" />
+									{if:$required.Pickup}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.Pickup}</p></div>
+									{/if:$required.Pickup}
+									
+									<ul class="mt5 s notice">
+										<li>*Pick up from Niseko area accommodations, nearby stations.</li>
+									</ul>
+									
+									<div class="tr_syukuhaku">
+										<span>Accommodation name</span>&ensp;<input type="text" name="AccommodationName" value="{$AccommodationName}" class="text w70p" />
+									</div>
+								</td>
+							</tr>
+							<tr><th class="bg1">Number of participants<em class="must">Required</em></th>
+								<td class="bg3">
+									<span id="tr_sanka_otona">
+									<span id="sanka_otona_txt">Adult</span>
+									<input type="hidden" name="SankaOtonaVal" value="{$SankaOtonaVal}" id="sanka_otona_val" />
+									<select name="Adult" id="sanka_otona" class="mb5">
+										<option value="" {$selected.default}>-</option>
+										<option value="None" {$selected.Adult.None}>None</option>
+										<option value="1" {$selected.Adult.1}>1</option>
+										<option value="2" {$selected.Adult.2}>2</option>
+										<option value="3" {$selected.Adult.3}>3</option>
+										<option value="4" {$selected.Adult.4}>4</option>
+										<option value="5" {$selected.Adult.5}>5</option>
+										<option value="6" {$selected.Adult.6}>6</option>
+										<option class="noloadbike" value="7" {$selected.Adult.7}>7</option>
+										<option class="noloadbike" value="8" {$selected.Adult.8}>8</option>
+										<option class="noloadbike" value="9" {$selected.Adult.9}>9</option>
+										<option class="noloadbike" value="10" {$selected.Adult.10}>10</option>
+										<option class="noloadbike" value="11" {$selected.Adult.11}>11</option>
+										<option class="noloadbike" value="12" {$selected.Adult.12}>12</option>
+										<option class="noloadbike" value="13" {$selected.Adult.13}>13</option>
+										<option class="noloadbike" value="14" {$selected.Adult.14}>14</option>
+										<option class="noloadbike" value="15" {$selected.Adult.15}>15</option>
+										<option class="noloadbike" value="16" {$selected.Adult.16}>16</option>
+										<option class="noloadbike" value="17" {$selected.Adult.17}>17</option>
+										<option class="noloadbike" value="18" {$selected.Adult.18}>18</option>
+										<option class="noloadbike" value="19" {$selected.Adult.19}>19</option>
+										<option class="noloadbike" value="20" {$selected.Adult.20}>20</option>
+										<option class="noloadbike" value="21" {$selected.Adult.21}>21</option>
+										<option class="noloadbike" value="22" {$selected.Adult.22}>22</option>
+										<option class="noloadbike" value="23" {$selected.Adult.23}>23</option>
+										<option class="noloadbike" value="24" {$selected.Adult.24}>24</option>
+										<option class="noloadbike" value="25" {$selected.Adult.25}>25</option>
+										<option class="noloadbike" value="26" {$selected.Adult.26}>26</option>
+										<option class="noloadbike" value="27" {$selected.Adult.27}>27</option>
+										<option class="noloadbike" value="28" {$selected.Adult.28}>28</option>
+										<option class="noloadbike" value="29" {$selected.Adult.29}>29</option>
+										<option class="noloadbike" value="30" {$selected.Adult.30}>30</option>
+									</select>
+									</span>
+									&emsp;
+									<span id="tr_sanka_kodomo">
+									<span>Child(<em class="caution">*see below</em>)</span>
+									<select name="Child" id="sanka_kodomo" class="mb5">
+										<option value="" {$selected.default}>-</option>
+										<option value="None" {$selected.Child.None}>None</option>
+										<option value="1" {$selected.Child.1}>1</option>
+										<option value="2" {$selected.Child.2}>2</option>
+										<option value="3" {$selected.Child.3}>3</option>
+										<option value="4" {$selected.Child.4}>4</option>
+										<option value="5" {$selected.Child.5}>5</option>
+										<option value="6" {$selected.Child.6}>6</option>
+										<option value="7" {$selected.Child.7}>7</option>
+										<option value="8" {$selected.Child.8}>8</option>
+										<option value="9" {$selected.Child.9}>9</option>
+										<option value="10" {$selected.Child.10}>10</option>
+										<option value="11" {$selected.Child.11}>11</option>
+										<option value="12" {$selected.Child.12}>12</option>
+										<option value="13" {$selected.Child.13}>13</option>
+										<option value="14" {$selected.Child.14}>14</option>
+										<option value="15" {$selected.Child.15}>15</option>
+										<option value="16" {$selected.Child.16}>16</option>
+										<option value="17" {$selected.Child.17}>17</option>
+										<option value="18" {$selected.Child.18}>18</option>
+										<option value="19" {$selected.Child.19}>19</option>
+										<option value="20" {$selected.Child.20}>20</option>
+										<option value="21" {$selected.Child.21}>21</option>
+										<option value="22" {$selected.Child.22}>22</option>
+										<option value="23" {$selected.Child.23}>23</option>
+										<option value="24" {$selected.Child.24}>24</option>
+										<option value="25" {$selected.Child.25}>25</option>
+										<option value="26" {$selected.Child.26}>26</option>
+										<option value="27" {$selected.Child.27}>27</option>
+										<option value="28" {$selected.Child.28}>28</option>
+										<option value="29" {$selected.Child.29}>29</option>
+										<option value="30" {$selected.Child.30}>30</option>
+									</select>
+									</span>
+									<br />
+									<span id="tr_sanka_senior">
+									<span>Senior(Age 60 and above)</span>
+									<select name="Senior" id="sanka_senior" class="mb5">
+										<option value="" {$selected.default}>-</option>
+										<option value="None" {$selected.Senior.None}>None</option>
+										<option value="1" {$selected.Senior.1}>1</option>
+										<option value="2" {$selected.Senior.2}>2</option>
+										<option value="3" {$selected.Senior.3}>3</option>
+										<option value="4" {$selected.Senior.4}>4</option>
+										<option value="5" {$selected.Senior.5}>5</option>
+										<option value="6" {$selected.Senior.6}>6</option>
+										<option value="7" {$selected.Senior.7}>7</option>
+										<option value="8" {$selected.Senior.8}>8</option>
+										<option value="9" {$selected.Senior.9}>9</option>
+										<option value="10" {$selected.Senior.10}>10</option>
+										<option value="11" {$selected.Senior.11}>11</option>
+										<option value="12" {$selected.Senior.12}>12</option>
+										<option value="13" {$selected.Senior.13}>13</option>
+										<option value="14" {$selected.Senior.14}>14</option>
+										<option value="15" {$selected.Senior.15}>15</option>
+										<option value="16" {$selected.Senior.16}>16</option>
+										<option value="17" {$selected.Senior.17}>17</option>
+										<option value="18" {$selected.Senior.18}>18</option>
+										<option value="19" {$selected.Senior.19}>19</option>
+										<option value="20" {$selected.Senior.20}>20</option>
+										<option value="21" {$selected.Senior.21}>21</option>
+										<option value="22" {$selected.Senior.22}>22</option>
+										<option value="23" {$selected.Senior.23}>23</option>
+										<option value="24" {$selected.Senior.24}>24</option>
+										<option value="25" {$selected.Senior.25}>25</option>
+										<option value="26" {$selected.Senior.26}>26</option>
+										<option value="27" {$selected.Senior.27}>27</option>
+										<option value="28" {$selected.Senior.28}>28</option>
+										<option value="29" {$selected.Senior.29}>29</option>
+										<option value="30" {$selected.Senior.30}>30</option>
+									</select>
+									</span>
+									&emsp;
+									<span id="tr_sanka_gakusei">
+									<span>Student</span>
+									<select name="Student" id="sanka_gakusei" class="mb5">
+										<option value="" {$selected.default}>-</option>
+										<option value="None" {$selected.Student.None}>None</option>
+										<option value="1" {$selected.Student.1}>1</option>
+										<option value="2" {$selected.Student.2}>2</option>
+										<option value="3" {$selected.Student.3}>3</option>
+										<option value="4" {$selected.Student.4}>4</option>
+										<option value="5" {$selected.Student.5}>5</option>
+										<option value="6" {$selected.Student.6}>6</option>
+										<option value="7" {$selected.Student.7}>7</option>
+										<option value="8" {$selected.Student.8}>8</option>
+										<option value="9" {$selected.Student.9}>9</option>
+										<option value="10" {$selected.Student.10}>10</option>
+										<option value="11" {$selected.Student.11}>11</option>
+										<option value="12" {$selected.Student.12}>12</option>
+										<option value="13" {$selected.Student.13}>13</option>
+										<option value="14" {$selected.Student.14}>14</option>
+										<option value="15" {$selected.Student.15}>15</option>
+										<option value="16" {$selected.Student.16}>16</option>
+										<option value="17" {$selected.Student.17}>17</option>
+										<option value="18" {$selected.Student.18}>18</option>
+										<option value="19" {$selected.Student.19}>19</option>
+										<option value="20" {$selected.Student.20}>20</option>
+										<option value="21" {$selected.Student.21}>21</option>
+										<option value="22" {$selected.Student.22}>22</option>
+										<option value="23" {$selected.Student.23}>23</option>
+										<option value="24" {$selected.Student.24}>24</option>
+										<option value="25" {$selected.Student.25}>25</option>
+										<option value="26" {$selected.Student.26}>26</option>
+										<option value="27" {$selected.Student.27}>27</option>
+										<option value="28" {$selected.Student.28}>28</option>
+										<option value="29" {$selected.Student.29}>29</option>
+										<option value="30" {$selected.Student.30}>30</option>
+									</select>
+									</span>
+									
+									<input type="hidden" name="required[]" value="Adult" />
+									{if:$required.Adult}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.Adult}</p></div>
+									{/if:$required.Adult}
+									
+									<input type="hidden" name="required[]" value="Child" />
+									{if:$required.Child}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.Child}</p></div>
+									{/if:$required.Child}
+									
+									<input type="hidden" name="required[]" value="Senior" />
+									{if:$required.Senior}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.Senior}</p></div>
+									{/if:$required.Senior}
+									
+									<input type="hidden" name="required[]" value="Student" />
+									{if:$required.Student}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.Student}</p></div>
+									{/if:$required.Student}
+									
+									<div id="tr_kodomo_nenrei" class="mt15">
+										<ul class="mb5">
+											<li>Please include all participating children's age<br />(eg. 3 years old, 4 years old, 7years old).</li>
+										</ul>
+										<em class="must mr7">Required</em><input type="text" name="ChildrenAge" value="{$ChildrenAge}" class="text w80p" id="kodomo_nenrei" />
+									</div>
+									
+									<input type="hidden" name="required[]" value="ChildrenAge" />
+									{if:$required.ChildrenAge}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.ChildrenAge}</p></div>
+									{/if:$required.ChildrenAge}
+									
+									<ul class="mt5 s notice">
+										<li>* Please be sure to make a selection in all fields.</li>
+									</ul>
+									<div id="kodomo_notice">
+										<ul class="bullet caution mt10">
+											<li id="gakusei_caution">* Students must be able to show a valid student ID card on the day of the tour.</li>
+											<li>* Child pricing is applicable for the following ages:</li>
+										</ul>
+										<ul class="mark02 ma3 caution">
+											<li>Rafting(Age 5 - 12)</li>
+											<li>Kids Rafting(Age 3 - 12)</li>
+											<li>Sea Kayak(Age 6 - 12)</li>
+											<li>Fun Kayak(Age 2 - 12)</li>
+											<li>MTB Scenic Riding(Age 6 - 12 (Must be over 130cm in height))</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr><th class="bg1">Prices</th>
+								<td class="bg3">
+									<ul class="mtb s notice">
+										<li>* The price will be automatically calculated.</li>
+									</ul>
+									<input type="text" name="prices" value="{$prices}" class="text tr w7em" id="price" readonly="readonly" style="background:#eeeeee;" /><span class="ml3">(Tax included)</span>
+									<p class="mt5">
+										<span class="mr3">[Discount, etc.]</span><span class="mt5 caution" id="msg">&mdash;</span>
+									</p>
+								</td>
+							</tr>
+							<tr><th class="bg1">Name<em class="must">Required</em></th>
+								<td class="bg3">
+									<p class="mb3">ex) Family name/First name</p>
+									<input type="text" name="Name" value="{$Name}" class="text w55p" />
+									
+									<input type="hidden" name="required[]" value="Name" />
+									{if:$required.Name}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.Name}</p></div>
+									{/if:$required.Name}
+								</td>
+							</tr>
+							<tr><th class="bg1">Post code</th>
+								<td class="bg3">
+									<p class="mb3">ex) 044-0081</p>
+									<input type="text" name="PostCode" value="{$PostCode}" class="text w20p num_hyphen" id="zip" />
+									
+									<input type="hidden" name="num_hyphen[]" value="PostCode" />
+									{if:$num_hyphen.PostCode}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$num_hyphen.PostCode}</p></div>
+									{/if:$num_hyphen.PostCode}
+								</td>
+							</tr>
+							<tr><th class="bg1">Address</th>
+								<td class="bg3">
+									<p class="mb3">ex) 328-1 Aza-Iwaobetsu, Kutchan-cho Abuta-Gun, Hokkaido</p>
+									<input type="text" name="Address" value="{$Address}" class="text w95p" />
+									
+									<ul class="mt5 s notice">
+										<li>*Please fill out your full address.</li>
+									</ul>
+								</td>
+							</tr>
+							<tr><th class="bg1">Phone<em class="must">Required</em></th>
+								<td class="bg3">
+									<p class="mb3">ex) 090-1234-5678</p>
+									<input type="text" name="Phone" value="{$Phone}" class="text w55p" />
+									
+									<input type="hidden" name="num_hyphen[]" value="Phone" />
+									{if:$num_hyphen.Phone}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$num_hyphen.Phone}</p></div>
+									{/if:$num_hyphen.Phone}
+									
+									<input type="hidden" name="required[]" value="Phone" />
+									{if:$required.Phone}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.Phone}</p></div>
+									{/if:$required.Phone}
+									
+									<ul class="mt5 s notice">
+										<li>*Please leave a number that you can be reached on the day of the tour.</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th class="bg1">Phone(confirmation)<em class="must">Required</em></th>
+								<td class="bg3">
+									<p class="mb3">ex) 090-1234-5678</p>
+									<input type="text" name="Phone2" value="{$Phone2}" class="text w55p" />
+									
+									<input type="hidden" name="required[]" value="Phone2" />
+									{if:$required.Phone2}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.Phone2}</p></div>
+									{/if:$required.Phone2}
+									
+									<input type="hidden" name="num_hyphen[]" value="Phone2" />
+									{if:$num_hyphen.Phone2}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$num_hyphen.Phone2}</p></div>
+									{/if:$num_hyphen.Phone2}
+									
+									<input type="hidden" name="match[]" value="Phone Phone2" />
+									{if:$match.Phone}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$match.Phone}</p></div>
+									{/if:$match.Phone}
+								</td>
+							</tr>
+							<tr><th class="bg1">FAX</th>
+								<td class="bg3">
+									<p class="mb3">ex) 0136-21-6657</p>
+									<input type="text" name="FAX" value="{$FAX}" class="text w55p" />
+									
+									<input type="hidden" name="num_hyphen[]" value="FAX" />
+									{if:$num_hyphen.FAX}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$num_hyphen.FAX}</p></div>
+									{/if:$num_hyphen.FAX}
+								</td>
+							</tr>
+							<tr><th class="bg1">Email address<em class="must">Required</em></th>
+								<td class="bg3">
+									<p class="mb3">ex) sample@sample.com</p>
+									<input type="text" name="EmailAddress" value="{$EmailAddress}" class="text w95p" />
+									
+									<input type="hidden" name="required[]" value="EmailAddress" />
+									{if:$required.EmailAddress}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.EmailAddress}</p></div>
+									{/if:$required.EmailAddress}
+									
+									<input type="hidden" name="email[]" value="EmailAddress" />
+									{if:$email.EmailAddress}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$email.EmailAddress}</p></div>
+									{/if:$email.EmailAddress}
+								</td>
+							</tr>
+							<tr>
+								<th class="bg1">Email Address<br /><small>(confirmation)</small><em class="must">Required</em></th>
+								<td class="bg3">
+									<p class="mb3">ex) sample@sample.com</p>
+									<input type="text" name="EmailAddress2" value="{$EmailAddress2}" class="text w95p" />
+									
+									<input type="hidden" name="required[]" value="EmailAddress2" />
+									{if:$required.EmailAddress2}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.EmailAddress2}</p></div>
+									{/if:$required.EmailAddress2}
+									
+									<input type="hidden" name="email[]" value="EmailAddress2" />
+									{if:$email.EmailAddress2}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$email.EmailAddress2}</p></div>
+									{/if:$email.EmailAddress2}
+									
+									<input type="hidden" name="match[]" value="EmailAddress EmailAddress2" />
+									{if:$match.EmailAddress}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$match.EmailAddress}</p></div>
+									{/if:$match.EmailAddress}
+								</td>
+							</tr>
+							<tr><th class="bg1">Notes&nbsp;</th>
+								<td class="bg3">
+									<textarea rows="6" cols="30" name="Notes" class="text w95p">{$Notes}</textarea>
+								</td>
+							</tr>
+						</table>
+						<div class="tc">
+							<input class="submit l" type="submit" value="Confirm details" />
+						</div>
+					</form>
+
+				</div>
+			</div>
+
+			<ul class="fix theme1">
+				<li class="fr btn"><a href="javascript:window.close();" class="b1 pa10"><span class="icon-close">&nbsp;Close This Window</span></a></li>
+			</ul>
+
+		</div><!-- contents_inner -->
+	</div><!-- contents -->
+
+	<ul class="reader">
+		<li><a id="END" name="END">Bottom of page</a></li>
+		<li><a href="#TOP" accesskey="T">Return to Top of Page</a></li>
+	</ul>
+
+	<script type="text/javascript" src="../../common2/js/libs/sugar-1.4.1.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-ui/js/jquery-ui-1.9.2.custom.min.js"></script>
+	<!-- <script type="text/javascript" src="../../common2/js/libs/jquery-ui/js/jquery.ui.datepicker-ja.min.js"></script> -->
+	<!-- <script type="text/javascript" src="../../common2/js/libs/gcalendar-holidays.min.js"></script> -->
+	<script type="text/javascript" src="../../common2/js/libs/jquery.cookie.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/underscore-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/base64.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery.easing.1.3.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/bxslider/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jscrollpane/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jscrollpane/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/flexslider/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="../../common2/js/ga.js"></script>
+	<script type="text/javascript" src="../../common2/js/common.js"></script>
+
+	<!-- <script type="text/javascript" src="../../common2/js/libs/ajaxzip2/ajaxzip2.min.js"></script> -->
+	<script type="text/javascript" src="../../common2/js/libs/jquery.filter_input.min.js"></script>
+
+	<script type="text/javascript">
+	
+	//AjaxZip2.JSONDATA = '../../common2/js/libs/ajaxzip2/data';
+	
+	/*
+	GCalHolidays.datepickerStyles = {
+		sunday   : "background-image: none; background-color: #e8d3ca",	// 日曜日
+		saturday : "background-image: none; background-color: #b2cbe4",	// 土曜日
+		holiday  : "background-image: none; background-color: #e9dacb" 	// 祝日
+	};
+	*/
+	
+	$(function(){
+		
+		// ボタンUIを設定。
+		$('input.submit').button();
+		
+		// 入力制限を設定。
+		$('.num_hyphen')
+			.filter_input({ regex : '[0-9\-]' })
+			.blur(function(){
+				var me = $(this);
+				me.val(me.val().hankaku('ansp').replace(/[^0-9\-]/g,''));
+		});
+		
+		// ラベルのIDを自動設定する。
+		var cnt = 0;
+		$('label').each(function(){
+			var me = $(this);
+			var el = me.find('>input');
+			var id = 'id'+(cnt++);
+			me.attr('for', id);
+			el.attr('id' , id).addClass('mr2');
+		});
+		
+		// カレンダーアイコンのレティナ対応。
+		var ico = 'ico_calendar.png';
+		try {
+			if (window.devicePixelRatio > 1) {
+				ico = 'ico_calendar@2x.png';
+			}
+		} catch(e){}
+		
+		// カレンダーを設定する。
+		var today = Date.create(new Date(), 'en');
+		$('.date').datepicker({
+			dateFormat    : 'yy/mm/dd(D)',
+			minDate       : 2,							// 明後日から選択可。
+			maxDate       : Date.create('2015/10/31'),	// 10月末まで選択可。
+			//changeYear  : true,						// 年選択メニューを表示。
+			//changeMonth : true,						// 月選択メニューを表示。
+			showOn        : 'both',						// テキストボックスとカレンダーボタンの両方でカレンダーを表示する。
+			buttonImage   : '../../common2/img/' + ico,	// カレンダーアイコンのイメージパス。
+			buttonText    : 'Calendar',				// カレンダーアイコンのテキスト。
+			beforeShowDay : function(date){
+				
+				// ツアー期間で選択できない日付けを設定
+				if (checkPeriod(date) === 0) {
+					return [false, 'ui-state-disabled'];
+				} else {
+					return [true, ''];
+				}
+			}
+		});
+		
+		// 郵便番号から住所を自動入力する。
+		/*
+		$('#zip').bind('keyup change', function(){
+			var me = $(this);
+			me.val(me.val().hankaku('ansp'));
+			AjaxZip2.zip2addr(this,'Address','Address',null,'Address');
+		});
+		*/
+		
+		// ツアー期間のチェック
+		var checkPeriod = function(d){
+			
+			var act = $('#act').val();
+			var cont = $('#cont').val();
+			var ymd = d.format('{yyyy}/{MM}/{dd}');
+			
+			// 除外日のリスト
+			var jogaibi = [];
+			
+			if (cont == 'Rafting') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 2015年4月25日～2015年10月31日のみ選択可。
+				} else if (d.isBetween('2015/4/24', '2015/11/1')) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (cont == 'Kids Rafting') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 2015年7月11日～2015年9月13日のみ選択可。
+				} else if (d.isBetween('2015/7/10', '2015/9/14')) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (cont == 'Rafting and Lunch Package') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 2015年4月25日～2015年10月31日のみ選択可。
+				} else if (d.isBetween('2015/4/24', '2015/11/1')) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (cont == 'Rafting, Lunch and Onsen Package') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 4/25~5/15　は除外。
+				} else if (d.isBetween('2015/4/24', '2015/5/16')) {
+					return 0;
+				// 2015年4月25日～2015年10月31日のみ選択可。
+				} else if (d.isBetween('2015/4/24', '2015/11/1')) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (cont == 'Rafting, BBQ and Lunch Package') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 5/7~6/12, 7/16, 10/10, 10/11　は除外。
+				} else if (d.isBetween('2015/5/6', '2015/6/13') || d.isBetween('2015/10/09', '2015/10/12')) {
+					return 0;
+				// 7月16日、10月10日は除外。
+				} else if (d.is('2015/7/16') || d.is('2015/10/10')) {
+					return 0;
+				// 2015年4月25日～2015年10月31日のみ選択可。
+				} else if (d.isBetween('2015/4/24', '2015/11/1')) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (cont == 'Rafting and Hanazono Package') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 2015年6月27日～2015年10月12日(10月は土日祝)のみ選択可。
+				} else if (d.isBetween('2015/6/26', '2015/10/1')) {
+					return 1;
+				} else if (d.getMonth() == 9 && d.getDate() <= 12 && (d.isSaturday() || d.isSunday() || d.is('2015/10/12'))) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (act == 'Ducky') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 2015年6月6日～2015年10月31日のみ選択可。
+				} else if (d.isBetween('2015/6/5', '2015/11/1')) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (act == 'Canyoning') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 2015年7月12日～2015年9月13日のみ選択可。
+				} else if (d.isBetween('2015/7/11', '2015/9/14')) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (act == 'Sea Kayak') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 2015年7月12日～2015年9月13日のみ選択可。
+				} else if (d.isBetween('2015/7/11', '2015/9/14')) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (act == 'Fun Kayak') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 2015年6月27日～2015年10月12日のみ選択可。
+				} else if (d.isBetween('2015/6/26', '2015/10/13')) {
+					return 1;
+				} else if (d.getMonth() == 9 && d.getDate() <= 12 && (d.isSaturday() || d.isSunday() || d.is('2015/10/12'))) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (act == 'MTB Scenic Riding') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 2015年6月27日～2015年10月12日のみ選択可。
+				} else if (d.isBetween('2015/6/26', '2015/10/13')) {
+					return 1;
+				} else if (d.getMonth() == 9 && d.getDate() <= 12 && (d.isSaturday() || d.isSunday() || d.is('2015/10/12'))) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (act == 'Road Bike') {
+				// 2015年6月1日～2015年10月12日(10月は土日祝)のみ選択可。
+				if (d.isBetween('2015/5/31', '2015/10/13')) {
+					return 1;
+				} else if (d.getMonth() == 9 && d.getDate() <= 12 && (d.isSaturday() || d.isSunday() || d.is('2015/10/12'))) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			return -1;
+		}; // checkPeriod
+		
+		// アクティビティ内容選択メニューの表示
+		var cont_menu = function(){
+			
+			var act = $('#act').val();
+			var cont = $('#cont').val();
+			var yoteibi = $('#yoteibi').datepicker('getDate');
+			
+			// アクティビティ内容の行と選択メニュー、予定日を全て隠す
+			$('.tr_cont,#cont_raft,#cont_bike,.tr_yoteibi,#tr_kodomo_nenrei').hide();
+			
+			// アクティビティ内容がキッズラフティング
+			if (['Kids Rafting'].indexOf(cont) >= 0) {
+				$('#tr_kodomo_nenrei').show();
+				//if ($('#kodomo_nenrei').val() == ' ') $('#kodomo_nenrei').val('')
+			} else {
+				$('#kodomo_nenrei').val(' ');
+			}
+			
+			// アクティビティがラフティング
+			if (['Rafting'].indexOf(act) >= 0) {
+				$('.tr_cont,#cont_raft').show();
+				if (cont != '-' && cont != '') $('.tr_yoteibi').show();
+				return;
+			}
+			
+			// アクティビティがロードバイクツアー
+			if (['Road Bike'].indexOf(act) >= 0) {
+				$('.tr_cont,#cont_bike').show();
+				if (cont != '-' && cont != '') $('.tr_yoteibi').show();
+				return;
+			}
+			
+			// 未選択を設定
+			$('#cont').val('-');
+			
+			// アクティビティが選択されていれば予定日を表示
+			if (act != '') {
+				$('.tr_yoteibi').show();
+			}
+		};
+		
+		// 時間帯選択メニューの表示
+		var jikantai_menu = function(){
+			
+			var act = $('#act').val();
+			var cont = $('#cont').val();
+			var yoteibi = $('#yoteibi').datepicker('getDate');
+			
+			// 時間帯の行と選択メニューを全て隠す
+			$('.tr_jikantai,#jikantai_am,#jikantai_ampm,#jikantai_hanapack,#jikantai_funkayak,#jikantai_funkayak_aug').hide();
+			
+			// 時間帯が午前のみ
+			if (['Rafting and Lunch Package','Rafting, Lunch and Onsen Package','Rafting, BBQ and Lunch Package','Mt Yotei Loop'].indexOf(cont) >= 0) {
+				$('#jikantai').val('AM');
+				$('.tr_jikantai,#jikantai_am').show();
+				return;
+			}
+			
+			// 時間帯が午前と午後
+			if (['Ducky','Canyoning','Sea Kayak','MTB Scenic Riding'].indexOf(act) >= 0) {
+				$('.tr_jikantai,#jikantai_ampm').show();
+				return;
+			}
+			
+			// 時間帯が午前と午後
+			if (['Rafting','Kids Rafting','Annupuri Downhill Course','Kutchan Jagaimo Course','Niseko Ski Resort Course (Niseko Milk Kobo round trip)'].indexOf(cont) >= 0) {
+				$('.tr_jikantai,#jikantai_ampm').show();
+				return;
+			}
+			
+			// 時間帯が午前と午後（ラフティング＆アクティビティ）
+			if (cont == 'Rafting and Lunch Package') {
+				$('.tr_jikantai,#jikantai_hanapack').show();
+				return;
+			}
+			
+			// 時間帯が時刻選択（8月のみ別メニュー）
+			if (act == 'Fun Kayak' && yoteibi && yoteibi.getMonth() == 7) {
+				$('.tr_jikantai,#jikantai_funkayak_aug').show();
+				return;
+			} else if (act == 'Fun Kayak') {
+				$('.tr_jikantai,#jikantai_funkayak').show();
+				return;
+			}
+			
+			// 未選択を設定
+			$('#jikantai').val('-');
+		};
+		
+		// 送迎選択メニューの表示
+		var sougei_menu = function(){
+			
+			var act = $('#act').val();
+			var cont = $('#cont').val();
+			
+			// 送迎の行と選択メニューを全て隠す
+			$('.tr_syukuhaku,.tr_sougei,#sougei_menu').hide();
+			
+			if (['Canyoning','Sea Kayak','Road Bike','MTB Scenic Riding'].indexOf(act) >= 0 ||
+				['Rafting','Kids Rafting','Rafting and Hanazono Package'].indexOf(cont) >= 0) {
+				if ($('#sougei').val() == '-') $('#sougei').val('');
+				$('#sougei_menu').val($('#sougei').val());
+				$('.tr_sougei,#sougei_menu').show();
+			} else {
+				$('.tr_syukuhaku,.tr_sougei,#sougei_menu').hide();
+				$('#sougei').val('-');
+			}
+			
+			if ($('#sougei').val() == 'Yes') {
+				$('.tr_syukuhaku').show();
+			} else {
+				$('.tr_syukuhaku').hide();
+			}
+		};
+		
+		// 参加人数選択メニューの表示
+		var sanka_menu = function(){
+			
+			var act = $('#act').val();
+			var cont = $('#cont').val();
+			var yoteibi = $('#yoteibi').datepicker('getDate');
+			
+			// 参加人数（大人・小人）選択メニューを全て隠す
+			$('#tr_sanka_otona,#tr_sanka_kodomo,#tr_sanka_senior,#tr_sanka_gakusei,#gakusei_caution,#kodomo_notice').hide();
+			
+			$('#sanka_otona_txt').text('Adult');
+			$('#sanka_otona_val').val('Adult');
+			
+			if (['Rafting','Sea Kayak','Fun Kayak','MTB Scenic Riding'].indexOf(act) >= 0) {
+				$('#kodomo_notice').show();
+			}
+			
+			// ロードバイクツアーで不要な参加人数（7～30人）を元に戻す。
+			$('#sanka_otona').append($('#noloadbike_box').html());
+			
+			// ダッキー、キャニオニングは参加人数（大人）のみ表示
+			if (['Ducky','Canyoning'].indexOf(act) >= 0) {
+				$('#tr_sanka_otona').show();
+				$('#sanka_kodomo').val('None');
+				$('#sanka_senior').val('None');
+				$('#sanka_gakusei').val('None');
+			} else if (['Rafting'].indexOf(act) >= 0 && ['Rafting'].indexOf(cont) >= 0) {
+				
+				var jogai = yoteibi && (yoteibi.isBetween('2015/5/1', '2015/5/7') || yoteibi.isBetween('2015/8/7', '2015/8/24'));
+				
+				if (yoteibi && !jogai && $('#oyakowari_menu').val() == 'ApplyFamilyDiscount') {
+					$('#tr_sanka_otona,#tr_sanka_kodomo').show();
+					$('#tr_sanka_senior,#tr_sanka_gakusei,#gakusei_caution').hide();
+					$('#sanka_senior').val('None');
+					$('#sanka_gakusei').val('None');
+				} else {
+					$('#tr_sanka_otona,#tr_sanka_kodomo,#tr_sanka_senior,#tr_sanka_gakusei,#gakusei_caution').show();
+				}
+			} else if (['ロードバイクツアー'].indexOf(act) >= 0) {
+				// ロードバイクツアーで不要な参加人数（7～30人）を一時的に見えないところに格納。
+				$('#noloadbike_box').html($('option.noloadbike'));
+				
+				$('#tr_sanka_otona').show();
+				$('#sanka_kodomo').val('None');
+				$('#sanka_senior').val('None');
+				$('#sanka_gakusei').val('None');
+				$('#sanka_otona_txt').text('Number of people');
+				$('#sanka_otona_val').val('Number of people');
+			} else {
+				$('#tr_sanka_otona,#tr_sanka_kodomo').show();
+				$('#sanka_senior').val('None');
+				$('#sanka_gakusei').val('None');
+			}
+		};
+		
+		// ラフティングの割引について。
+		var raft_waribiki = function(){
+			
+			var act = $('#act').val();
+			var cont = $('#cont').val();
+			var yoteibi = $('#yoteibi').datepicker('getDate');
+			
+			var msg = '';
+			
+			var jogai = yoteibi && (yoteibi.isBetween('2015/5/1', '2015/5/7') || yoteibi.isBetween('2015/8/7', '2015/8/24'));
+			
+			// アクティビティ内容がラフティング
+			if (['Rafting'].indexOf(cont) >= 0 && !jogai && yoteibi && yoteibi.isAfter('2015/5/6')){
+				$('.tr_oyakowari,#tr_sanka_senior,#tr_sanka_gakusei,#gakusei_caution').show();
+			} else if (['Rafting'].indexOf(cont) >= 0 && !jogai){
+				$('#tr_sanka_senior,#tr_sanka_gakusei,#gakusei_caution').show();
+			} else {
+				$('.tr_oyakowari,#tr_sanka_senior,#tr_sanka_gakusei,#gakusei_caution').hide();
+				$('#sanka_senior').val('None');
+				$('#sanka_gakusei').val('None');
+			}
+			
+			if (yoteibi && !jogai && $('#oyakowari_menu').val() == 'ApplyFamilyDiscount') {
+				$('#tr_sanka_senior,#tr_sanka_gakusei,#gakusei_caution').hide();
+				$('#sanka_senior').val('None');
+				$('#sanka_gakusei').val('None');
+			}
+			
+			if (yoteibi && ['Rafting'].indexOf(cont) >= 0) {
+				if (yoteibi && (yoteibi.isBetween('2015/5/6', '2015/7/1') || yoteibi.isAfter('2015/08/31')) && $('#oyakowari_menu').val() == 'ApplyFamilyDiscount') {
+					//msg = '※「親子割」の対象となります。';
+				} else {
+					// 割引の除外日は5月2,3,4,5,6、8月8～23日
+					jogai = yoteibi && (yoteibi.isBetween('2015/5/1', '2015/5/7') || yoteibi.isBetween('2015/8/7', '2015/8/24'));
+					
+					// 1ヶ月以上前で除外日の場合
+					if (jogai && Date.create().daysUntil(yoteibi) >= 29) {
+						msg = '*The 1 month in advance 15% off discount does not apply to the date you have selected.';
+					} else if (jogai) {
+						msg = '*The 10% off discount does not apply to the date you have selected.';
+					} else if (Date.create().daysUntil(yoteibi) >= 29) {
+						msg = '*The 1 month in advance 15% discount applies to the date you have selected.';
+					} else {
+						msg = '*The 10% off discount applies to the date you have selected.';
+					}
+				}
+			}
+			
+			$('#waribiki').val(msg);
+		};
+		
+		// 料金計算
+		var price_keisan = function(){
+			var price = 0;
+			var otona = $('#sanka_otona').val().replace('人', '');
+			var kodomo = $('#sanka_kodomo').val().replace('人', '');
+			var senior = $('#sanka_senior').val().replace('人', '');
+			var gakusei = $('#sanka_gakusei').val().replace('人', '');
+			if (isNaN(otona) || otona == '') otona = 0;
+			if (isNaN(kodomo) || kodomo == '') kodomo = 0;
+			if (isNaN(senior) || senior == '') senior = 0;
+			if (isNaN(gakusei) || gakusei == '') gakusei = 0;
+			//console.info('【1】 ' + otona + ' / ' + kodomo + ' / ' + senior);
+			
+			var act = $('#act').val();
+			var cont = $('#cont').val();
+			var yoteibi = $('#yoteibi').datepicker('getDate');
+			
+			if (act == 'MTB Scenic Riding') {
+				price = (5500 * otona) + (3800 * kodomo);
+			} else if (act == 'Road Bike') {
+				if (cont == 'Annupuri Downhill Course') {
+					price = (otona == 1 ? 10000 : 7000) * otona;
+				} else if (cont == 'Kutchan Jagaimo Course') {
+					price = (otona == 1 ? 9000 : 6000) * otona;
+				} else if (cont == 'Niseko Ski Resort Course (Niseko Milk Kobo round trip)') {
+					price = (otona == 1 ? 9000 : 6000) * otona;
+				} else if (cont == 'Mt Yotei Loop') {
+					price = (otona == 1 ? 11000 : 8000) * otona;
+				}
+			} else if (act == 'Fun Kayak') {
+				price = (1500 * otona) + (800 * kodomo);
+			} else if (act == 'Sea Kayak') {
+				price = (7100 * otona) + (4900 * kodomo);
+			} else if (act == 'Canyoning') {
+				price = (6600 * otona);
+			} else if (act == 'Ducky') {
+				price = (5500 * otona);
+			} else if (act == 'Rafting') {
+				if (cont == 'Rafting') {
+					//if (yoteibi && (yoteibi.isBetween('2015/5/6', '2015/7/1') || yoteibi.isAfter('2015/08/31')) && $('#oyakowari_menu').val() == '「親子割」を適用する') {
+					if (yoteibi && $('#oyakowari_menu').val() == 'ApplyFamilyDiscount') {
+						//msg = '※「親子割」の対象となります。';
+						if (otona >= 2) {
+							kodomo = kodomo - Math.floor(otona / 2);
+							$('#waribiki').val('* Family Discount is available.')
+						} else {
+							$('#waribiki').val('')
+						}
+						if (kodomo < 0) kodomo = 0;
+						//console.info('【2】 ' + otona + ' / ' + kodomo + ' / ' + senior);
+						price = (5500 * otona) + (3800 * kodomo);
+					} else {
+						// 割引の除外日は5月2～6日、8月8～16日
+						var jogai = yoteibi && (yoteibi.isBetween('2015/5/1', '2015/5/7') || yoteibi.isBetween('2015/8/7', '2015/8/17'));
+						
+						// 1ヶ月以上前で除外日の場合
+						if (jogai && Date.create().daysUntil(yoteibi) >= 29) {
+							//msg = '※選択された予定日は割引適用除外期間の為、「1ヶ月以上前15％割引」の対象外となります。';
+							price = (5500 * otona) + (3800 * kodomo);// + (5500 * senior) + (5500 * gakusei);
+						} else if (jogai) {
+							//msg = '※選択された予定日は割引適用除外期間の為、「WEBから予約10％割引」の対象外となります。';
+							price = (5500 * otona) + (3800 * kodomo);// + (5500 * senior) + (5500 * gakusei);
+						} else if (Date.create().daysUntil(yoteibi) >= 29) {
+							//msg = '※選択された予定日は「1ヶ月以上前15％割引」の対象となります。';
+							price = (4675 * otona) + (3230 * kodomo) + (3800 * senior) + (4675 * gakusei);
+						} else {
+							//msg = '※「WEBから予約10％割引」の対象となります。';
+							price = (4950 * otona) + (3420 * kodomo) + (3800 * senior) + (4675 * gakusei);
+						}
+					}
+				} else if (cont == 'Kids Rafting') {
+					price = (4400 * otona) + (3300 * kodomo);
+				} else if (cont == 'Rafting and Lunch Package') {
+					price = (5700 * otona) + (4300 * kodomo);
+				} else if (cont == 'Rafting, Lunch and Onsen Package') {
+					price = (6100 * otona) + (4600 * kodomo);
+				} else if (cont == 'Rafting, BBQ and Lunch Package') {
+					price = (6700 * otona) + (4700 * kodomo);
+				} else if (cont == 'Rafting and Hanazono Package') {
+					price = (6800 * otona) + (5500 * kodomo);
+				}
+			}
+			
+			$('#price').val(price.format() + ' yen');
+			$('#msg').html($('#waribiki').val());
+		};
+		
+		// 時間帯、予定日、送迎、参加人数選択メニューをリセットする
+		var resetVal = function(){
+			$('#jikantai').val('');
+			$('#yoteibi').val('');
+			$('#sougei').val('');
+			$('#kodomo_nenrei').val('');
+			$('#jikantai_am,#jikantai_ampm,#jikantai_hanapack,#jikantai_funkayak,#jikantai_funkayak_aug').val('');
+			$('#sougei_menu').val('');
+			$('#sanka_otona,#sanka_kodomo,#sanka_senior,#sanka_gakusei').val('');
+			$('#price').val('');
+		};
+		
+		// 表示設定
+		cont_menu();
+		jikantai_menu();
+		sougei_menu();
+		sanka_menu();
+		raft_waribiki();
+		price_keisan();
+		
+		// アクティビティ選択メニュー
+		$('#act').change(function(){
+			// アクティビティ変更時はアクティビティ内容も含めてクリアする。
+			$('#cont').val('');
+			$('#cont_raft,#cont_bike').val('');
+			resetVal();
+			
+			// アクティビティ内容、時間帯、送迎、参加人数選択メニューの表示設定。
+			cont_menu();
+			jikantai_menu();
+			sougei_menu();
+			sanka_menu();
+			
+			raft_waribiki();
+			price_keisan();
+		});
+		
+		// アクティビティ内容選択メニュー
+		$('#cont_raft,#cont_bike').change(function(){
+			$('#cont').val($(this).val());
+			resetVal();
+			
+			// アクティビティ内容、時間帯、送迎、参加人数選択メニューの表示設定。
+			cont_menu();
+			jikantai_menu();
+			sougei_menu();
+			sanka_menu();
+			
+			raft_waribiki();
+			price_keisan();
+		});
+		
+		// 予定日を変更した場合
+		$('#yoteibi').change(function(){
+			jikantai_menu();
+			raft_waribiki();
+			price_keisan();
+		});
+		
+		// 時間帯選択メニュー
+		$('#jikantai_am,#jikantai_ampm,#jikantai_hanapack,#jikantai_funkayak,#jikantai_funkayak_aug').change(function(){
+			$('#jikantai').val($(this).val());
+		});
+		
+		// 送迎選択メニュー
+		$('#sougei_menu').change(function(){
+			$('#sougei').val($(this).val());
+			if ($(this).val() == 'Yes') {
+				$('.tr_syukuhaku').show();
+			} else {
+				$('.tr_syukuhaku').hide();
+			}
+		});
+		
+		// 親子割選択メニュー
+		$('#oyakowari_menu').change(function(){
+			sanka_menu();
+			raft_waribiki();
+			price_keisan();
+		});
+		
+		// 人数選択メニュー
+		$('#sanka_otona,#sanka_kodomo,#sanka_senior,#sanka_gakusei').change(function(){
+			/*
+			var act = $('#act').val();
+			var otona = $('#sanka_otona').val().replace('人', '');
+			if (isNaN(otona) || otona == '') otona = 0;
+			
+			if (act == 'ロードバイクツアー' && otona > 6) {
+				
+			}
+			*/
+			price_keisan();
+		});
+		
+		// アクティビティ内容選択メニューの初期値を設定
+		$('#cont_raft,#cont_bike').val($('#cont').val());
+		
+		// 時間帯選択メニューの初期値を設定
+		$('#jikantai_am,#jikantai_ampm,#jikantai_hanapack,#jikantai_funkayak,#jikantai_funkayak_aug').val($('#jikantai').val());
+		
+		// 送迎選択メニューの初期値を設定
+		$('#sougei_menu').val($('#sougei').val());
+	});
+	</script>
+
+<select id="noloadbike_box" class="none"></select>
+
+</body>
+</html>

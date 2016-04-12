@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<meta name="author" content="HANAZONO NISEKO JAPAN" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="shortcut icon" href="../favicon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+	<link rel="start" href="../" />
+	<link rel="stylesheet" type="text/css" media="screen,print" href="../common2/css/default.css" />
+	<link rel="stylesheet" type="text/css" media="screen,print" href="../common2/css/design.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../common2/js/libs/fancybox/jquery.fancybox-1.3.4.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../common2/js/libs/jquery-ui/css/custom-theme/jquery-ui-1.9.2.custom.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../common2/js/libs/jquery-ui/css/jquery-ui-fix.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../common2/js/libs/flexslider/flexslider.fix.css" />
+	<link rel="stylesheet" href="../common2/css/fontello.css" />
+	<link rel="stylesheet" href="../common2/css/animation.css" /><!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+	<title>ニュースリリース | リゾート運営会社について | ニセコHANAZONOリゾート</title>
+</head>
+<body class="fix green">
+<div id="preloader">&nbsp;</div>
+
+	<ul class="reader">
+		<li><a id="TOP" name="TOP">ページの先頭です</a></li>
+		<li><a href="#BODY" accesskey="C">本文まで進みます</a></li>
+	</ul>
+
+	<div id="header" class="fix">
+		<h1 id="header_logo"><a href="../../ja/"><img src="../common2/img/logo_hanazono.png" alt="ニセコHANAZONOリゾート" class="fit" /></a></h1>
+		<div id="nav_btn" class="sumaho fr"><a href="./"><img src="../common2/img/nav_btn.png" alt="Menu" class="fit" /></a></div>
+		<div id="header_english" class="sumaho fr"><a href="../../en/snow/index.html" class="lv1"><i class="icon-nav"><span class="reader">&raquo;</span></i><span>English</span></a></div>
+		<div id="header_summer" class="sumaho fr"><a href="../green/index.html" class="lv1 fix"><i class="icon-nav"><span class="reader">&raquo;</span></i><span>グリーン<br />シーズン</span></a></div>
+
+		<ul id="nav" class="fix">
+			<li id="nav_whats_new" class="nav_li">
+				<a href="../snow/nav_whats_new.html" class="lv1 fix"><i class="icon-nav nosumaho"><span class="reader">&raquo;</span></i><span>リゾート<br class="nosumaho" />最新情報</span></a>
+				<div class="nav_box none"><div class="pa">Loading...</div></div>
+			</li>
+			<li id="nav_weather" class="nav_li">
+				<a href="../snow/nav_weather.html" class="lv1 fix"><i class="icon-na weather nosumaho" id="nav_weather_icon"><span class="reader">&mdash;</span></i><span class="nosumaho" id="nav_temperature">&mdash;&#8451;</span><span class="sumaho">積雪と天気</span></a>
+				<div class="nav_box none"><div class="pa">Loading...</div></div>
+			</li>
+			<li id="nav_lift_status" class="nav_li">
+				<a href="../snow/nav_lift_status.html" class="lv1 fix"><i class="icon-lift-quad nosumaho"><span class="reader">&raquo;</span></i><span>リフト<br class="nosumaho" />運行情報</span></a>
+				<div class="nav_box none"><div class="pa">Loading...</div></div>
+			</li>
+			<li id="nav_activity_status" class="nav_li">
+				<a href="../snow/nav_activity_status.html" class="lv1 fix"><i class="icon-activity-status nosumaho"><span class="reader">&raquo;</span></i><span>アクティビティ<br class="nosumaho" />営業状況</span></a>
+				<div class="nav_box none"><div class="pa">Loading...</div></div>
+			</li>
+			<li id="nav_packages_deals" class="nav_li">
+				<a href="../snow/nav_packages_deals.html" class="lv1 fix"><i class="icon-nav nosumaho"><span class="reader">&raquo;</span></i><span>お得なおすすめ<br class="nosumaho" />宿泊パッケージ</span></a>
+				<div class="nav_box none"><div class="pa">Loading...</div></div>
+			</li>
+			<li id="nav_events" class="nav_li">
+				<a href="../snow/nav_events.html" class="lv1 fix"><i class="icon-nav nosumaho"><span class="reader">&raquo;</span></i><span>イベント情報</span></a>
+				<div class="nav_box none"><div class="pa">Loading...</div></div>
+			</li>
+			<li id="nav_blog" class="nav_li">
+				<a href="../snow/nav_blog.html" class="lv1 fix"><i class="icon-nav nosumaho"><span class="reader">&raquo;</span></i><span>ブログ</span></a>
+				<div class="nav_box none"><div class="pa">Loading...</div></div>
+			</li>
+			<li id="nav_english" class="nav_li nosumaho">
+				<a href="../../en/snow/index.html" class="lv1"><i class="icon-nav nosumaho"><span class="reader">&raquo;</span></i><span>English</span></a>
+			</li>
+			<li id="nav_summer" class="nav_li nosumaho">
+				<a href="../green/index.html" class="lv1 fix"><i class="icon-nav nosumaho"><span class="reader">&raquo;</span></i><span>グリーン<br />シーズン</span></a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="wrap" class="fix">
+		<ul id="menu">
+			<li class="theme1"><a href="../green/resort/index.html" class="lv1"><span>リゾート<em>&emsp;</em></span></a>
+				<ul class="none b1">
+					<li><a href="../green/resort/index.html" class="lv2"><span class="n">リゾート概要</span></a></li>
+					<li><a href="../green/resort/access.html" class="lv2"><span>アクセス<em>&emsp;</em></span></a>
+						<ul class="none b2">
+							<li><a href="../green/resort/access.html#by-car" class="lv3"><span class="n">車によるアクセス</span></a></li>
+							<li><a href="../green/resort/access.html#by-train" class="lv3"><span class="n">鉄道によるアクセス</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="theme1"><a href="../green/rafting/index.html" class="lv1"><span>ラフティング<em>&emsp;</em></span></a>
+				<ul class="none b1">
+					<li>
+						<a href="../green/rafting/index.html" class="lv2"><span class="pa"><img src="../common2/img/menu_rafting.jpg" alt="ラフティング" class="fit" /></span><span class="n">ラフティング概要</span></a>
+					</li>
+					<li><a href="../green/rafting/prices.html" class="lv2" target="_blank"><span>メニューと料金<em>&emsp;</em></span></a>
+						<ul class="none b2">
+							<li><a href="../green/rafting/prices.html#rafting" class="lv3" target="_blank"><span class="n">ラフティング</span></a></li>
+							<li><a href="../green/rafting/packages.html" class="lv3" target="_blank"><span class="n">お得なパッケージ</span></a></li>
+							<li><a href="../green/rafting/prices.html#kids" class="lv3" target="_blank"><span class="n">キッズラフティング</span></a></li>
+						</ul>
+					</li>
+					<li><a href="../green/rafting/what_to_expect.html" class="lv2" target="_blank"><span class="n">持ち物と集合時間</span></a></li>
+				</ul>
+			</li>
+			<li class="theme1"><a href="../green/ducky/index.html" class="lv1"><span>ダッキー<em>&emsp;</em></span></a>
+				<ul class="none b1">
+					<li>
+						<a href="../green/ducky/index.html" class="lv2"><span class="pa"><img src="../common2/img/menu_ducky.jpg" alt="ダッキー" class="fit" /></span><span class="n">ダッキー概要</span></a>
+					</li>
+					<li><a href="../green/rafting/what_to_expect.html" class="lv2" target="_blank"><span class="n">持ち物と集合時間</span></a></li>
+				</ul>
+			</li>
+			<li class="theme1"><a href="../green/canyoning/index.html" class="lv1"><span>キャニオニング<em>&emsp;</em></span></a>
+				<ul class="none b1">
+					<li>
+						<a href="../green/canyoning/index.html" class="lv2"><span class="pa"><img src="../common2/img/menu_canyoning.jpg" alt="キャニオニング" class="fit" /></span><span class="n">キャニオニング概要</span></a>
+					</li>
+					<li><a href="../green/canyoning/what_to_expect.html" class="lv2" target="_blank"><span class="n">持ち物と集合時間</span></a></li>
+				</ul>
+			</li>
+			<li class="theme1"><a href="../green/sea-kayak/index.html" class="lv1"><span>シーカヤック<em>&emsp;</em></span></a>
+				<ul class="none b1">
+					<li>
+						<a href="../green/sea-kayak/index.html" class="lv2"><span class="pa"><img src="../common2/img/menu_sea-kayak.jpg" alt="シーカヤック" class="fit" /></span><span class="n">シーカヤック概要</span></a>
+					</li>
+					<li><a href="../green/sea-kayak/what_to_expect.html" class="lv2" target="_blank"><span class="n">持ち物と集合時間</span></a></li>
+				</ul>
+			</li>
+			<li class="theme1"><a href="../green/fun-kayak/index.html" class="lv1"><span>ファンカヤック<em>&emsp;</em></span></a>
+				<ul class="none b1">
+					<li>
+						<a href="../green/fun-kayak/index.html" class="lv2"><span class="pa"><img src="../common2/img/menu_fun-kayak.jpg" alt="ファンカヤック" class="fit" /></span><span class="n">ファンカヤック概要</span></a>
+					</li>
+					<li><a href="../green/fun-kayak/what_to_expect.html" class="lv2" target="_blank"><span class="n">持ち物と集合時間</span></a></li>
+				</ul>
+			</li>
+			<li class="theme1"><a href="../green/roadbike/index.html" class="lv1"><span>ロードバイク<em>&emsp;</em></span></a>
+				<ul class="none b1">
+					<li>
+						<a href="../green/roadbike/index.html" class="lv2"><span class="pa"><img src="../common2/img/menu_roadbike.jpg" alt="ロードバイク" class="fit" /></span><span class="n">ロードバイク概要</span></a>
+					</li>
+					<li><a href="../green/roadbike/rentals.html" class="lv2"><span class="n">ロードバイクレンタル</span></a></li>
+					<li><a href="../green/roadbike/tours.html" class="lv2"><span class="n">ロードバイクツアー</span></a></li>
+					<li><a href="../green/roadbike/what_to_expect.html" class="lv2" target="_blank"><span class="n">持ち物と集合時間</span></a></li>
+				</ul>
+			</li>
+			<li class="theme1"><a href="../green/mountain-biking/index.html" class="lv1"><span>マウンテンバイクパーク<em>&emsp;</em></span></a>
+				<ul class="none b1">
+					<li>
+						<a href="../green/mountain-biking/index.html" class="lv2"><span class="pa"><img src="../common2/img/menu_mountain-biking.jpg" alt="マウンテンバイクパーク" class="fit" /></span><span class="n">マウンテンバイクパーク概要</span></a>
+					</li>
+					<li><a href="../green/mountain-biking/prices.html" class="lv2"><span class="n">メニューと料金</span></a></li>
+					<li><a href="../green/mountain-biking/what_to_expect.html" class="lv2" target="_blank"><span class="n">持ち物と集合時間</span></a></li>
+				</ul>
+			</li>
+			<li class="theme1"><a href="../green/zipline/index.html" class="lv1"><span>ジップライン<em>&emsp;</em></span></a>
+				<ul class="none b1">
+					<li><a href="../green/zipline/index.html" class="lv2"><span class="pa"><img src="../common2/img/menu_green_zipline.jpg" alt="ジップライン" class="fit" /></span><span class="n">ジップライン概要</span></a></li>
+				</ul>
+			</li>
+			<li class="theme1"><a href="../green/summer-tubing/index.html" class="lv1"><span>サマーチュービング<em>&emsp;</em></span></a>
+				<ul class="none b1">
+					<li><a href="../green/summer-tubing/index.html" class="lv2"><span class="pa"><img src="../common2/img/menu_summer-tubing.jpg" alt="サマーチュービング" class="fit" /></span><span class="n">サマーチュービング概要</span></a></li>
+				</ul>
+			</li>
+			<li class="theme1"><a href="../green/hanafuwa/index.html" class="lv1"><span>ふわふわ遊具はなふわ<em>&emsp;</em></span></a>
+				<ul class="none b1">
+					<li><a href="../green/hanafuwa/index.html" class="lv2"><span class="pa"><img src="../common2/img/menu_hanafuwa.jpg" alt="ふわふわ遊具はなふわ" class="fit" /></span><span class="n">ふわふわ遊具はなふわ概要</span></a></li>
+				</ul>
+			</li>
+			<li class="theme1"><a href="../green/slacklining/index.html" class="lv1"><span>オーマイガッー スラックライン<em>&emsp;</em></span></a>
+				<ul class="none b1">
+					<li><a href="../green/slacklining/index.html" class="lv2"><span class="pa"><img src="../common2/img/menu_slacklining.jpg" alt="オーマイガッー スラックライン" class="fit" /></span><span class="n">オーマイガッー スラックライン概要</span></a></li>
+				</ul>
+			</li>
+			<li class="theme1"><a href="../green/restaurants/index.html" class="lv1"><span>レストランとカフェ<em class="l2">&emsp;</em></span></a>
+				<ul class="none b1">
+					<li><a href="../green/restaurants/yamasemi.html" class="lv2" target="_blank"><span class="e">クラブハウス レストラン</span></a></li>
+					<li><a href="../green/restaurants/cafe308.html" class="lv2" target="_blank"><span class="n">カフェ308</span></a></li>
+				</ul>
+			</li>
+			<li class="theme1"><a href="http://www.hanazonogolf.com/" class="lv1" target="_blank"><span class="e">HANAZONO GOLF</span></a></li>
+			<li class="theme1"><a href="http://hanazononiseko.com/nms/" class="lv1" target="_blank"><span class="e">ご宿泊と宿泊パッケージ</span></a></li>
+			<li class="theme8 open"><a href="../aboutus/index.html" class="lv1"><span>リゾート運営会社について<em>&emsp;</em></span></a>
+				<ul class="none b1">
+					<li><a href="../aboutus/index.html" class="lv2"><span>会社概要<em>&emsp;</em></span></a>
+						<ul class="none b2">
+							<li><a href="../aboutus/contact.html" class="lv3" target="_blank"><span class="e">お問い合わせ先</span></a></li>
+						</ul>
+					</li>
+					<li><a href="../aboutus/development.html" class="lv2"><span>リゾート開発<em>&emsp;</em></span></a>
+						<ul class="none b2">
+							<li><a href="../aboutus/development.html#investment" class="lv3"><span class="n">投資機会</span></a></li>
+						</ul>
+					</li>
+					<li><a href="../aboutus/employment.html" class="lv2"><span class="n">求人情報</span></a></li>
+					<li><a href="../aboutus/download.html" class="lv2"><span class="n">ダウンロードセンター</span></a></li>
+					<li><a href="../aboutus/releases.html" class="lv2"><span class="n">ニュースリリース</span></a></li>
+					<li><a href="../aboutus/request.html" class="lv2"><span class="n">取材のお問い合わせ</span></a></li>
+					<li><a href="../aboutus/privacy.html" class="lv2"><span class="n">個人情報保護について</span></a></li>
+				</ul>
+			</li>
+		</ul>
+
+		<div id="wrap_inner" class="fix" style="background-image:url(img/page_bg_snow.jpg);">
+
+			<div id="contents">
+				<div id="contents_inner">
+					<p class="reader"><a id="BODY" name="BODY">ここから本文です</a></p>
+
+					<div class="box theme8">
+						<h1 class="type1 c1 mb">ニュースリリース</h1>
+						<div class="inner">
+							<table class="theme8 type2 sp2 full" summary="Media Releases">
+								<tr>
+									<th class="bg1 nobr">2012年10月9日</th>
+									<td class="bg3"><a href="pdf/media-release_20121009.pdf" target="_blank" class="icon-r-file-pdf" title="PDF:723KB">渡辺洋一写真展「HANAZONO FOREST」開催のご案内</a></td>
+								</tr>
+								<tr>
+									<th class="bg1 nobr">2012年7月25日</th>
+									<td class="bg3"><a href="pdf/media-release_20120725.pdf" target="_blank" class="icon-r-file-pdf" title="PDF:3.1MB">8月5日ニセコHANAZONOヒルクライムに伴う交通規制のご案内</a></td>
+								</tr>
+								<tr>
+									<th class="bg1 nobr">2012年6月12</th>
+									<td class="bg3"><a href="pdf/media-release_20120612.pdf" target="_blank" class="icon-r-file-pdf" title="PDF:875KB">マスコットキャラクター「カモノハシ」が北海道観光大使に任命</a></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+
+					<div id="to_top" class="notablet"><a href="#TOP"><img src="../common2/img/nav_close.png" alt="ページの先頭へ" /></a></div>
+				</div><!-- contents_inner -->
+			</div><!-- contents -->
+
+			<div id="sidebar" class="fix">
+				<div id="booking">
+					<div class="inbox">
+						<div id="booking_form">
+							<a href="../snow/booking_form.html" class="c0">Loading...</a>
+						</div>
+					</div>
+				</div>
+				<div class="sidebox">
+					<a href="../snow/backcountry-guiding/index.html" class="highlight"><img src="img/sidebar_hpg2.jpg" alt="安全かつ効率よくとっておきの場所へお連れします" class="fit" /></a>
+				</div>
+				<div class="sidebox">
+					<a href="../snow/rental-and-retail/rentals.html" class="highlight"><img src="img/sidebar_rental.jpg" alt="レンタル期間中なんどでも乗り換えOK!!最新ギアをいろいろ試しちゃおう!!" class="fit" /></a>
+				</div>
+			</div><!-- sidebar -->
+
+			<div id="footer" class="fix">
+			
+				<div id="contact_hanazono">
+					<div class="inbox">
+						<h2 class="type2 c0 mb">ニセコHANAZONOリゾート</h2>
+						<address>
+							〒044-0082　北海道虻田郡倶知安町字岩尾別328-1
+						</address>
+						<ul>
+							<li>スノーシーズンアクティビティ：0136-21-6688</li>
+							<li>グリーンシーズンアクティビティ：0136-21-3333</li>
+						</ul>
+						<div class="btn r w9em mt15"><a href="../aboutus/index.html"><span>会社概要</span></a></div>
+					</div>
+				</div>
+			
+				<div id="book_accommodation">
+					<div class="inbox">
+						<h2 class="type2 c0 mb">ご宿泊のご予約はこちら</h2>
+						<p>ご宿泊と各種アクティビティのお得なパッケージも<br />バケーション ニセコ</p>
+						<ul>
+							<li>0136-21-7788</li>
+							<li>info@vacationniseko.com</li>
+						</ul>
+						<div class="btn r w10em mt15"><a href="http://hanazononiseko.com/nms/" target="_blank"><span>今すぐ予約する</span></a></div>
+					</div>
+				</div>
+			
+				<div id="search">
+					<div class="inbox">
+						<h2 class="type2 c0 mb">サイト内検索</h2>
+						<form action="http://www.google.com/cse" id="cse-search-box" name="cse-search-box" target="_blank">
+							<input type="hidden" name="cx" value="003080879582333711453:gklfodhnsaq" />
+							<input type="hidden" name="ie" value="UTF-8" />
+							<div class="textbox mb10">
+								<input type="text" name="q" id="srchInput" value="例：リフト料金" />
+							</div>
+							<div class="fix">
+								<button type="submit" name="sa" id="srchBtn" class="type1 submit fr">検索</button>
+							</div>
+						</form>
+						<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&amp;lang=en"></script>
+					</div>
+				</div>
+			
+				<div id="newsletter">
+					<div class="inbox">
+						<h2 class="type2 c0 mb">リゾート最新情報を配信！<br class="sumaho" />メールマガジン登録</h2>
+						<form action="//hanazononiseko.us1.list-manage.com/subscribe/post?u=ddba0d8bc0489dc836c64885f&amp;id=51b53404a0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+							<div class="textbox mb10">
+								<input type="text" value="example@harmonyresorts.com" name="EMAIL" class="email w100p" id="mce-EMAIL" />
+								<span class="reader"><input type="text" name="b_ddba0d8bc0489dc836c64885f_51b53404a0" tabindex="-1" value="" /></span>
+							</div>
+							<div class="fix">
+								<button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="type2 submit fr">送信</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			
+				<div id="hanazono" class="tc">
+					<div class="inbox">
+						<img src="../common2/img/hanazono.png" alt="HANAZONO NISEKO JAPAN" class="fit" />
+					</div>
+				</div>
+			
+				<div id="nihon_harmony" class="tc">
+					<div class="inbox">
+						<img src="../common2/img/nihon_harmony.png" alt="NIHON HARMONY RESORTS KK" class="fit" />
+					</div>
+				</div>
+			
+				<div id="tripadvisor" class="tc">
+					<div class="inbox">
+						<div id="TA_certificateOfExcellence473" class="TA_certificateOfExcellence"><ul id="KZSXcjyEQ" class="TA_links K8WhcN"><li id="spDc51OXimJA" class="rSniWxlOA"><a target="_blank" href="http://www.tripadvisor.jp/Attraction_Review-g1025639-d1992578-Reviews-Niseko_Hanazono_Resort-Kutchan_cho_Abuta_gun_Hokkaido.html"><img src="http://www.tripadvisor.jp/img/cdsi/img2/awards/CoE2015_WidgetAsset-14348-2.png" alt="TripAdvisor" class="widCOEImg" id="CDSWIDCOELOGO"/></a></li></ul></div><script src="http://www.jscache.com/wejs?wtype=certificateOfExcellence&amp;uniq=473&amp;locationId=1992578&amp;lang=ja&amp;year=2015&amp;display_version=2"></script>
+					</div>
+				</div>
+
+			</div><!-- footer -->
+		</div><!-- wrap_inner -->
+
+	</div><!-- wrap -->
+
+	<div id="nav_close" class="sumaho"><a href="./"><img src="../common2/img/nav_close.png" alt="Close" class="fit" /></a></div>
+
+	<ul class="reader">
+		<li><a id="END" name="END">ページの最後です</a></li>
+		<li><a href="#TOP" accesskey="T">先頭へ戻ります</a></li>
+	</ul>
+
+	<script type="text/javascript" src="../common2/js/libs/sugar-1.4.1.min.js"></script>
+	<script type="text/javascript" src="../common2/js/libs/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../common2/js/libs/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="../common2/js/libs/jquery-ui/js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="../common2/js/libs/jquery-ui/js/jquery.ui.datepicker-ja.min.js"></script>
+	<script type="text/javascript" src="../common2/js/libs/gcalendar-holidays.min.js"></script>
+	<script type="text/javascript" src="../common2/js/libs/jquery.cookie.min.js"></script>
+	<script type="text/javascript" src="../common2/js/libs/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<script type="text/javascript" src="../common2/js/libs/underscore-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../common2/js/libs/base64.min.js"></script>
+	<script type="text/javascript" src="../common2/js/libs/jquery.easing.1.3.min.js"></script>
+	<script type="text/javascript" src="../common2/js/libs/bxslider/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../common2/js/libs/jscrollpane/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="../common2/js/libs/jscrollpane/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="../common2/js/libs/flexslider/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="../common2/js/ga.js"></script>
+	<script type="text/javascript" src="../common2/js/common.js"></script>
+
+</body>
+</html>

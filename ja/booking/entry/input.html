@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<meta name="author" content="HANAZONO NISEKO JAPAN" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="shortcut icon" href="../../favicon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+	<link rel="start" href="../../" />
+	<link rel="stylesheet" type="text/css" media="screen,print" href="../../common2/css/default.css" />
+	<link rel="stylesheet" type="text/css" media="screen,print" href="../../common2/css/design.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/fancybox/jquery.fancybox-1.3.4.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/jquery-ui/css/custom-theme/jquery-ui-1.9.2.custom.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/jquery-ui/css/jquery-ui-fix.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/flexslider/flexslider.fix.css" />
+	<link rel="stylesheet" href="../../common2/css/fontello.css" />
+	<link rel="stylesheet" href="../../common2/css/animation.css" /><!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+	<link rel="stylesheet" href="style.css" />
+	<title>HANAZONO FREESTYLE COMP エントリー | エントリー | ニセコHANAZONOリゾート</title>
+</head>
+<body class="fix tab">
+<div id="preloader">&nbsp;</div>
+
+	<ul class="reader">
+		<li><a id="TOP" name="TOP">ページの先頭です</a></li>
+		<li><a href="#BODY" accesskey="C">本文まで進みます</a></li>
+	</ul>
+
+	<div id="contents">
+		<div id="contents_inner">
+
+			<div class="box theme1">
+				<h1 class="type1 c1 mb"><small class="c2">HANAZONO FREESTYLE COMP</small>エントリー</h1>
+				<div class="inner">
+					<table class="full sp4 tc">
+						<tr class="ratio">
+							<th class="arr u3 b5 c0">ステップ１<br /><span class="black l">情報入力</span></th>
+							<th class="arr u3">ステップ２<br /><span class="black l">入力内容確認</span></th>
+							<th class="arr u3">ステップ３<br /><span class="black l">エントリー完了</span></th>
+						</tr>
+					</table>
+				</div>
+				<h2 class="type2 c2 mb">下記のフォームに記入して入力内容確認ボタンをクリックしてください。</h2>
+				<div class="inner intxt">
+					<p class="notice">未成年者は親権者の承諾が必要なためウェブからのお申し込みは受付出来ません。</p>
+					<p class="lb"><a href="https://hanazononiseko.com/ja/snow/mountain/pdf/terrain-parks/form_jp.pdf" target="_blank" class="icon-r-file-pdf">こちらのリンクより申込書のPDFをダウンロード</a>していただけます。</p>
+					<p>PDFファイルを印刷し、必要事項をご記入、ご捺印の上以下の住所へ、エントリー費(&yen;2,000)と共に現金書留にてご郵送いただけますようお願いいたします。</p>
+					<dl class="b2 c0 ma10 pa10"><dd>
+						<address>〒044-0082　北海道虻田郡倶知安町字岩尾別328-1 <br />日本ハーモニー・リゾート株式会社　イベントエントリー受付係</address>
+					</dd></dl>
+					<ul class="type1">
+						<li>2015年2月22日(日) HANAZONOスラロームの申し込み締め切りは2015年2月21日(土)です。</li>
+						<li>2015年3月8日(日) HANAZONOスロープスタイルの申し込み締め切りは2015年3月7日(土)です。</li>
+					</ul>
+				</div>
+				<div class="inner">
+
+					<form action="index.php" method="post" enctype="multipart/form-data" id="frm">
+						<table class="theme1 type2 sp3 full thtc oneline">
+							<tr><th class="bg1 w10em">大会名<em class="must">必須</em></th>
+								<td class="bg3">
+									<select name="大会名">
+										<option value="" {$selected.default}>大会名をお選びください</option>
+										<option value="HANAZONOスラローム" {$selected.大会名.HANAZONOスラローム}>HANAZONOスラローム</option>
+										<option value="HANAZONOスロープスタイル" {$selected.大会名.HANAZONOスロープスタイル}>HANAZONOスロープスタイル</option>
+									</select>
+									
+									<input type="hidden" name="required[]" value="大会名" />
+									{if:$required.大会名}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.大会名}</p></div>
+									{/if:$required.大会名}
+								</td>
+							</tr>
+							<tr><th class="bg1">氏名<em class="must">必須</em></th>
+								<td class="bg3">
+									<input type="text" name="氏名" value="{$氏名}" class="text w95p" />
+									
+									<input type="hidden" name="required[]" value="氏名" />
+									{if:$required.氏名}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.氏名}</p></div>
+									{/if:$required.氏名}
+								</td>
+							</tr>
+							<tr><th class="bg1">性別<em class="must">必須</em></th>
+								<td class="bg3">
+									<label><input type="radio" name="性別" value="男" {$checked.性別.男} class="radio" /><span>男</span></label>
+									<label><input type="radio" name="性別" value="女" {$checked.性別.女} class="radio" /><span>女</span></label>
+									
+									<input type="hidden" name="required[]" value="性別" />
+									{if:$required.性別}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.性別}</p></div>
+									{/if:$required.性別}
+								</td>
+							</tr>
+							<tr><th class="bg1">生年月日<em class="must">必須</em></th>
+								<td class="bg3">
+									<select name="生年月日（年）">
+										<option value="" {$selected.default}>―</option>
+										<option value="1962" {$selected.生年月日（年）.1962}>1962</option>
+										<option value="1963" {$selected.生年月日（年）.1963}>1963</option>
+										<option value="1964" {$selected.生年月日（年）.1964}>1964</option>
+										<option value="1965" {$selected.生年月日（年）.1965}>1965</option>
+										<option value="1966" {$selected.生年月日（年）.1966}>1966</option>
+										<option value="1967" {$selected.生年月日（年）.1967}>1967</option>
+										<option value="1968" {$selected.生年月日（年）.1968}>1968</option>
+										<option value="1969" {$selected.生年月日（年）.1969}>1969</option>
+										<option value="1970" {$selected.生年月日（年）.1970}>1970</option>
+										<option value="1971" {$selected.生年月日（年）.1971}>1971</option>
+										<option value="1972" {$selected.生年月日（年）.1972}>1972</option>
+										<option value="1973" {$selected.生年月日（年）.1973}>1973</option>
+										<option value="1974" {$selected.生年月日（年）.1974}>1974</option>
+										<option value="1975" {$selected.生年月日（年）.1975}>1975</option>
+										<option value="1976" {$selected.生年月日（年）.1976}>1976</option>
+										<option value="1977" {$selected.生年月日（年）.1977}>1977</option>
+										<option value="1978" {$selected.生年月日（年）.1978}>1978</option>
+										<option value="1979" {$selected.生年月日（年）.1979}>1979</option>
+										<option value="1980" {$selected.生年月日（年）.1980}>1980</option>
+										<option value="1981" {$selected.生年月日（年）.1981}>1981</option>
+										<option value="1982" {$selected.生年月日（年）.1982}>1982</option>
+										<option value="1983" {$selected.生年月日（年）.1983}>1983</option>
+										<option value="1984" {$selected.生年月日（年）.1984}>1984</option>
+										<option value="1985" {$selected.生年月日（年）.1985}>1985</option>
+										<option value="1986" {$selected.生年月日（年）.1986}>1986</option>
+										<option value="1987" {$selected.生年月日（年）.1987}>1987</option>
+										<option value="1988" {$selected.生年月日（年）.1988}>1988</option>
+										<option value="1989" {$selected.生年月日（年）.1989}>1989</option>
+										<option value="1990" {$selected.生年月日（年）.1990}>1990</option>
+										<option value="1991" {$selected.生年月日（年）.1991}>1991</option>
+										<option value="1992" {$selected.生年月日（年）.1992}>1992</option>
+										<option value="1993" {$selected.生年月日（年）.1993}>1993</option>
+										<option value="1994" {$selected.生年月日（年）.1994}>1994</option>
+										<option value="1995" {$selected.生年月日（年）.1995}>1995</option>
+										<option value="1996" {$selected.生年月日（年）.1996}>1996</option>
+										<option value="1997" {$selected.生年月日（年）.1997}>1997</option>
+										<option value="1998" {$selected.生年月日（年）.1998}>1998</option>
+										<option value="1999" {$selected.生年月日（年）.1999}>1999</option>
+										<option value="2000" {$selected.生年月日（年）.2000}>2000</option>
+										<option value="2001" {$selected.生年月日（年）.2001}>2001</option>
+										<option value="2002" {$selected.生年月日（年）.2002}>2002</option>
+										<option value="2003" {$selected.生年月日（年）.2003}>2003</option>
+										<option value="2004" {$selected.生年月日（年）.2004}>2004</option>
+										<option value="2005" {$selected.生年月日（年）.2005}>2005</option>
+										<option value="2006" {$selected.生年月日（年）.2006}>2006</option>
+										<option value="2007" {$selected.生年月日（年）.2007}>2007</option>
+										<option value="2008" {$selected.生年月日（年）.2008}>2008</option>
+										<option value="2009" {$selected.生年月日（年）.2009}>2009</option>
+										<option value="2010" {$selected.生年月日（年）.2010}>2010</option>
+										<option value="2011" {$selected.生年月日（年）.2011}>2011</option>
+										<option value="2012" {$selected.生年月日（年）.2012}>2012</option>
+										<option value="2013" {$selected.生年月日（年）.2013}>2013</option>
+										<option value="2014" {$selected.生年月日（年）.2014}>2014</option>
+										<option value="2015" {$selected.生年月日（年）.2015}>2015</option>
+									</select><span class="ml5">年</span>
+									<select name="生年月日（月）">
+										<option value="" {$selected.default}>―</option>
+										<option value="1" {$selected.生年月日（月）.1}>1</option>
+										<option value="2" {$selected.生年月日（月）.2}>2</option>
+										<option value="3" {$selected.生年月日（月）.3}>3</option>
+										<option value="4" {$selected.生年月日（月）.4}>4</option>
+										<option value="5" {$selected.生年月日（月）.5}>5</option>
+										<option value="6" {$selected.生年月日（月）.6}>6</option>
+										<option value="7" {$selected.生年月日（月）.7}>7</option>
+										<option value="8" {$selected.生年月日（月）.8}>8</option>
+										<option value="9" {$selected.生年月日（月）.9}>9</option>
+										<option value="10" {$selected.生年月日（月）.10}>10</option>
+										<option value="11" {$selected.生年月日（月）.11}>11</option>
+										<option value="12" {$selected.生年月日（月）.12}>12</option>
+									</select><span class="ml5">月</span>
+									<select name="生年月日（日）">
+										<option value="" {$selected.default}>―</option>
+										<option value="1" {$selected.生年月日（日）.1}>1</option>
+										<option value="2" {$selected.生年月日（日）.2}>2</option>
+										<option value="3" {$selected.生年月日（日）.3}>3</option>
+										<option value="4" {$selected.生年月日（日）.4}>4</option>
+										<option value="5" {$selected.生年月日（日）.5}>5</option>
+										<option value="6" {$selected.生年月日（日）.6}>6</option>
+										<option value="7" {$selected.生年月日（日）.7}>7</option>
+										<option value="8" {$selected.生年月日（日）.8}>8</option>
+										<option value="9" {$selected.生年月日（日）.9}>9</option>
+										<option value="10" {$selected.生年月日（日）.10}>10</option>
+										<option value="11" {$selected.生年月日（日）.11}>11</option>
+										<option value="12" {$selected.生年月日（日）.12}>12</option>
+										<option value="13" {$selected.生年月日（日）.13}>13</option>
+										<option value="14" {$selected.生年月日（日）.14}>14</option>
+										<option value="15" {$selected.生年月日（日）.15}>15</option>
+										<option value="16" {$selected.生年月日（日）.16}>16</option>
+										<option value="17" {$selected.生年月日（日）.17}>17</option>
+										<option value="18" {$selected.生年月日（日）.18}>18</option>
+										<option value="19" {$selected.生年月日（日）.19}>19</option>
+										<option value="20" {$selected.生年月日（日）.20}>20</option>
+										<option value="21" {$selected.生年月日（日）.21}>21</option>
+										<option value="22" {$selected.生年月日（日）.22}>22</option>
+										<option value="23" {$selected.生年月日（日）.23}>23</option>
+										<option value="24" {$selected.生年月日（日）.24}>24</option>
+										<option value="25" {$selected.生年月日（日）.25}>25</option>
+										<option value="26" {$selected.生年月日（日）.26}>26</option>
+										<option value="27" {$selected.生年月日（日）.27}>27</option>
+										<option value="28" {$selected.生年月日（日）.28}>28</option>
+										<option value="29" {$selected.生年月日（日）.29}>29</option>
+										<option value="30" {$selected.生年月日（日）.30}>30</option>
+										<option value="31" {$selected.生年月日（日）.31}>31</option>
+									</select><span class="ml5">日</span>
+									
+									<input type="hidden" name="required[]" value="生年月日（年）" />
+									{if:$required.生年月日（年）}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.生年月日（年）}</p></div>
+									{/if:$required.生年月日（年）}
+									
+									<input type="hidden" name="required[]" value="生年月日（月）" />
+									{if:$required.生年月日（月）}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.生年月日（月）}</p></div>
+									{/if:$required.生年月日（月）}
+									
+									<input type="hidden" name="required[]" value="生年月日（日）" />
+									{if:$required.生年月日（日）}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.生年月日（日）}</p></div>
+									{/if:$required.生年月日（日）}
+								</td>
+							</tr>
+							<tr><th class="bg1">年齢<em class="must">必須</em></th>
+								<td class="bg3">
+									<input type="text" name="年齢" value="{$年齢}" class="text w4em" /><span class="ml5">歳</span>
+									
+									<input type="hidden" name="required[]" value="年齢" />
+									{if:$required.年齢}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.年齢}</p></div>
+									{/if:$required.年齢}
+								</td>
+							</tr>
+							<tr><th class="bg1">住所<em class="must">必須</em></th>
+								<td class="bg3">
+									<div class="mb5"><input type="text" name="郵便番号１" value="{$郵便番号１}" class="text w3em" /><span class="ml5 mr5">&ndash;</span>
+										<input type="text" name="郵便番号２" value="{$郵便番号２}" class="text w4em" /><span class="ml5">(郵便番号)</span></div>
+									<div class="mb5"><input type="text" name="都道府県" value="{$都道府県}" class="text w70p" /><span class="ml5">(都道府県)</span></div>
+									<div class="mb5"><input type="text" name="市区町村" value="{$市区町村}" class="text w70p" /><span class="ml5">(市区町村)</span></div>
+									<div class="mb5"><input type="text" name="番地" value="{$番地}" class="text w70p" /><span class="ml5">(番地)</span></div>
+									
+									<input type="hidden" name="required[]" value="郵便番号１" />
+									{if:$required.郵便番号１}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.郵便番号１}</p></div>
+									{/if:$required.郵便番号１}
+									
+									<input type="hidden" name="required[]" value="郵便番号２" />
+									{if:$required.郵便番号２}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.郵便番号２}</p></div>
+									{/if:$required.郵便番号２}
+									
+									<input type="hidden" name="required[]" value="都道府県" />
+									{if:$required.都道府県}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.都道府県}</p></div>
+									{/if:$required.都道府県}
+									
+									<input type="hidden" name="required[]" value="市区町村" />
+									{if:$required.市区町村}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.市区町村}</p></div>
+									{/if:$required.市区町村}
+									
+									<input type="hidden" name="required[]" value="番地" />
+									{if:$required.番地}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.番地}</p></div>
+									{/if:$required.番地}
+								</td>
+							</tr>
+							<tr><th class="bg1">電話番号<em class="must">必須</em></th>
+								<td class="bg3">
+									<input type="text" name="電話番号" value="{$電話番号}" class="text w95p" />
+									
+									<input type="hidden" name="required[]" value="電話番号" />
+									{if:$required.電話番号}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.電話番号}</p></div>
+									{/if:$required.電話番号}
+								</td>
+							</tr>
+							<tr><th class="bg1">メールアドレス<em class="must">必須</em></th>
+								<td class="bg3">
+									<input type="text" name="メールアドレス" value="{$メールアドレス}" class="text w95p" />
+									
+									<input type="hidden" name="required[]" value="メールアドレス" />
+									{if:$required.メールアドレス}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.メールアドレス}</p></div>
+									{/if:$required.メールアドレス}
+									
+									<input type="hidden" name="email[]" value="メールアドレス" />
+									{if:$email.メールアドレス}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$email.メールアドレス}</p></div>
+									{/if:$email.メールアドレス}
+								</td>
+							</tr>
+							<tr>
+								<th class="bg1">メールアドレス<br />（確認用）<em class="must">必須</em></th>　　　　
+								<td class="bg3">
+									<input type="text" name="メールアドレス（確認用）" value="{$メールアドレス（確認用）}" class="text w95p" />
+									
+									<input type="hidden" name="required[]" value="メールアドレス（確認用）" />
+									{if:$required.メールアドレス（確認用）}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.メールアドレス（確認用）}</p></div>
+									{/if:$required.メールアドレス（確認用）}
+									
+									<input type="hidden" name="email[]" value="メールアドレス（確認用）" />
+									{if:$email.メールアドレス（確認用）}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$email.メールアドレス（確認用）}</p></div>
+									{/if:$email.メールアドレス（確認用）}
+									
+									<input type="hidden" name="match[]" value="メールアドレス メールアドレス（確認用）" />
+									{if:$match.メールアドレス}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$match.メールアドレス}</p></div>
+									{/if:$match.メールアドレス}
+								</td>
+							</tr>
+							<tr><th class="bg1">情報メールの配信<em class="must">必須</em></th>
+								<td class="bg3">
+									<label><input type="radio" name="情報メールの配信" value="希望する" {$checked.情報メールの配信.希望する} class="radio" /><span>希望する</span></label>
+									<label><input type="radio" name="情報メールの配信" value="希望しない" {$checked.情報メールの配信.希望しない} class="radio" /><span>希望しない</span></label>
+									
+									<input type="hidden" name="required[]" value="情報メールの配信" />
+									{if:$required.情報メールの配信}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.情報メールの配信}</p></div>
+									{/if:$required.情報メールの配信}
+								</td>
+							</tr>
+							<tr><th class="bg1">緊急連絡先<br />（電話番号） <em class="must">必須</em></th>
+								<td class="bg3">
+									<input type="text" name="緊急連絡先（電話番号）" value="{$緊急連絡先（電話番号）}" class="text w95p" />
+									
+									<input type="hidden" name="required[]" value="緊急連絡先（電話番号）" />
+									{if:$required.緊急連絡先（電話番号）}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.緊急連絡先（電話番号）}</p></div>
+									{/if:$required.緊急連絡先（電話番号）}
+								</td>
+							</tr>
+							<tr><th class="bg1">緊急連絡先の名前<em class="must">必須</em></th>
+								<td class="bg3">
+									<input type="text" name="緊急連絡先の名前" value="{$緊急連絡先の名前}" class="text w95p" />
+									
+									<input type="hidden" name="required[]" value="緊急連絡先の名前" />
+									{if:$required.緊急連絡先の名前}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.緊急連絡先の名前}</p></div>
+									{/if:$required.緊急連絡先の名前}
+								</td>
+							</tr>
+							<tr><th class="bg1">参加カテゴリー<em class="must">必須</em></th>
+								<td class="bg3">
+									<select name="参加カテゴリー" id="category">
+										<option value="" {$selected.default}>参加カテゴリーをお選びください</option>
+										<option value="男子スノーボード" {$selected.参加カテゴリー.男子スノーボード}>男子スノーボード</option>
+										<option value="女子スノーボード" {$selected.参加カテゴリー.女子スノーボード}>女子スノーボード</option>
+										<option value="男子スキー" {$selected.参加カテゴリー.男子スキー}>男子スキー</option>
+										<option value="女子スキー" {$selected.参加カテゴリー.女子スキー}>女子スキー</option>
+									</select>
+									
+									<input type="hidden" name="required[]" value="参加カテゴリー" />
+									{if:$required.参加カテゴリー}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.参加カテゴリー}</p></div>
+									{/if:$required.参加カテゴリー}
+								</td>
+							</tr>
+							<tr><th class="bg1">スタンス</th>
+								<td class="bg3">
+									<p class="icon-info notice mb5">スノーボーダーのみ</p>
+									<select name="スタンス" id="stance">
+										<option value="" {$selected.default}>スタンスをお選びください</option>
+										<option value="レギュラー" {$selected.スタンス.レギュラー}>レギュラー</option>
+										<option value="グーフィー" {$selected.スタンス.グーフィー}>グーフィー</option>
+									</select>
+									
+									<div class="none ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>参加カテゴリーでスノーボードを選択した場合は入力必須です。</p></div>
+								</td>
+							</tr>
+							<tr><th class="bg1">保険会社<em class="must">必須</em></th>
+								<td class="bg3">
+									<input type="text" name="保険会社" value="{$保険会社}" class="text w95p" />
+									
+									<input type="hidden" name="required[]" value="保険会社" />
+									{if:$required.保険会社}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.保険会社}</p></div>
+									{/if:$required.保険会社}
+								</td>
+							</tr>
+							<tr><th class="bg1">保険番号<em class="must">必須</em></th>
+								<td class="bg3">
+									<input type="text" name="保険番号" value="{$保険番号}" class="text w95p" />
+									
+									<input type="hidden" name="required[]" value="保険番号" />
+									{if:$required.保険番号}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.保険番号}</p></div>
+									{/if:$required.保険番号}
+								</td>
+							</tr>
+							<tr><th class="bg1">スポンサー・自己PR・コメント等<em class="must">必須</em>
+								<td class="bg3">
+									<textarea rows="6" cols="30" name="スポンサー・自己PR・コメント等" class="text w95p">{$スポンサー・自己PR・コメント等}</textarea>
+									<input type="hidden" name="required[]" value="スポンサー・自己PR・コメント等" />
+									{if:$required.スポンサー・自己PR・コメント等}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.スポンサー・自己PR・コメント等}</p></div>
+									{/if:$required.スポンサー・自己PR・コメント等}
+								</td>
+							</tr>
+							<tr><th class="bg1">諸注意</th>
+								<td class="bg3">
+									<ul class="bullet s">
+										<li>※競技会参加者の個人情報は競技会参加者ご本人の同意なくして利用目的の範囲を超えて利用することはございません。</li>
+										<li>※お客様のご都合によるエントリーのキャンセルや不参加に伴うエントリー費の返金は致しません。</li>
+										<li>※参加者は別途リフト1日券が必要となります。</li>
+										<li>※出場者はヘルメットの着用を義務付けます。（有料レンタル有り&yen;1,000、レンタルには身分証明証もしくはクレジットカードが必要です。ヘルメットの数には限りがございます。）</li>
+										<li>※競技スケジュール・競技方式・ジャッジングルールは、当日の天候により直前に変更される場合がございます。</li>
+										<li>※大会エントリー費支払先:現金書留で下記の住所へ郵送して下さい。</li>
+									</ul>
+									<dl class="b2 c0 ma10 pa10"><dd>
+										<address>〒044-0082　北海道虻田郡倶知安町字岩尾別328-1 <br />日本ハーモニー・リゾート株式会社　イベントエントリー受付係</address>
+									</dd></dl>
+									<p class="s">（受付締め切り日は「大会情報」の「詳細はこちら」に各大会ごとに記載しております。）</p>
+								</td>
+							</tr>
+							<tr><th class="bg1">免責同意書<em class="must">必須</em></th>
+								<td class="bg3">
+									<ol class="decimal s mb10">
+										<li>スポーツマンらしく礼儀正しく行動します。大会当局・主催者の指示に従います。</li>
+										<li>大会中は、実行委員会の選択する医療スタッフによる体育会の習慣的な治療・移送・緊急の手術に同意し自己の治療費を負担します。険加入は自己の責任である事を承知します。</li>
+										<li>大会期間中の映像権を大会主催者に与え、将来、大会の写真・ビデオを複製し、大会ビデオを製造・販売すること及び日本ハーモニーリゾート(株)のプロモーションに使用する事を許可します。</li>
+										<li>私はスキー・スノーボードをする時は、自分あるいは他人の作為・不作為・不注意により損害・損失あるいは重傷・機能マヒ、最悪、死亡にいたる危険がある事を承知します。また、不可知の危険のある事も承知します。</li>
+										<li>私は本競技会参加によって生じた損失・損害について、主催者、大会スポンサー、開催会場等、本競技会の関係者、役員、従業員に対して訴訟しない事を署名し誓約します。私、又は私の相続人・代理人もこの免責同意書・権利放棄書に拘束されることを確認します。</li>
+									</ol>
+									
+									<span class="mr5">署名</span><input type="text" name="署名" value="{$署名}" class="text w70p" />
+									
+									<input type="hidden" name="required[]" value="署名" />
+									{if:$required.署名}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.署名}</p></div>
+									{/if:$required.署名}
+								</td>
+							</tr>
+						</table>
+						<div class="tc">
+							<input class="submit l" type="submit" value="入力内容確認" />
+						</div>
+					</form>
+
+				</div>
+			</div>
+
+			<ul class="fix theme1">
+				<li class="fr btn"><a href="javascript:window.close();" class="b1 pa10"><span class="icon-close">&nbsp;このウィンドウを閉じる</span></a></li>
+			</ul>
+
+		</div><!-- contents_inner -->
+	</div><!-- contents -->
+
+	<ul class="reader">
+		<li><a id="END" name="END">ページの最後です</a></li>
+		<li><a href="#TOP" accesskey="T">先頭へ戻ります</a></li>
+	</ul>
+
+	<script type="text/javascript" src="../../common2/js/libs/sugar-1.4.1.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-ui/js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-ui/js/jquery.ui.datepicker-ja.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/gcalendar-holidays.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery.cookie.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/underscore-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/base64.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery.easing.1.3.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/bxslider/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jscrollpane/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jscrollpane/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/flexslider/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="../../common2/js/ga.js"></script>
+	<script type="text/javascript" src="../../common2/js/common.js"></script>
+
+	<script type="text/javascript" src="../../common2/js/libs/jquery.filter_input.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		
+		// ボタンUIを設定。
+		$('input.submit').button();
+		
+		// 入力制限を設定。
+		$('.num_hyphen')
+			.filter_input({ regex : '[0-9\-]' })
+			.blur(function(){
+				var me = $(this);
+				me.val(me.val().hankaku('ansp').replace(/[^0-9\-]/g,''));
+		});
+		
+		// ラベルのIDを自動設定する。
+		var cnt = 0;
+		$('label').each(function(){
+			var me = $(this);
+			var el = me.find('>input');
+			var id = 'id'+(cnt++);
+			me.attr('for', id);
+			el.attr('id' , id).addClass('mr2');
+		});
+		
+		// スタンスのチェック。
+		var c = $('#category');
+		var s = $('#stance');
+		if (!c.val().endsWith('スノーボード') && s.val() != '') {
+			s.val('');
+		}
+		$('#frm').submit(function(){
+			if (c.val().endsWith('スノーボード') && s.val() == '') {
+				s.next('.ui-state-error').fadeIn();
+				s.focus();
+				return false;
+			}
+			return true;
+		});
+		
+	});
+	</script>
+
+</body>
+</html>

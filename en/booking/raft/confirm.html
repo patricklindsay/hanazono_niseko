@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<meta name="author" content="HANAZONO NISEKO JAPAN" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="shortcut icon" href="../../favicon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+	<link rel="start" href="../../" />
+	<link rel="stylesheet" type="text/css" media="screen,print" href="../../common2/css/default.css" />
+	<link rel="stylesheet" type="text/css" media="screen,print" href="../../common2/css/design.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/fancybox/jquery.fancybox-1.3.4.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/jquery-ui/css/custom-theme/jquery-ui-1.9.2.custom.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/jquery-ui/css/jquery-ui-fix.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/flexslider/flexslider.fix.css" />
+	<link rel="stylesheet" href="../../common2/css/fontello.css" />
+	<link rel="stylesheet" href="../../common2/css/animation.css" /><!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+	<link rel="stylesheet" href="style.css" />
+	<title>Online Booking Form (Confirm details) | Green Season | Niseko HANAZONO Resort</title>
+</head>
+<body class="fix tab">
+<div id="preloader">&nbsp;</div>
+
+	<ul class="reader">
+		<li><a id="TOP" name="TOP">Top of page</a></li>
+		<li><a href="#BODY" accesskey="C">Go to Main contents</a></li>
+	</ul>
+
+	<div id="contents">
+		<div id="contents_inner">
+
+			<div class="box theme1">
+				<h1 class="type1 c1 mb"><small class="c2">Green Season</small>Online Booking Form</h1>
+				<div class="inner">
+					<table class="full sp4 tc">
+						<tr class="ratio">
+							<th class="arr u3">Step 1<br /><span class="black l">Fill out form</span></th>
+							<th class="arr u3 b5 c0">Step 2<br /><span class="black l">Confirm details</span></th>
+							<th class="arr u3">Step 3<br /><span class="black l">Create booking</span></th>
+						</tr>
+					</table>
+				</div>
+				<h2 class="type2 c2 mb">Please check your details and click submit to proceed. <br />If you would like to make changes, please click back.</h2>
+				<div class="inner intxt">
+					<ul class="bullet notice">
+						<li>* Please note on receipt of the booking inquiry, our staff will contact you and provide a confirmation of availability. Until such time the booking remains tentative.</li>
+						<li>* Online booking MUST be made at least 3 days before activity date. Please call (0136) 21 3333 for bookings within the next two days.</li>
+					</ul>
+					<!-- <dl class="ma10 pa10 b0 c0">
+						<dd>
+							<p>携帯のアドレスを登録されるお客様は、携帯電話の迷惑メール受信拒否設定によっては、本サイトからのお知らせメールが届かない場合があります。しばらくしてもメールが届かない場合は、お客様の携帯に迷惑メール受信拒否がされている可能性がございますので以下の方法で受信拒否設定を解除して下さい。</p>
+							<p class="ma5 pa3 tc" style="border:2px solid #ea553a;">受信拒否解除設定をする<br class="sumaho" />メールアドレス：<br class="sumaho" />raft@harmonyresorts.com</p>
+							<ul class="mark02 ma5 lb">
+								<li>【docomoの場合】⇒<a href="http://www.nttdocomo.co.jp/info/spam_mail/measure/domain/" target="_blank">受信／拒否設定</a></li>
+								<li>【auの場合】⇒<a href="http://www.au.kddi.com/support/mobile/trouble/forestalling/mail/anti-spam/fillter/function-03/" target="_blank">指定受信リスト設定</a></li>
+								<li>【ソフトバンクの場合】⇒<a href="http://www.softbank.jp/mobile/support/antispam/settings/indivisual/whiteblack/" target="_blank">迷惑メールの対策の流れや設定方法について</a></li>
+							</ul>
+							<p>リンク先は各携帯電話会社様のホームページです。ページ内容やURLが変更になっている場合がございます。詳しくは各携帯電話の取扱説明書をご確認下さい。</p>
+						</dd>
+					</dl> -->
+				</div>
+				<div class="inner">
+
+					<form action="index.php" method="post" enctype="multipart/form-data">
+						<table class="theme1 type2 sp3 full thtc oneline">
+							<tr>
+								<th class="bg1">Activity</th>
+								<td class="bg3">{$Activity.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">Activity Type</th>
+								<td class="bg3">{$ActivityType.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">Tour date</th>
+								<td class="bg3">{$Tourdate.value}{if:$Waribiki.value}<p class="s mt5 notice bullet">{$Waribiki.value}</p>{/if:$Waribiki.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">Family Discount</th>
+								<td class="bg3">{$FamilyDiscount.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">Time slot</th>
+								<td class="bg3">{$Timeslot.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">Number of participants</th>
+								<td class="bg3">{$SankaOtonaVal.value} {$Adult.value}<br />Child {$Child.value}<span id="tr_kodomo_nenrei">&emsp;(Children's age: {$ChildrenAge.value})</span><br />Senior {$Senior.value}&emsp;Student {$Student.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">Prices</th>
+								<td class="bg3">
+									<p>{$Breakdown.value.nl2br}</p>
+									<p>Total: {$prices.value}(Tax included)</p>
+								</td>
+							</tr>
+							<tr>
+								<th class="bg1">Accommodation pickup</th>
+								<td class="bg3">
+									{$Pickup.value}<br />
+									Accommodation name: {$AccommodationName.value}
+								</td>
+							</tr>
+							<tr>
+								<th class="bg1">Name</th>
+								<td class="bg3">{$Name.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">Post Code</th>
+								<td class="bg3">{$PostCode.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">Address</th>
+								<td class="bg3">{$Address.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">Phone</th>
+								<td class="bg3">{$Phone.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">Phone <br /><small>(confirmation)</small></th>
+								<td class="bg3">{$Phone2.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">FAX</th>
+								<td class="bg3">{$FAX.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">Email address</th>
+								<td class="bg3">{$EmailAddress.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">Email address <br /><small>(confirmation)</small></th>
+								<td class="bg3">{$EmailAddress2.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">Notes</th>
+								<td class="bg3">{$Notes.value}</td>
+							</tr>
+						</table>
+						<div class="tc">
+							<form method="post" action="index.php" enctype="multipart/form-data" class="inline">
+								{$hiddens}
+								<input type="hidden" name="page" value="input" />
+								<input class="submit l w15em" type="submit" value="Back" />
+							</form>
+							&nbsp;
+							<form method="post" action="index.php" enctype="multipart/form-data" class="inline">
+								{$hiddens}
+								<input type="hidden" name="page" value="finish" />
+								<input class="submit l w15em" type="submit" value="Submit" />
+							</form>
+						</div>
+					</form>
+
+				</div>
+			</div>
+
+			<ul class="fix theme1">
+				<li class="fr btn"><a href="javascript:window.close();" class="b1 pa10"><span class="icon-close">&nbsp;Close This Window</span></a></li>
+			</ul>
+
+		</div><!-- contents_inner -->
+	</div><!-- contents -->
+
+	<ul class="reader">
+		<li><a id="END" name="END">Bottom of page</a></li>
+		<li><a href="#TOP" accesskey="T">Return to Top of Page</a></li>
+	</ul>
+
+	<script type="text/javascript" src="../../common2/js/libs/sugar-1.4.1.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-ui/js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/gcalendar-holidays.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery.cookie.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/underscore-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/base64.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery.easing.1.3.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/bxslider/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jscrollpane/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jscrollpane/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/flexslider/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="../../common2/js/ga.js"></script>
+	<script type="text/javascript" src="../../common2/js/common.js"></script>
+
+	<script type="text/javascript">
+	$(function(){
+		
+		// ボタンUIを設定。
+		$('input.submit').button();
+		
+	});
+	</script>
+
+</body>
+</html>

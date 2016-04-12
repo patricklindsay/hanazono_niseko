@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<meta name="author" content="HANAZONO NISEKO JAPAN" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="shortcut icon" href="../../favicon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+	<link rel="start" href="../../" />
+	<link rel="stylesheet" type="text/css" media="screen,print" href="../../common2/css/default.css" />
+	<link rel="stylesheet" type="text/css" media="screen,print" href="../../common2/css/design.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/fancybox/jquery.fancybox-1.3.4.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/jquery-ui/css/custom-theme/jquery-ui-1.9.2.custom.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/jquery-ui/css/jquery-ui-fix.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/flexslider/flexslider.fix.css" />
+	<link rel="stylesheet" href="../../common2/css/fontello.css" />
+	<link rel="stylesheet" href="../../common2/css/animation.css" /><!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+	<link rel="stylesheet" href="style.css" />
+	<title>HANAZONO FREESTYLE COMP ENTRY (Confirm details) | SNOW SEASON | HANAZONO NISEKO JAPAN</title>
+</head>
+<body class="fix tab">
+<div id="preloader">&nbsp;</div>
+
+	<ul class="reader">
+		<li><a id="TOP" name="TOP">Top of page</a></li>
+		<li><a href="#BODY" accesskey="C">Go to Main contents</a></li>
+	</ul>
+
+	<div id="contents">
+		<div id="contents_inner">
+
+			<div class="box theme1">
+				<h1 class="type1 c1 mb"><small class="c2">HANAZONO FREESTYLE COMP</small>ENTRY</h1>
+				<div class="inner">
+					<table class="full sp4 tc">
+						<tr class="ratio">
+							<th class="arr u3">Step 1<br /><span class="black l">Fill out form</span></th>
+							<th class="arr u3 b5 c0">Step 2<br /><span class="black l">Confirm details</span></th>
+							<th class="arr u3">Step 3<br /><span class="black l">Entry completion</span></th>
+						</tr>
+					</table>
+				</div>
+				<h2 class="type2 c2 mb">Please check your details and click submit to proceed.<br />If you would like to make changes, please click back.</h2>
+				<div class="inner intxt">
+					<p class="notice">Minors may not enter online as parental consent is required.</p>
+					<p class="lb"><a href="https://hanazononiseko.com/en/snow/mountain/pdf/terrain-parks/form_en.pdf" target="_blank" class="icon-r-file-pdf">Please click HERE</a>to download the PDF version of the Entry Form. Print out and enter your details, then send along with &yen;2,000 in a registered letter to the address below:</p>
+				  <dl class="b2 c0 ma10 pa10"><dd>
+						<address>
+						Competition Resistration<br />Nihon harmony resorts KK 328-1 Aza-Iwaobetsu, Kutchan-cho, Abuta-Gun, Hokkaido Japan 044-0082</address>
+					</dd></dl>
+					<ul class="type1">
+					  <li>Entry Deadlines: HANAZONO SLALOME Feb 21(sat) 2015 / HANAZONO SLOPESTYLE Mar <span class="bg3">7 (Sat)</span> 2015</li>
+					</ul>
+				</div>
+				<div class="inner">
+
+					<form action="index.php" method="post" enctype="multipart/form-data">
+						<table class="theme1 type2 sp3 full thtc oneline">
+							<tr><th class="bg1 w10em">Competition</th>
+								<td class="bg3">{$Competition.value}</td>
+							</tr>
+							<tr><th class="bg1">Name</th>
+								<td class="bg3">{$Name.value}</td>
+							</tr>
+							<tr><th class="bg1">Sex</th>
+								<td class="bg3">{$Sex.value}</td>
+							</tr>
+							<tr><th class="bg1">DOB</th>
+								<td class="bg3">{$DOB_Year.value}/{$DOB_Month.value}/{$DOB_Day.value}</td>
+							</tr>
+							<tr><th class="bg1">Age</th>
+								<td class="bg3">{$Age.value}</td>
+							</tr>
+							<tr><th class="bg1">Address</th>
+								<td class="bg3">
+									{$POCode1.value}&ndash;{$POCode2.value} (POCode)<br />
+									{$Prefecture.value} (Prefecture)<br />
+									{$CityTownName.value} (City/Town Name)<br />
+									{$StreetAddress.value} (Street Address)<br />
+								</td>
+							</tr>
+							<tr><th class="bg1">Phone</th>
+								<td class="bg3">{$Phone.value}</td>
+							</tr>
+							<tr><th class="bg1">Email Address</th>
+								<td class="bg3">{$EmailAddress.value}</td>
+							</tr>
+							<tr>
+								<th class="bg1">Confirm Email Address</th>
+								<td class="bg3">{$ConfirmEmailAddress.value}</td>
+							</tr>
+							<tr><th class="bg1">Would you like to e-mail receive updates?</th>
+								<td class="bg3">{$ReceiveUpdatesEmail.value}</td>
+							</tr>
+							<tr><th class="bg1">Emergency Contact (Phone)</th>
+								<td class="bg3">{$EmergencyContact_Phone.value}</td>
+							</tr>
+							<tr><th class="bg1">Emergency Contact Name</th>
+								<td class="bg3">{$EmergencyContactName.value}</td>
+							</tr>
+							<tr><th class="bg1">Category</th>
+								<td class="bg3">{$Category.value}</td>
+							</tr>
+							<tr><th class="bg1">Stance</th>
+								<td class="bg3">{$Stance.value}</td>
+							</tr>
+							<tr><th class="bg1">Insurance Company Name</th>
+								<td class="bg3">{$InsuranceCompanyName.value}</td>
+							</tr>
+							<tr><th class="bg1">Insurance Number</th>
+								<td class="bg3">{$InsuranceNumber.value}</td>
+							</tr>
+							<tr><th class="bg1">Sponsors, Comments Etc</th>
+								<td class="bg3">{$Sponsors_Comments_Etc.value}</td>
+							</tr>
+							<tr><th class="bg1">Please note</th>
+								<td class="bg3">
+									<ul class="bullet s">
+										<li>*Your personal information will not be used for any other purpose without your consent.</li>
+										<li>*Cancellations will not be eligible for a refund.</li>
+										<li>*A lift pass is required to gain access to all competitions.</li>
+										<li>*Helmets are compulsory for all competitors. (A limited number of rental helmets are available for 1,000yen. Photo ID or credit card required)</li>
+										<li>*Event schedule, format and judging rules may change according to weather and snow conditions.</li>
+									</ul>
+									<dl class="b2 c0 ma10 pa10"><dd>
+										<address>
+										Competition Resistration <br />Nihon harmony resorts KK 328-1 Aza-Iwaobetsu, Kutchan-cho, Abuta-Gun, Hokkaido Japan 044-0082 </address>
+									</dd></dl>
+									<p class="s">Entry Deadlines: HANAZONO SLALOME Feb 17 2015 / HANAZONO SLOPESTYLE Mar 3 2015</p>
+								</td>
+							</tr>
+							<tr><th class="bg1">Release, Waver and Conditions of Entry</th>
+								<td class="bg3">
+									<ol class="decimal s mb10">
+										<li>I acknowledge and agree to hold Nihon Harmony Resorts, its employees, agents, and guests, free and harmless from all damages of any kind whatsoever, whether for bodily injury or property damage, related to any activities, including but not limited to my participation in the above Event. I, as parent, guardian, custodian, of the minor children who will be undertaking any activities, hereby release Nihon Harmony Resorts from any and all liability and responsibility for injury to person(s) and damage to or loss of property arising out of the participation to the above event.</li>
+										<li>I hereby give Nihon Harmony Resorts and Nihon Harmony Resort&rsquo;s Official professional recording companies permission to video tape, photograph, and record my image and or likeness during my participation in the Event. I understand that such taping or recording may be used at the sole discretion of Nihon Harmony Resorts. I also understand by giving permission is in no way an endorsement of Nihon Harmony Resorts or any product(s) distributed by Nihon Harmony Resorts KK.</li>
+										<li>I have read this waiver and fully understand its terms, I understand that I am giving up substantial rights, including my right to sue. I acknowledge that I am signing the agreement freely and voluntarily, and intend by my Full Name below to be a complete and unconditional release of all liability to the greatest extent allowed by law.</li>
+									</ol>
+									
+									<span class="mr5">Full Name</span>{$FullName.value}
+								</td>
+							</tr>
+						</table>
+						<div class="tc">
+							<form method="post" action="index.php" class="inline">
+								{$hiddens}
+								<input type="hidden" name="page" value="input" />
+								<input class="submit l w15em" type="submit" value="Back" />
+							</form>
+							&nbsp;
+							<form method="post" action="index.php" class="inline">
+								{$hiddens}
+								<input type="hidden" name="page" value="finish" />
+								<input class="submit l w15em" type="submit" value="Submit" />
+							</form>
+						</div>
+					</form>
+
+				</div>
+			</div>
+
+			<ul class="fix theme1">
+				<li class="fr btn"><a href="javascript:window.close();" class="b1 pa10"><span class="icon-close">&nbsp;Close This Window</span></a></li>
+			</ul>
+
+		</div><!-- contents_inner -->
+	</div><!-- contents -->
+
+	<ul class="reader">
+		<li><a id="END" name="END">Bottom of page</a></li>
+		<li><a href="#TOP" accesskey="T">Return to Top of Page</a></li>
+	</ul>
+
+	<script type="text/javascript" src="../../common2/js/libs/sugar-1.4.1.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-ui/js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery.cookie.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/underscore-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/base64.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery.easing.1.3.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/bxslider/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jscrollpane/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jscrollpane/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/flexslider/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="../../common2/js/ga.js"></script>
+	<script type="text/javascript" src="../../common2/js/common.js"></script>
+
+	<script type="text/javascript">
+	$(function(){
+		
+		$('input.submit').button();
+		
+	});
+	</script>
+
+</body>
+</html>

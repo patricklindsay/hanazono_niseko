@@ -1,0 +1,1367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<meta name="author" content="HANAZONO NISEKO JAPAN" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="shortcut icon" href="../../favicon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+	<link rel="start" href="../../" />
+	<link rel="stylesheet" type="text/css" media="screen,print" href="../../common2/css/default.css" />
+	<link rel="stylesheet" type="text/css" media="screen,print" href="../../common2/css/design.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/fancybox/jquery.fancybox-1.3.4.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/jquery-ui/css/custom-theme/jquery-ui-1.9.2.custom.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/jquery-ui/css/jquery-ui-fix.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../common2/js/libs/flexslider/flexslider.fix.css" />
+	<link rel="stylesheet" href="../../common2/css/fontello.css" />
+	<link rel="stylesheet" href="../../common2/css/animation.css" /><!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+	<link rel="stylesheet" href="style.css" />
+	<title>予約フォーム | グリーンシーズン | ニセコHANAZONOリゾート</title>
+</head>
+<body class="fix tab">
+<div id="preloader">&nbsp;</div>
+
+	<ul class="reader">
+		<li><a id="TOP" name="TOP">ページの先頭です</a></li>
+		<li><a href="#BODY" accesskey="C">本文まで進みます</a></li>
+	</ul>
+
+	<div id="contents">
+		<div id="contents_inner">
+
+			<div class="box theme1">
+				<h1 class="type1 c1 mb"><small class="c2">グリーンシーズン</small>予約フォーム</h1>
+				<div class="inner">
+					<table class="full sp4 tc">
+						<tr class="ratio">
+							<th class="arr u3 b5 c0">ステップ１<br /><span class="black l">情報入力</span></th>
+							<th class="arr u3">ステップ２<br /><span class="black l">入力内容確認</span></th>
+							<th class="arr u3">ステップ３<br /><span class="black l">仮予約完了</span></th>
+						</tr>
+					</table>
+				</div>
+				<h2 class="type2 c2 mb">下記のフォームに記入して入力内容確認ボタンをクリックしてください。</h2>
+				<div class="inner intxt">
+					<ul class="bullet notice">
+						<li>※インターネット上でのご予約は、スタッフからのご予約確定のメールを送信するまで、あくまでも仮予約となりますことをご了承ください。</li>
+						<li>※前日・当日のご予約はお電話にてお問合せください。<br /><a href="tel:0136-21-3333">Tel:0136-21-3333</a></li>
+						<!-- <li>※インターネット上での予約は、スタッフが確認のご連絡をさし上げて時間などの内容を確認するまでは、あくまでも仮予約だということをご了承ください。</li>
+						<li>※前日・当日のご予約はお電話でお願い致します。</li> -->
+					</ul>
+				</div>
+				<div class="inner">
+
+					<form action="index.php" method="post" enctype="multipart/form-data" id="frm">
+						<table class="theme1 type2 sp3 full thtc oneline">
+							<!-- <colgroup>
+								<col width="33%">
+								<col width="67%">
+							</colgroup> -->
+							<tr class="tr_act"><th class="bg1 w10em">アクティビティ<em class="must">必須</em></th>
+								<td class="bg3">
+									<select name="アクティビティ" id="act">
+										<option value="" {$selected.default}>▼ご希望のアクティビティをお選びください</option>
+										<option value="ラフティング" {$selected.アクティビティ.ラフティング}>ラフティング</option>
+										<option value="ダッキー" {$selected.アクティビティ.ダッキー}>ダッキー</option>
+										<option value="キャニオニング" {$selected.アクティビティ.キャニオニング}>キャニオニング</option>
+										<option value="シーカヤック" {$selected.アクティビティ.シーカヤック}>シーカヤック</option>
+										<option value="ファンカヤック" {$selected.アクティビティ.ファンカヤック}>ファンカヤック</option>
+										<option value="ロードバイクツアー" {$selected.アクティビティ.ロードバイクツアー}>ロードバイクツアー</option>
+										<option value="MTBシーニックライディング" {$selected.アクティビティ.MTBシーニックライディング}>MTBシーニックライディング</option>
+									</select>
+									
+									<input type="hidden" name="割引" value="{$割引}" id="waribiki" />
+									
+									<input type="hidden" name="required[]" value="アクティビティ" />
+									{if:$required.アクティビティ}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.アクティビティ}</p></div>
+									{/if:$required.アクティビティ}
+								</td>
+							</tr>
+							<tr class="tr_cont"><th class="bg1">アクティビティ内容<em class="must">必須</em></th>
+								<td class="bg3">
+									<select name="ラフティング内容" id="cont_raft">
+										<option value="">▼ツアーの内容をお選びください</option>
+										<option value="ラフティング">ラフティング</option>
+										<option value="キッズラフティング">キッズラフティング</option>
+										<option value="ラフティング＆ランチパック">ラフティング＆ランチパック</option>
+										<option value="ラフティング＆ランチ＋温泉パック">ラフティング＆ランチ＋温泉パック</option>
+										<option value="ラフティング＆BBQ＋温泉パック">ラフティング＆BBQ＋温泉パック</option>
+										<option value="ラフティング ＆ HANAZONOスーパーパス">ラフティング ＆ HANAZONOスーパーパス</option>
+									</select>
+									
+									<select name="ロードバイクツアー内容" id="cont_bike">
+										<option value="">▼ツアーの内容をお選びください</option>
+										<option value="倶知安ジャガイモ畑コース">倶知安ジャガイモ畑コース</option>
+										<option value="アンヌプリダウンヒルコース">アンヌプリダウンヒルコース</option>
+										<option value="スキー場周遊コース（ミルク工房往復）">スキー場周遊コース（ミルク工房往復）</option>
+										<option value="羊蹄山一周コース">羊蹄山一周コース</option>
+									</select>
+									
+									<input type="hidden" name="アクティビティ内容" value="{$アクティビティ内容}" id="cont" />
+									
+									<input type="hidden" name="required[]" value="アクティビティ内容" />
+									{if:$required.アクティビティ内容}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.アクティビティ内容}</p></div>
+									{/if:$required.アクティビティ内容}
+								</td>
+							</tr>
+							<tr class="tr_yoteibi"><th class="bg1">予定日<em class="must">必須</em></th>
+								<td class="bg3">
+									<input type="text" name="予定日" value="{$予定日}" class="text w11em date" id="yoteibi" readonly="readonly" />
+									
+									<input type="hidden" name="required[]" value="予定日" />
+									{if:$required.予定日}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.予定日}</p></div>
+									{/if:$required.予定日}
+									
+									<ul class="mt5 s notice">
+										<li>※取り扱い期間外と、既に予約で埋まってしまっている日は選択不可として表示されます。</li>
+										<li>※5月1日（日）～5日（木）/ 8月6日（土）～21日（日）は、各種割引の取り扱い期間外となります。</li>
+									</ul>
+								</td>
+							</tr>
+							<tr class="tr_oyakowari"><th class="bg1">「親子割」<em class="must">必須</em></th>
+								<td class="bg3">
+									<select name="「親子割」" id="oyakowari_menu">
+										<option value="「親子割」を適用しない" {$selected.「親子割」.「親子割」を適用しない}>「親子割」を適用しない</option>
+										<option value="「親子割」を適用する" {$selected.「親子割」.「親子割」を適用する}>「親子割」を適用する</option>
+									</select>
+									
+									<!-- <input type="hidden" name="親子割" value="{$親子割}" id="oyakowari" /> -->
+									
+									<p class="bold mt10 c3">親子割は大人2人ごとに小人1人が無料になる期間限定割引です。<br />他の割引は併用できません。</p>
+									<ul class="mt5 s notice">
+										<li>※大人数のご利用の場合、大人、小人、シニアの組み合わせによっては他の割引をご利用の方がお得になる場合がございます。お客様のご利用内容に合わせてご選択ください。</li>
+									</ul>
+								</td>
+							</tr>
+							<tr class="tr_jikantai"><th class="bg1">時間帯<em class="must">必須</em></th>
+								<td class="bg3">
+									<select name="時間帯（午前）" id="jikantai_am">
+										<option value="午前">午前</option>
+									</select>
+									
+									<select name="時間帯（午前午後）" id="jikantai_ampm">
+										<option value="">▼ご希望の時間帯をお選びください</option>
+										<option value="午前">午前</option>
+										<option value="午後">午後</option>
+									</select>
+									
+									<select name="時間帯（ラフティング ＆ HANAZONOスーパーパス）" id="jikantai_hanapack">
+										<option value="">▼ご希望の時間帯をお選びください</option>
+										<option value="午前 ラフティング・午後 HANAZONOスーパーパス">午前 ラフティング・午後 HANAZONOスーパーパス</option>
+										<option value="午前 HANAZONOスーパーパス・午後 ラフティング">午前 HANAZONOスーパーパス・午後 ラフティング</option>
+									</select>
+									
+									<select name="時間帯（ファンカヤック）" id="jikantai_funkayak">
+										<option value="">▼ご希望の時間帯をお選びください</option>
+										<option value="9:30">&#9312;9:30</option>
+										<option value="11:00">&#9313;11:00</option>
+										<option value="14:00">&#9314;14:00</option>
+										<option value="15:30">&#9315;15:30</option>
+									</select>
+<!-- 2016年度はファンカヤックの期間による時間帯の変更無し（重複となりますがまた使うかも知れませんので残しました）-->
+									<select name="時間帯（ファンカヤック8月）" id="jikantai_funkayak_aug">
+										<option value="">▼ご希望の時間帯をお選びください</option>
+										<option value="9:30">&#9312;9:30</option>
+										<option value="11:00">&#9313;11:00</option>
+										<option value="14:00">&#9314;14:00</option>
+										<option value="15:30">&#9315;15:30</option>
+									</select>
+									
+									<input type="hidden" name="時間帯" value="{$時間帯}" id="jikantai" />
+									
+									<input type="hidden" name="required[]" value="時間帯" />
+									{if:$required.時間帯}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.時間帯}</p></div>
+									{/if:$required.時間帯}
+								</td>
+							</tr>
+							<tr class="tr_sougei"><th class="bg1">送迎<em class="must">必須</em></th>
+								<td class="bg3">
+									<select name="送迎（選択メニュー）" id="sougei_menu">
+										<option value="">▼送迎のご希望をお選びください</option>
+										<option value="送迎不要">送迎不要</option>
+										<option value="送迎必要">送迎必要</option>
+									</select>
+									
+									<input type="hidden" name="送迎" value="{$送迎}" id="sougei" />
+									
+									<input type="hidden" name="required[]" value="送迎" />
+									{if:$required.送迎}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.送迎}</p></div>
+									{/if:$required.送迎}
+									
+									<ul class="mt5 s notice">
+										<li>※ニセコエリア宿泊施設、最寄駅からの送迎。</li>
+									</ul>
+									
+									<div class="tr_syukuhaku">
+										<span>宿泊先名</span>&ensp;<input type="text" name="宿泊先名" value="{$宿泊先名}" class="text w70p" />
+									</div>
+								</td>
+							</tr>
+							<tr><th class="bg1">参加人数<em class="must">必須</em></th>
+								<td class="bg3">
+									<span id="tr_sanka_otona">
+									<span id="sanka_otona_txt">大人</span>
+									<input type="hidden" name="大人人数の表記" value="{$大人人数の表記}" id="sanka_otona_val" />
+									<select name="参加人数（大人）" id="sanka_otona" class="mb5">
+										<option value="" {$selected.default}>─</option>
+										<option value="なし" {$selected.参加人数（大人）.なし}>なし</option>
+										<option value="1人" {$selected.参加人数（大人）.1人}>1人</option>
+										<option value="2人" {$selected.参加人数（大人）.2人}>2人</option>
+										<option value="3人" {$selected.参加人数（大人）.3人}>3人</option>
+										<option value="4人" {$selected.参加人数（大人）.4人}>4人</option>
+										<option class="noloadbike" value="5人" {$selected.参加人数（大人）.5人}>5人</option>
+										<option class="noloadbike" value="6人" {$selected.参加人数（大人）.6人}>6人</option>
+										<option class="noloadbike" value="7人" {$selected.参加人数（大人）.7人}>7人</option>
+										<option class="noloadbike" value="8人" {$selected.参加人数（大人）.8人}>8人</option>
+										<option class="noloadbike" value="9人" {$selected.参加人数（大人）.9人}>9人</option>
+										<option class="noloadbike" value="10人" {$selected.参加人数（大人）.10人}>10人</option>
+										<option class="noloadbike" value="11人" {$selected.参加人数（大人）.11人}>11人</option>
+										<option class="noloadbike" value="12人" {$selected.参加人数（大人）.12人}>12人</option>
+										<option class="noloadbike" value="13人" {$selected.参加人数（大人）.13人}>13人</option>
+										<option class="noloadbike" value="14人" {$selected.参加人数（大人）.14人}>14人</option>
+										<option class="noloadbike" value="15人" {$selected.参加人数（大人）.15人}>15人</option>
+										<option class="noloadbike" value="16人" {$selected.参加人数（大人）.16人}>16人</option>
+										<option class="noloadbike" value="17人" {$selected.参加人数（大人）.17人}>17人</option>
+										<option class="noloadbike" value="18人" {$selected.参加人数（大人）.18人}>18人</option>
+										<option class="noloadbike" value="19人" {$selected.参加人数（大人）.19人}>19人</option>
+										<option class="noloadbike" value="20人" {$selected.参加人数（大人）.20人}>20人</option>
+										<option class="noloadbike" value="21人" {$selected.参加人数（大人）.21人}>21人</option>
+										<option class="noloadbike" value="22人" {$selected.参加人数（大人）.22人}>22人</option>
+										<option class="noloadbike" value="23人" {$selected.参加人数（大人）.23人}>23人</option>
+										<option class="noloadbike" value="24人" {$selected.参加人数（大人）.24人}>24人</option>
+										<option class="noloadbike" value="25人" {$selected.参加人数（大人）.25人}>25人</option>
+										<option class="noloadbike" value="26人" {$selected.参加人数（大人）.26人}>26人</option>
+										<option class="noloadbike" value="27人" {$selected.参加人数（大人）.27人}>27人</option>
+										<option class="noloadbike" value="28人" {$selected.参加人数（大人）.28人}>28人</option>
+										<option class="noloadbike" value="29人" {$selected.参加人数（大人）.29人}>29人</option>
+										<option class="noloadbike" value="30人" {$selected.参加人数（大人）.30人}>30人</option>
+									</select>
+									</span>
+									　
+									<span id="tr_sanka_kodomo">
+									<span>小人(<em class="caution">※下記参照</em>)</span>
+									<select name="参加人数（小人）" id="sanka_kodomo" class="mb5">
+										<option value="" {$selected.default}>─</option>
+										<option value="なし" {$selected.参加人数（小人）.なし}>なし</option>
+										<option value="1人" {$selected.参加人数（小人）.1人}>1人</option>
+										<option value="2人" {$selected.参加人数（小人）.2人}>2人</option>
+										<option value="3人" {$selected.参加人数（小人）.3人}>3人</option>
+										<option value="4人" {$selected.参加人数（小人）.4人}>4人</option>
+										<option value="5人" {$selected.参加人数（小人）.5人}>5人</option>
+										<option value="6人" {$selected.参加人数（小人）.6人}>6人</option>
+										<option value="7人" {$selected.参加人数（小人）.7人}>7人</option>
+										<option value="8人" {$selected.参加人数（小人）.8人}>8人</option>
+										<option value="9人" {$selected.参加人数（小人）.9人}>9人</option>
+										<option value="10人" {$selected.参加人数（小人）.10人}>10人</option>
+										<option value="11人" {$selected.参加人数（小人）.11人}>11人</option>
+										<option value="12人" {$selected.参加人数（小人）.12人}>12人</option>
+										<option value="13人" {$selected.参加人数（小人）.13人}>13人</option>
+										<option value="14人" {$selected.参加人数（小人）.14人}>14人</option>
+										<option value="15人" {$selected.参加人数（小人）.15人}>15人</option>
+										<option value="16人" {$selected.参加人数（小人）.16人}>16人</option>
+										<option value="17人" {$selected.参加人数（小人）.17人}>17人</option>
+										<option value="18人" {$selected.参加人数（小人）.18人}>18人</option>
+										<option value="19人" {$selected.参加人数（小人）.19人}>19人</option>
+										<option value="20人" {$selected.参加人数（小人）.20人}>20人</option>
+										<option value="21人" {$selected.参加人数（小人）.21人}>21人</option>
+										<option value="22人" {$selected.参加人数（小人）.22人}>22人</option>
+										<option value="23人" {$selected.参加人数（小人）.23人}>23人</option>
+										<option value="24人" {$selected.参加人数（小人）.24人}>24人</option>
+										<option value="25人" {$selected.参加人数（小人）.25人}>25人</option>
+										<option value="26人" {$selected.参加人数（小人）.26人}>26人</option>
+										<option value="27人" {$selected.参加人数（小人）.27人}>27人</option>
+										<option value="28人" {$selected.参加人数（小人）.28人}>28人</option>
+										<option value="29人" {$selected.参加人数（小人）.29人}>29人</option>
+										<option value="30人" {$selected.参加人数（小人）.30人}>30人</option>
+									</select>
+									</span>
+									<br />
+									<span id="tr_sanka_senior">
+									<span>シニア(60才～)</span>
+									<select name="参加人数（シニア）" id="sanka_senior" class="mb5">
+										<option value="" {$selected.default}>─</option>
+										<option value="なし" {$selected.参加人数（シニア）.なし}>なし</option>
+										<option value="1人" {$selected.参加人数（シニア）.1人}>1人</option>
+										<option value="2人" {$selected.参加人数（シニア）.2人}>2人</option>
+										<option value="3人" {$selected.参加人数（シニア）.3人}>3人</option>
+										<option value="4人" {$selected.参加人数（シニア）.4人}>4人</option>
+										<option value="5人" {$selected.参加人数（シニア）.5人}>5人</option>
+										<option value="6人" {$selected.参加人数（シニア）.6人}>6人</option>
+										<option value="7人" {$selected.参加人数（シニア）.7人}>7人</option>
+										<option value="8人" {$selected.参加人数（シニア）.8人}>8人</option>
+										<option value="9人" {$selected.参加人数（シニア）.9人}>9人</option>
+										<option value="10人" {$selected.参加人数（シニア）.10人}>10人</option>
+										<option value="11人" {$selected.参加人数（シニア）.11人}>11人</option>
+										<option value="12人" {$selected.参加人数（シニア）.12人}>12人</option>
+										<option value="13人" {$selected.参加人数（シニア）.13人}>13人</option>
+										<option value="14人" {$selected.参加人数（シニア）.14人}>14人</option>
+										<option value="15人" {$selected.参加人数（シニア）.15人}>15人</option>
+										<option value="16人" {$selected.参加人数（シニア）.16人}>16人</option>
+										<option value="17人" {$selected.参加人数（シニア）.17人}>17人</option>
+										<option value="18人" {$selected.参加人数（シニア）.18人}>18人</option>
+										<option value="19人" {$selected.参加人数（シニア）.19人}>19人</option>
+										<option value="20人" {$selected.参加人数（シニア）.20人}>20人</option>
+										<option value="21人" {$selected.参加人数（シニア）.21人}>21人</option>
+										<option value="22人" {$selected.参加人数（シニア）.22人}>22人</option>
+										<option value="23人" {$selected.参加人数（シニア）.23人}>23人</option>
+										<option value="24人" {$selected.参加人数（シニア）.24人}>24人</option>
+										<option value="25人" {$selected.参加人数（シニア）.25人}>25人</option>
+										<option value="26人" {$selected.参加人数（シニア）.26人}>26人</option>
+										<option value="27人" {$selected.参加人数（シニア）.27人}>27人</option>
+										<option value="28人" {$selected.参加人数（シニア）.28人}>28人</option>
+										<option value="29人" {$selected.参加人数（シニア）.29人}>29人</option>
+										<option value="30人" {$selected.参加人数（シニア）.30人}>30人</option>
+									</select>
+									</span>
+									　
+									<span id="tr_sanka_gakusei">
+									<span>学割</span>
+									<select name="参加人数（学割）" id="sanka_gakusei" class="mb5">
+										<option value="" {$selected.default}>─</option>
+										<option value="なし" {$selected.参加人数（学割）.なし}>なし</option>
+										<option value="1人" {$selected.参加人数（学割）.1人}>1人</option>
+										<option value="2人" {$selected.参加人数（学割）.2人}>2人</option>
+										<option value="3人" {$selected.参加人数（学割）.3人}>3人</option>
+										<option value="4人" {$selected.参加人数（学割）.4人}>4人</option>
+										<option value="5人" {$selected.参加人数（学割）.5人}>5人</option>
+										<option value="6人" {$selected.参加人数（学割）.6人}>6人</option>
+										<option value="7人" {$selected.参加人数（学割）.7人}>7人</option>
+										<option value="8人" {$selected.参加人数（学割）.8人}>8人</option>
+										<option value="9人" {$selected.参加人数（学割）.9人}>9人</option>
+										<option value="10人" {$selected.参加人数（学割）.10人}>10人</option>
+										<option value="11人" {$selected.参加人数（学割）.11人}>11人</option>
+										<option value="12人" {$selected.参加人数（学割）.12人}>12人</option>
+										<option value="13人" {$selected.参加人数（学割）.13人}>13人</option>
+										<option value="14人" {$selected.参加人数（学割）.14人}>14人</option>
+										<option value="15人" {$selected.参加人数（学割）.15人}>15人</option>
+										<option value="16人" {$selected.参加人数（学割）.16人}>16人</option>
+										<option value="17人" {$selected.参加人数（学割）.17人}>17人</option>
+										<option value="18人" {$selected.参加人数（学割）.18人}>18人</option>
+										<option value="19人" {$selected.参加人数（学割）.19人}>19人</option>
+										<option value="20人" {$selected.参加人数（学割）.20人}>20人</option>
+										<option value="21人" {$selected.参加人数（学割）.21人}>21人</option>
+										<option value="22人" {$selected.参加人数（学割）.22人}>22人</option>
+										<option value="23人" {$selected.参加人数（学割）.23人}>23人</option>
+										<option value="24人" {$selected.参加人数（学割）.24人}>24人</option>
+										<option value="25人" {$selected.参加人数（学割）.25人}>25人</option>
+										<option value="26人" {$selected.参加人数（学割）.26人}>26人</option>
+										<option value="27人" {$selected.参加人数（学割）.27人}>27人</option>
+										<option value="28人" {$selected.参加人数（学割）.28人}>28人</option>
+										<option value="29人" {$selected.参加人数（学割）.29人}>29人</option>
+										<option value="30人" {$selected.参加人数（学割）.30人}>30人</option>
+									</select>
+									</span>
+									
+									<input type="hidden" name="required[]" value="参加人数（大人）" />
+									{if:$required.参加人数（大人）}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.参加人数（大人）}</p></div>
+									{/if:$required.参加人数（大人）}
+									
+									<input type="hidden" name="required[]" value="参加人数（小人）" />
+									{if:$required.参加人数（小人）}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.参加人数（小人）}</p></div>
+									{/if:$required.参加人数（小人）}
+									
+									<input type="hidden" name="required[]" value="参加人数（シニア）" />
+									{if:$required.参加人数（シニア）}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.参加人数（シニア）}</p></div>
+									{/if:$required.参加人数（シニア）}
+									
+									<input type="hidden" name="required[]" value="参加人数（学割）" />
+									{if:$required.参加人数（学割）}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.参加人数（学割）}</p></div>
+									{/if:$required.参加人数（学割）}
+									
+									<div id="tr_kodomo_nenrei" class="mt15">
+										<ul class="mb5">
+											<li>参加する小人全員分の年齢をご記入ください。(例) 3才、4才、7才。</li>
+										</ul>
+										<em class="must mr7">必須</em><input type="text" name="小人全員の年齢" value="{$小人全員の年齢}" class="text w80p" id="kodomo_nenrei" />
+									</div>
+									
+									<input type="hidden" name="required[]" value="小人全員の年齢" />
+									{if:$required.小人全員の年齢}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.小人全員の年齢}</p></div>
+									{/if:$required.小人全員の年齢}
+									
+									<ul class="mt5 s notice">
+										<li>※参加者がいない項目も必ず「なし」を選択してください。</li>
+									</ul>
+									<div id="kodomo_notice">
+										<ul class="bullet caution mt10">
+											<li id="gakusei_caution">※学割は、中学・高校・大学・専門学校の在学生で、学生証（当日の提示が必要）を持っていることが条件になります。</li>
+											<li>※アクティビティ毎の小人の年齢適用は以下をご参照ください</li>
+										</ul>
+										<ul class="mark02 ma3 caution">
+											<li>ラフティング(4才～小学生)</li>
+											<li>キッズラフティング(3才~小学生)</li>
+											<li>シーカヤック(5才～小学生)</li>
+											<li>ファンカヤック(2才~小学生)</li>
+											<li>MTBシーニックライディング(身長130cm以上の6才~小学生)</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr><th class="bg1">料金</th>
+								<td class="bg3">
+									<ul class="mb5 s notice">
+										<li>※選択したアクティビティ内容、参加人数によって、自動的に計算されます。</li>
+									</ul>
+									<div id="uchiwake" class="mb10 pb5" style="border-bottom:1px solid #999999;">
+										<span>[内訳]</span>
+										<textarea id="uchiwake_val" rows="4" cols="20" name="内訳" class="text w95p" readonly="readonly" style="background:#eeeeee;">{$内訳}</textarea>
+									</div>
+									<span class="mr5">合計</span><input type="text" name="料金" value="{$料金}" class="text tr w7em" id="price" readonly="readonly" style="background:#eeeeee;" /><span class="ml3">（税込）</span>
+								</td>
+							</tr>
+							<tr><th class="bg1">お名前<em class="must">必須</em></th>
+								<td class="bg3">
+									<p class="mb3">例）花園 太郎</p>
+									<input type="text" name="お名前" value="{$お名前}" class="text w55p" />
+									
+									<input type="hidden" name="required[]" value="お名前" />
+									{if:$required.お名前}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.お名前}</p></div>
+									{/if:$required.お名前}
+								</td>
+							</tr>
+							<tr><th class="bg1">ふりがな<em class="must">必須</em></th>
+								<td class="bg3">
+									<p class="mb3">例）はなぞの たろう</p>
+									<input type="text" name="ふりがな" value="{$ふりがな}" class="text w55p" />
+									
+									<input type="hidden" name="required[]" value="ふりがな" />
+									{if:$required.ふりがな}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.ふりがな}</p></div>
+									{/if:$required.ふりがな}
+									
+									<input type="hidden" name="hiragana[]" value="ふりがな" />
+									{if:$hiragana.ふりがな}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$hiragana.ふりがな}</p></div>
+									{/if:$hiragana.ふりがな}
+								</td>
+							</tr>
+							<tr><th class="bg1">郵便番号</th>
+								<td class="bg3">
+									<p class="mb3">例）044-0081</p>
+									<span>〒</span>&ensp;<input type="text" name="郵便番号" value="{$郵便番号}" class="text w20p num_hyphen" id="zip" />
+									
+									<input type="hidden" name="num_hyphen[]" value="郵便番号" />
+									{if:$num_hyphen.郵便番号}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$num_hyphen.郵便番号}</p></div>
+									{/if:$num_hyphen.郵便番号}
+									
+									<ul class="mt5 s notice">
+										<li>※郵便番号を入力すると、ご住所欄に自動入力されます。</li>
+									</ul>
+								</td>
+							</tr>
+							<tr><th class="bg1">ご住所</th>
+								<td class="bg3">
+									<p class="mb3">例）虻田郡倶知安町字岩尾別328-1</p>
+									<input type="text" name="ご住所" value="{$ご住所}" class="text w95p" />
+									
+									<ul class="mt5 s notice">
+										<li>※建物名までご記入ください。</li>
+									</ul>
+								</td>
+							</tr>
+							<tr><th class="bg1">電話番号<em class="must">必須</em></th>
+								<td class="bg3">
+									<p class="mb3">例）090-1234-5678</p>
+									<input type="text" name="電話番号" value="{$電話番号}" class="text w55p" />
+									
+									<input type="hidden" name="num_hyphen[]" value="電話番号" />
+									{if:$num_hyphen.電話番号}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$num_hyphen.電話番号}</p></div>
+									{/if:$num_hyphen.電話番号}
+									
+									<input type="hidden" name="required[]" value="電話番号" />
+									{if:$required.電話番号}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.電話番号}</p></div>
+									{/if:$required.電話番号}
+									
+									<ul class="mt5 s notice">
+										<li>※当日連絡可能な携帯電話を入力してください。</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th class="bg1">電話番号（確認用）<em class="must">必須</em></th>
+								<td class="bg3">
+									<p class="mb3">例）090-1234-5678</p>
+									<input type="text" name="電話番号（確認用）" value="{$電話番号（確認用）}" class="text w55p" />
+									
+									<input type="hidden" name="required[]" value="電話番号（確認用）" />
+									{if:$required.電話番号（確認用）}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.電話番号（確認用）}</p></div>
+									{/if:$required.電話番号（確認用）}
+									
+									<input type="hidden" name="num_hyphen[]" value="電話番号（確認用）" />
+									{if:$num_hyphen.電話番号（確認用）}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$num_hyphen.電話番号（確認用）}</p></div>
+									{/if:$num_hyphen.電話番号（確認用）}
+									
+									<input type="hidden" name="match[]" value="電話番号 電話番号（確認用）" />
+									{if:$match.電話番号}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$match.電話番号}</p></div>
+									{/if:$match.電話番号}
+								</td>
+							</tr>
+							<tr><th class="bg1">電話による前日のご予約内容の確認<em class="must">必須</em></th>
+								<td class="bg3">
+									<ul class="mb5 s notice">
+										<li>※4:00PM～6:00PMの間に0136-21-3333よりお電話いたします</li>
+									</ul>
+									
+									<select name="電話による前日のご予約内容の確認">
+										<option value="">▼ご希望をお選びください</option>
+										<option value="希望する" {$selected.電話による前日のご予約内容の確認.希望する}>希望する</option>
+										<option value="希望しない" {$selected.電話による前日のご予約内容の確認.希望しない}>希望しない</option>
+									</select>
+									
+									<input type="hidden" name="required[]" value="電話による前日のご予約内容の確認" />
+									{if:$required.電話による前日のご予約内容の確認}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.電話による前日のご予約内容の確認}</p></div>
+									{/if:$required.電話による前日のご予約内容の確認}
+								</td>
+							</tr>
+							<tr><th class="bg1">FAX番号</th>
+								<td class="bg3">
+									<p class="mb3">例）0136-21-6657</p>
+									<input type="text" name="FAX番号" value="{$FAX番号}" class="text w55p" />
+									
+									<input type="hidden" name="num_hyphen[]" value="FAX番号" />
+									{if:$num_hyphen.FAX番号}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$num_hyphen.FAX番号}</p></div>
+									{/if:$num_hyphen.FAX番号}
+								</td>
+							</tr>
+							<tr><th class="bg1">メールアドレス<em class="must">必須</em></th>
+								<td class="bg3">
+									<p class="mb3">例）sample@sample.com</p>
+									<input type="text" name="メールアドレス" value="{$メールアドレス}" class="text w95p" />
+									
+									<input type="hidden" name="required[]" value="メールアドレス" />
+									{if:$required.メールアドレス}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.メールアドレス}</p></div>
+									{/if:$required.メールアドレス}
+									
+									<input type="hidden" name="email[]" value="メールアドレス" />
+									{if:$email.メールアドレス}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$email.メールアドレス}</p></div>
+									{/if:$email.メールアドレス}
+								</td>
+							</tr>
+							<tr>
+								<th class="bg1">メールアドレス（確認用）<em class="must">必須</em></th>
+								<td class="bg3">
+									<p class="mb3">例）sample@sample.com</p>
+									<input type="text" name="メールアドレス（確認用）" value="{$メールアドレス（確認用）}" class="text w95p" />
+									
+									<input type="hidden" name="required[]" value="メールアドレス（確認用）" />
+									{if:$required.メールアドレス（確認用）}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$required.メールアドレス（確認用）}</p></div>
+									{/if:$required.メールアドレス（確認用）}
+									
+									<input type="hidden" name="email[]" value="メールアドレス（確認用）" />
+									{if:$email.メールアドレス（確認用）}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$email.メールアドレス（確認用）}</p></div>
+									{/if:$email.メールアドレス（確認用）}
+									
+									<input type="hidden" name="match[]" value="メールアドレス メールアドレス（確認用）" />
+									{if:$match.メールアドレス}
+									<div class="ui-state-error ui-corner-all"><p><span class="ui-icon ui-icon-alert"></span>{$match.メールアドレス}</p></div>
+									{/if:$match.メールアドレス}
+								</td>
+							</tr>
+							<tr><th class="bg1">備考・ご質問等&nbsp;</th>
+								<td class="bg3">
+									<textarea rows="6" cols="30" name="備考・ご質問等" class="text w95p">{$備考・ご質問等}</textarea>
+								</td>
+							</tr>
+						</table>
+						<div class="tc">
+							<input class="submit l" type="submit" value="入力内容確認" />
+						</div>
+					</form>
+
+				</div>
+			</div>
+
+			<ul class="fix theme1">
+				<li class="fr btn"><a href="javascript:window.close();" class="b1 pa10"><span class="icon-close">&nbsp;このウィンドウを閉じる</span></a></li>
+			</ul>
+
+		</div><!-- contents_inner -->
+	</div><!-- contents -->
+
+	<ul class="reader">
+		<li><a id="END" name="END">ページの最後です</a></li>
+		<li><a href="#TOP" accesskey="T">先頭へ戻ります</a></li>
+	</ul>
+
+	<script type="text/javascript" src="../../common2/js/libs/sugar-1.4.1.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-ui/js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery-ui/js/jquery.ui.datepicker-ja.min.js"></script>
+	<!-- <script type="text/javascript" src="../../common2/js/libs/gcalendar-holidays.min.js"></script> -->
+	<script type="text/javascript" src="../../common2/js/libs/jquery.cookie.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/underscore-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/base64.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery.easing.1.3.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/bxslider/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jscrollpane/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jscrollpane/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/flexslider/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="../../common2/js/ga.js"></script>
+	<script type="text/javascript" src="../../common2/js/common.js"></script>
+
+	<script type="text/javascript" src="../../common2/js/libs/ajaxzip2/ajaxzip2.min.js"></script>
+	<script type="text/javascript" src="../../common2/js/libs/jquery.filter_input.min.js"></script>
+
+	<script type="text/javascript">
+	
+	AjaxZip2.JSONDATA = '../../common2/js/libs/ajaxzip2/data';
+	
+	/*
+	GCalHolidays.datepickerStyles = {
+		sunday   : "background-image: none; background-color: #e8d3ca",	// 日曜日
+		saturday : "background-image: none; background-color: #b2cbe4",	// 土曜日
+		holiday  : "background-image: none; background-color: #e9dacb" 	// 祝日
+	};
+	*/
+	
+	$(function(){
+		
+		// ボタンUIを設定。
+		$('input.submit').button();
+		
+		// 入力制限を設定。
+		$('.num_hyphen')
+			.filter_input({ regex : '[0-9\-]' })
+			.blur(function(){
+				var me = $(this);
+				me.val(me.val().hankaku('ansp').replace(/[^0-9\-]/g,''));
+		});
+		
+		// ラベルのIDを自動設定する。
+		var cnt = 0;
+		$('label').each(function(){
+			var me = $(this);
+			var el = me.find('>input');
+			var id = 'id'+(cnt++);
+			me.attr('for', id);
+			el.attr('id' , id).addClass('mr2');
+		});
+		
+		// カレンダーアイコンのレティナ対応。
+		var ico = 'ico_calendar.png';
+		try {
+			if (window.devicePixelRatio > 1) {
+				ico = 'ico_calendar@2x.png';
+			}
+		} catch(e){}
+		
+		// カレンダーを設定する。
+		var today = Date.create(new Date(), 'ja');
+		$('.date').datepicker({
+			dateFormat    : 'yy年mm月dd日(D)',
+			minDate       : 2,							// 明後日から選択可。
+			maxDate       : Date.create('2016/10/30'),	// 10月30日まで選択可。
+			//changeYear  : true,						// 年選択メニューを表示。
+			//changeMonth : true,						// 月選択メニューを表示。
+			showOn        : 'both',						// テキストボックスとカレンダーボタンの両方でカレンダーを表示する。
+			buttonImage   : '../../common2/img/' + ico,	// カレンダーアイコンのイメージパス。
+			buttonText    : 'カレンダー表示',				// カレンダーアイコンのテキスト。
+			beforeShowDay : function(date){
+				
+				// ツアー期間で選択できない日付けを設定
+				if (checkPeriod(date) === 0) {
+					return [false, 'ui-state-disabled'];
+				} else {
+					return [true, ''];
+				}
+			}
+		});
+		
+		// 郵便番号から住所を自動入力する。
+		$('#zip').bind('keyup change', function(){
+			var me = $(this);
+			me.val(me.val().hankaku('ansp'));
+			AjaxZip2.zip2addr(this,'ご住所','ご住所',null,'ご住所');
+		});
+		
+		// ツアー期間のチェック
+		var checkPeriod = function(d){
+			
+			var act = $('#act').val();
+			var cont = $('#cont').val();
+			var ymd = d.format('{yyyy}/{MM}/{dd}');
+			
+			// 除外日のリスト
+			var jogaibi = [];
+			
+			if (cont == 'ラフティング') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 2016年4月29日～2016年10月30日のみ選択可。
+				} else if (d.isBetween('2016/4/28', '2016/10/31')) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (cont == 'キッズラフティング') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 2016年7月16日～2016年9月4日のみ選択可。
+				} else if (d.isBetween('2016/7/15', '2016/9/5')) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (cont == 'ラフティング＆ランチパック') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 2016年4月29日～2016年10月30日のみ選択可。
+				} else if (d.isBetween('2016/4/28', '2016/10/31')) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (cont == 'ラフティング＆ランチ＋温泉パック') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 個別の除外日対応。
+				} else if (['2016/05/14'].indexOf(ymd) >= 0) {
+					return 0;
+				// 2016年度は除外日無し
+//				} else if (d.isBetween('2015/4/24', '2015/5/16')) {
+//					return 0;
+				// 2016年5月14日～2016年10月30日のみ選択可。
+				} else if (d.isBetween('2016/5/13', '2016/10/31')) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (cont == 'ラフティング＆BBQ＋温泉パック') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 5/7~6/12, 7/16, 10/10, 10/11　は除外。→ 2016年度は除外日無し
+//				} else if (d.isBetween('2015/5/6', '2015/6/13') || d.isBetween('2015/10/09', '2015/10/12')) {
+//					return 0;
+				// 7月16日、10月10日は除外。→ 2016年度は除外日無し
+//				} else if (d.is('2015/7/16') || d.is('2015/10/10')) {
+//					return 0;
+				// 2016年4月29日～2016年10月30日のみ選択可。
+				} else if (d.isBetween('2016/4/28', '2016/10/31')) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (cont == 'ラフティング ＆ HANAZONOスーパーパス') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 2015年6月27日～2015年10月12日(10月は土日祝)のみ選択可。→2016年度は特定催行日は無
+//				} else if (d.isBetween('2015/6/26', '2015/10/1')) {
+//					return 1;
+//				} else if (d.getMonth() == 9 && d.getDate() <= 12 && (d.isSaturday() || d.isSunday() || d.is('2015/10/12'))) {
+
+				// 2016年7月16日～2015年9月25日
+				} else if (d.isBetween('2016/7/15', '2016/9/26')) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (act == 'ダッキー') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 2016年6月4日～2016年10月30日のみ選択可。
+				} else if (d.isBetween('2016/6/3', '2016/10/31')) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (act == 'キャニオニング') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 2016年7月16日～2016年9月4日のみ選択可。
+				} else if (d.isBetween('2016/7/15', '2016/9/5')) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (act == 'シーカヤック') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 2016年7月16日～2016年9月4日のみ選択可。
+				} else if (d.isBetween('2016/7/15', '2016/9/5')) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (act == 'ファンカヤック') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 2015年6月27日～2015年10月12日の土日祝のみ選択可。→2016年度は特定催行日は無
+//				} else if (d.isBetween('2015/6/26', '2015/10/13')) {
+//					return 1;
+//				} else if (d.getMonth() == 9 && d.getDate() <= 12 && (d.isSaturday() || d.isSunday() || d.is('2015/10/12'))) {
+
+				// ※8/1（月）～8/31（水）は催行不可日とする。
+				} else if (d.isBetween('2016/7/31', '2016/9/1')) {
+					return 0;					
+				// 2016年7月16日～2016年9月25日のみ選択可。
+				} else if (d.isBetween('2016/7/15', '2016/9/26')) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (act == 'MTBシーニックライディング') {
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 2015年6月27日～2015年10月12日の土日祝のみ選択可。→2016年度は特定催行日は無
+//				} else if (d.isBetween('2015/6/26', '2015/10/13')) {
+//					return 1;
+//				} else if (d.getMonth() == 9 && d.getDate() <= 12 && (d.isSaturday() || d.isSunday() || d.is('2015/10/12'))) {
+				// 2016年6月4日～2016年10月30日のみ選択可。
+				} else if (d.isBetween('2016/6/3', '2016/10/31')) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			if (act == 'ロードバイクツアー') {
+				// 2015年6月1日～2015年10月12日(10月は土日祝)のみ選択可。→2016年度は特定催行日は無
+//				if (d.isBetween('2015/5/31', '2015/10/13')) {
+//					return 1;
+//				} else if (d.getMonth() == 9 && d.getDate() <= 12 && (d.isSaturday() || d.isSunday() || d.is('2015/10/12'))) {
+				
+				// 除外日を追加。
+				if (jogaibi.indexOf(ymd) >= 0) {
+					return 0;
+				// 2016年6月1日～2016年9月25日のみ選択可。
+				} else if (d.isBetween('2016/5/31', '2016/9/26')) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			
+			return -1;
+		}; // checkPeriod
+		
+		// アクティビティ内容選択メニューの表示
+		var cont_menu = function(){
+			
+			var act = $('#act').val();
+			var cont = $('#cont').val();
+			var yoteibi = $('#yoteibi').datepicker('getDate');
+			
+			// アクティビティ内容の行と選択メニュー、予定日を全て隠す
+			$('.tr_cont,#cont_raft,#cont_bike,.tr_yoteibi,#tr_kodomo_nenrei').hide();
+			
+			// アクティビティ内容がキッズラフティング
+			if (['キッズラフティング'].indexOf(cont) >= 0) {
+				$('#tr_kodomo_nenrei').show();
+				//if ($('#kodomo_nenrei').val() == '　') $('#kodomo_nenrei').val('')
+			} else {
+				$('#kodomo_nenrei').val('　');
+			}
+			
+			// アクティビティがラフティング
+			if (['ラフティング'].indexOf(act) >= 0) {
+				$('.tr_cont,#cont_raft').show();
+				if (cont != '─' && cont != '') $('.tr_yoteibi').show();
+				return;
+			}
+			
+			// アクティビティがロードバイクツアー
+			if (['ロードバイクツアー'].indexOf(act) >= 0) {
+				$('.tr_cont,#cont_bike').show();
+				if (cont != '─' && cont != '') $('.tr_yoteibi').show();
+				return;
+			}
+			
+			// 未選択を設定
+			$('#cont').val('─');
+			
+			// アクティビティが選択されていれば予定日を表示
+			if (act != '') {
+				$('.tr_yoteibi').show();
+			}
+		};
+		
+		// 時間帯選択メニューの表示
+		var jikantai_menu = function(){
+			
+			var act = $('#act').val();
+			var cont = $('#cont').val();
+			var yoteibi = $('#yoteibi').datepicker('getDate');
+			
+			// 時間帯の行と選択メニューを全て隠す
+			$('.tr_jikantai,#jikantai_am,#jikantai_ampm,#jikantai_hanapack,#jikantai_funkayak,#jikantai_funkayak_aug').hide();
+			
+			// 時間帯が午前のみ
+			if (['ラフティング＆ランチパック','ラフティング＆ランチ＋温泉パック','ラフティング＆BBQ＋温泉パック','羊蹄山一周コース'].indexOf(cont) >= 0) {
+				$('#jikantai').val('午前');
+				$('.tr_jikantai,#jikantai_am').show();
+				return;
+			}
+			
+			// 時間帯が午前と午後
+			if (['ダッキー','キャニオニング','シーカヤック','MTBシーニックライディング'].indexOf(act) >= 0) {
+				$('.tr_jikantai,#jikantai_ampm').show();
+				return;
+			}
+			
+			// 時間帯が午前と午後
+			if (['ラフティング','キッズラフティング','アンヌプリダウンヒルコース','倶知安ジャガイモ畑コース','スキー場周遊コース（ミルク工房往復）'].indexOf(cont) >= 0) {
+				$('.tr_jikantai,#jikantai_ampm').show();
+				return;
+			}
+			
+			// 時間帯が午前と午後（ラフティング ＆ HANAZONOスーパーパス）
+			if (cont == 'ラフティング ＆ HANAZONOスーパーパス') {
+				$('.tr_jikantai,#jikantai_hanapack').show();
+				return;
+			}
+			
+			// 時間帯が時刻選択（8月のみ別メニュー）→2016年度は8月だけの時間変更は無いがそのまま使用しました
+			if (act == 'ファンカヤック' && yoteibi && yoteibi.getMonth() == 7) {
+				$('.tr_jikantai,#jikantai_funkayak_aug').show();
+				return;
+			} else if (act == 'ファンカヤック') {
+				$('.tr_jikantai,#jikantai_funkayak').show();
+				return;
+			}
+			
+			// 未選択を設定
+			$('#jikantai').val('─');
+		};
+		
+		// 送迎選択メニューの表示
+		var sougei_menu = function(){
+			
+			var act = $('#act').val();
+			var cont = $('#cont').val();
+			
+			// 送迎の行と選択メニューを全て隠す
+			$('.tr_syukuhaku,.tr_sougei,#sougei_menu').hide();
+			
+			//if (['キャニオニング','シーカヤック','ロードバイクツアー','MTBシーニックライディング'].indexOf(act) >= 0 ||
+			if (['キャニオニング','シーカヤック','MTBシーニックライディング'].indexOf(act) >= 0 ||
+				['ラフティング','キッズラフティング','ラフティング ＆ HANAZONOスーパーパス'].indexOf(cont) >= 0) {
+				if ($('#sougei').val() == '─') $('#sougei').val('');
+				$('#sougei_menu').val($('#sougei').val());
+				$('.tr_sougei,#sougei_menu').show();
+			} else {
+				$('.tr_syukuhaku,.tr_sougei,#sougei_menu').hide();
+				$('#sougei').val('─');
+			}
+			
+			if ($('#sougei').val() == '送迎必要') {
+				$('.tr_syukuhaku').show();
+			} else {
+				$('.tr_syukuhaku').hide();
+			}
+		};
+		
+		// 参加人数選択メニューの表示
+		var sanka_menu = function(){
+			
+			var act = $('#act').val();
+			var cont = $('#cont').val();
+			var yoteibi = $('#yoteibi').datepicker('getDate');
+			
+			// 参加人数（大人・小人）選択メニューを全て隠す
+			$('#tr_sanka_otona,#tr_sanka_kodomo,#tr_sanka_senior,#tr_sanka_gakusei,#gakusei_caution,#kodomo_notice').hide();
+			
+			$('#sanka_otona_txt').text('大人');
+			$('#sanka_otona_val').val('大人');
+			
+			if (['ラフティング','シーカヤック','ファンカヤック','MTBシーニックライディング'].indexOf(act) >= 0) {
+				$('#kodomo_notice').show();
+			}
+			
+			// ロードバイクツアーで不要な参加人数（7～30人）を元に戻す。
+			$('#sanka_otona').append($('#noloadbike_box').html());
+			
+			// ダッキー、キャニオニングは参加人数（大人）のみ表示
+			if (['ダッキー','キャニオニング'].indexOf(act) >= 0) {
+				$('#tr_sanka_otona').show();
+				$('#sanka_kodomo').val('なし');
+				$('#sanka_senior').val('なし');
+				$('#sanka_gakusei').val('なし');
+			} else if (['ラフティング'].indexOf(act) >= 0 && ['ラフティング'].indexOf(cont) >= 0) {
+// ラフティングだけ割引項目を表示するが繁忙期割引除外日 5月1日（日）～5日（木）/ 8月6日（土）～21日（日）には割引項目を表示しない
+				var jogai = yoteibi && (yoteibi.isBetween('2016/4/30', '2016/5/6') || yoteibi.isBetween('2016/8/5', '2016/8/22'));
+				
+				if (yoteibi && !jogai && $('#oyakowari_menu').val() == '「親子割」を適用する') {
+					$('#tr_sanka_otona,#tr_sanka_kodomo').show();
+					$('#tr_sanka_senior,#tr_sanka_gakusei,#gakusei_caution').hide();
+					$('#sanka_senior').val('なし');
+					$('#sanka_gakusei').val('なし');
+				} else {
+					$('#tr_sanka_otona,#tr_sanka_kodomo,#tr_sanka_senior,#tr_sanka_gakusei,#gakusei_caution').show();
+				}
+			} else if (['ロードバイクツアー'].indexOf(act) >= 0) {
+				// ロードバイクツアーで不要な参加人数（7～30人）を一時的に見えないところに格納。
+				$('#noloadbike_box').html($('option.noloadbike'));
+				
+				$('#tr_sanka_otona').show();
+				$('#sanka_kodomo').val('なし');
+				$('#sanka_senior').val('なし');
+				$('#sanka_gakusei').val('なし');
+				$('#sanka_otona_txt').text('人数');
+				$('#sanka_otona_val').val('人数');
+			} else {
+				$('#tr_sanka_otona,#tr_sanka_kodomo').show();
+				$('#sanka_senior').val('なし');
+				$('#sanka_gakusei').val('なし');
+			}
+		};
+		
+		// ラフティングの割引について。
+		var raft_waribiki = function(){
+			
+			var act = $('#act').val();
+			var cont = $('#cont').val();
+			var yoteibi = $('#yoteibi').datepicker('getDate');
+			
+			var msg = '';
+
+			// 2016年度は各種割引の繁忙期割引除外日：5月1日（日）～5日（木）  /  8月6日（土）～21日（日）でどの割引も期間統一
+			// WEB割、早割の除外日は5月2,3,4,5,6、8月8～16日（2015年度は割引種類によって期間が分かれていた）
+			jogai1 = yoteibi && (yoteibi.isBetween('2016/4/30', '2016/5/6') || yoteibi.isBetween('2016/8/5', '2016/8/22'));
+			// 親子割、シニア割、学割の除外日は5月2,3,4,5,6、8月8～23日（2015年度は割引種類によって期間が分かれていた）
+			jogai2 = yoteibi && (yoteibi.isBetween('2016/4/30', '2016/5/6') || yoteibi.isBetween('2016/8/5', '2016/8/22'));
+
+			// アクティビティ内容がラフティング
+			if (['ラフティング'].indexOf(cont) >= 0 && !jogai2 && yoteibi && yoteibi.isAfter('2016/4/28')){
+				$('.tr_oyakowari,#tr_sanka_senior,#tr_sanka_gakusei,#gakusei_caution').show();
+			} else if (['ラフティング'].indexOf(cont) >= 0 && !jogai2){
+				$('#tr_sanka_senior,#tr_sanka_gakusei,#gakusei_caution').show();
+			} else {
+				$('.tr_oyakowari,#tr_sanka_senior,#tr_sanka_gakusei,#gakusei_caution').hide();
+				$('#sanka_senior').val('なし');
+				$('#sanka_gakusei').val('なし');
+			}
+			
+			if (yoteibi && !jogai2 && $('#oyakowari_menu').val() == '「親子割」を適用する') {
+				$('#tr_sanka_senior,#tr_sanka_gakusei,#gakusei_caution').hide();
+				$('#sanka_senior').val('なし');
+				$('#sanka_gakusei').val('なし');
+			}
+			
+			if (jogai2 && $('#oyakowari_menu').val() == '「親子割」を適用する') {
+				$('#oyakowari_menu').val('「親子割」を適用しない')
+			}
+			
+			/*
+			if (yoteibi && ['ラフティング'].indexOf(cont) >= 0) {
+				if (!jogai2 && $('#oyakowari_menu').val() == '「親子割」を適用する') {
+					msg = '※「親子割」の対象となります。';
+				} else if (jogai1 && Date.create().daysUntil(yoteibi) >= 29) {
+					msg = '※選択された予定日は割引適用除外期間の為、「1ヶ月以上前15％割引」の対象外となります。';
+				} else if (jogai1) {
+					msg = '※選択された予定日は割引適用除外期間の為、「WEBから予約10％割引」の対象外となります。';
+				} else if (Date.create().daysUntil(yoteibi) >= 29) {
+					msg = '※選択された予定日は「1ヶ月以上前15％割引」の対象となります。';
+				} else {
+					msg = '※「WEBから予約10％割引」の対象となります。';
+				}
+			}
+			
+			$('#waribiki').val(msg);
+			*/
+		};
+		
+		// 料金計算
+		var price_keisan = function(){
+			var price = 0;
+			var otona = $('#sanka_otona').val().replace('人', '');
+			var kodomo = $('#sanka_kodomo').val().replace('人', '');
+			var senior = $('#sanka_senior').val().replace('人', '');
+			var gakusei = $('#sanka_gakusei').val().replace('人', '');
+			
+			if (isNaN(otona) || otona == '') otona = 0;
+			if (isNaN(kodomo) || kodomo == '') kodomo = 0;
+			if (isNaN(senior) || senior == '') senior = 0;
+			if (isNaN(gakusei) || gakusei == '') gakusei = 0;
+			//console.info('【1】 ' + otona + ' / ' + kodomo + ' / ' + senior);
+			
+			var act = $('#act').val();
+			var cont = $('#cont').val();
+			var yoteibi = $('#yoteibi').datepicker('getDate');
+			
+			$('#uchiwake_val').empty();
+			
+			if (act == 'MTBシーニックライディング') {
+				price = (5500 * otona) + (3800 * kodomo);
+				if (otona > 0) $('#uchiwake_val').append('大人（5,500円）：　' + otona + '人　' + (5500 * otona).format() + '円' + "\n");
+				if (kodomo > 0) $('#uchiwake_val').append('小人（3,800円）：　' + kodomo + '人　' + (3800 * kodomo).format() + '円' + "\n");
+			} else if (act == 'ロードバイクツアー') {
+				if (cont == 'アンヌプリダウンヒルコース') {
+					price = (otona == 1 ? 13000 : 10000) * otona;
+					if (otona > 0) $('#uchiwake_val').append('人数（1人13,000円／2人以上10,000円）：　' + otona + '人　' + ((otona == 1 ? 13000 : 10000) * otona).format() + '円' + "\n");
+				} else if (cont == '倶知安ジャガイモ畑コース') {
+					price = (otona == 1 ? 9000 : 6000) * otona;
+					if (otona > 0) $('#uchiwake_val').append('人数（1人9,000円／2人以上6,000円）：　' + otona + '人　' + ((otona == 1 ? 9000 : 6000) * otona).format() + '円' + "\n");
+				} else if (cont == 'スキー場周遊コース（ミルク工房往復）') {
+					price = (otona == 1 ? 9000 : 6000) * otona;
+					if (otona > 0) $('#uchiwake_val').append('人数（1人9,000円／2人以上6,000円）：　' + otona + '人　' + ((otona == 1 ? 9000 : 6000) * otona).format() + '円' + "\n");
+				} else if (cont == '羊蹄山一周コース') {
+					price = (otona == 1 ? 11000 : 8000) * otona;
+					if (otona > 0) $('#uchiwake_val').append('人数（1人11,000円／2人以上8,000円）：　' + otona + '人　' + ((otona == 1 ? 11000 : 8000) * otona).format() + '円' + "\n");
+				}
+			} else if (act == 'ファンカヤック') {
+				price = (1500 * otona) + (800 * kodomo);
+				if (otona > 0) $('#uchiwake_val').append('大人（1,500円）：　' + otona + '人　' + (1500 * otona).format() + '円' + "\n");
+				if (kodomo > 0) $('#uchiwake_val').append('小人（800円）：　　' + kodomo + '人　' + (800 * kodomo).format() + '円' + "\n");
+			} else if (act == 'シーカヤック') {
+				price = (7100 * otona) + (4900 * kodomo);
+				if (otona > 0) $('#uchiwake_val').append('大人（7,100円）：　' + otona + '人　' + (7100 * otona).format() + '円' + "\n");
+				if (kodomo > 0) $('#uchiwake_val').append('小人（4,900円）：　' + kodomo + '人　' + (4900 * kodomo).format() + '円' + "\n");
+			} else if (act == 'キャニオニング') {
+				price = (6600 * otona);
+				if (otona > 0) $('#uchiwake_val').append('大人（6,600円）：　' + otona + '人　' + (6600 * otona).format() + '円' + "\n");
+			} else if (act == 'ダッキー') {
+				price = (5500 * otona);
+				if (otona > 0) $('#uchiwake_val').append('大人（5,500円）：　' + otona + '人　' + (5500 * otona).format() + '円' + "\n");
+			} else if (act == 'ラフティング') {
+				if (cont == 'ラフティング') {
+					$('#uchiwake').show();
+					
+					//if (yoteibi && (yoteibi.isBetween('2016/5/6', '2016/7/1') || yoteibi.isAfter('2016/08/31')) && $('#oyakowari_menu').val() == '「親子割」を適用する') {
+					if (yoteibi && $('#oyakowari_menu').val() == '「親子割」を適用する') {
+						//msg = '※「親子割」の対象となります。';
+						var kodomo_fix = kodomo;
+						if (otona >= 2) {
+							kodomo_fix = kodomo - Math.floor(otona / 2);
+							if (kodomo_fix < 0) kodomo_fix = 0;
+						}
+						//console.info('【2】 ' + otona + ' / ' + kodomo + ' / ' + senior);
+						price = (5500 * otona) + (3800 * kodomo_fix);
+						
+						if (otona > 0) $('#uchiwake_val').append('大人（5,500円）：　' + otona + '人　' + (5500 * otona).format() + '円' + "\n");
+						if (kodomo > 0) $('#uchiwake_val').append('小人（3,800円）：　' + kodomo + '人　' + (3800 * kodomo_fix).format() + '円（親子割適用　0円：　' + Math.floor(otona / 2) + '人）' + "\n");
+						//if (kodomo > 0) $('#uchiwake_val').append('小人（3,800円）：　' + kodomo_fix + '人　' + (3800 * kodomo_fix).format() + '円' + "\n");
+						//if (kodomo > 0) $('#uchiwake_val').append('小人（親子割適用　0円）：　' + Math.floor(otona / 2) + '人　' + '0円' + "\n");
+						
+					} else {
+						// 早割・WEB割の除外日は5月2～6日、8月8～16日 →2016年度はどの割引も期間統一 5月1日（日）～5日（木）  /  8月6日（土）～21日（日）
+						var jogai = yoteibi && (yoteibi.isBetween('2016/4/30', '2016/5/6') || yoteibi.isBetween('2016/8/5', '2016/8/22'));
+						
+						// 1ヶ月以上前で除外日の場合
+						if (jogai && Date.create().daysUntil(yoteibi) >= 29) {
+							//msg = '※選択された予定日は割引適用除外期間の為、「1ヶ月以上前15％割引」の対象外となります。';
+							price = (5500 * otona) + (3800 * kodomo);// + (5500 * senior) + (5500 * gakusei);
+							
+							if (otona > 0) $('#uchiwake_val').append('大人（早割対象外　5,500円）：　' + otona + '人　' + (5500 * otona).format() + '円' + "\n");
+							if (kodomo > 0) $('#uchiwake_val').append('小人（早割対象外　3,800円）：　' + kodomo + '人　' + (3800 * kodomo).format() + '円' + "\n");
+						} else if (jogai) {
+							//msg = '※選択された予定日は割引適用除外期間の為、「WEBから予約10％割引」の対象外となります。';
+							price = (5500 * otona) + (3800 * kodomo);// + (5500 * senior) + (5500 * gakusei);
+							
+							if (otona > 0) $('#uchiwake_val').append('大人（WEB割対象外　5,500円）：　' + otona + '人　' + (5500 * otona).format() + '円' + "\n");
+							if (kodomo > 0) $('#uchiwake_val').append('小人（WEB割対象外　3,800円）：　' + kodomo + '人　' + (3800 * kodomo).format() + '円' + "\n");
+						} else if (Date.create().daysUntil(yoteibi) >= 29) {
+							//msg = '※選択された予定日は「1ヶ月以上前15％割引」の対象となります。';
+							price = (4675 * otona) + (3230 * kodomo) + (3800 * senior) + (4675 * gakusei);
+							
+							if (otona > 0) $('#uchiwake_val').append('大人（早割15%割引　4,675円）：　' + otona + '人　' + (4675 * otona).format() + '円' + "\n");
+							if (kodomo > 0) $('#uchiwake_val').append('小人（早割15%割引　3,230円）：　' + kodomo + '人　' + (3230 * kodomo).format() + '円' + "\n");
+							if (senior > 0) $('#uchiwake_val').append('シニア割（3,800円）：　　　　　　 ' + senior + '人　' + (3800 * senior).format() + '円' + "\n");
+							if (gakusei > 0) $('#uchiwake_val').append('学割（4,675円）：　　　　　　　　 ' + gakusei + '人　' + (4675 * gakusei).format() + '円');
+						} else {
+							//msg = '※「WEBから予約10％割引」の対象となります。';
+							price = (4950 * otona) + (3420 * kodomo) + (3800 * senior) + (4675 * gakusei);
+							
+							if (otona > 0) $('#uchiwake_val').append('大人（WEB割10%割引　4,950円）：　' + otona + '人　' + (4950 * otona).format() + '円' + "\n");
+							if (kodomo > 0) $('#uchiwake_val').append('小人（WEB割10%割引　3,420円）：　' + kodomo + '人　' + (3420 * kodomo).format() + '円' + "\n");
+							if (senior > 0) $('#uchiwake_val').append('シニア割（3,800円）：　　　　　　　 ' + senior + '人　' + (3800 * senior).format() + '円' + "\n");
+							if (gakusei > 0) $('#uchiwake_val').append('学割（4,675円）：　　　　　　　　　 ' + gakusei + '人　' + (4675 * gakusei).format() + '円');
+						}
+					}
+				} else if (cont == 'キッズラフティング') {
+					price = (4400 * otona) + (3300 * kodomo);
+					if (otona > 0) $('#uchiwake_val').append('大人（4,400円）：　' + otona + '人　' + (4400 * otona).format() + '円' + "\n");
+					if (kodomo > 0) $('#uchiwake_val').append('小人（3,300円）：　' + kodomo + '人　' + (3300 * kodomo).format() + '円' + "\n");
+				} else if (cont == 'ラフティング＆ランチパック') {
+					price = (5700 * otona) + (4300 * kodomo);
+					if (otona > 0) $('#uchiwake_val').append('大人（5,700円）：　' + otona + '人　' + (5700 * otona).format() + '円' + "\n");
+					if (kodomo > 0) $('#uchiwake_val').append('小人（4,300円）：　' + kodomo + '人　' + (4300 * kodomo).format() + '円' + "\n");
+				} else if (cont == 'ラフティング＆ランチ＋温泉パック') {
+					price = (6100 * otona) + (4600 * kodomo);
+					if (otona > 0) $('#uchiwake_val').append('大人（6,100円）：　' + otona + '人　' + (6100 * otona).format() + '円' + "\n");
+					if (kodomo > 0) $('#uchiwake_val').append('小人（4,600円）：　' + kodomo + '人　' + (4600 * kodomo).format() + '円' + "\n");
+				} else if (cont == 'ラフティング＆BBQ＋温泉パック') {
+					price = (6700 * otona) + (4700 * kodomo);
+					if (otona > 0) $('#uchiwake_val').append('大人（6,700円）：　' + otona + '人　' + (6700 * otona).format() + '円' + "\n");
+					if (kodomo > 0) $('#uchiwake_val').append('小人（4,700円）：　' + kodomo + '人　' + (4700 * kodomo).format() + '円' + "\n");
+				} else if (cont == 'ラフティング ＆ HANAZONOスーパーパス') {
+					price = (6800 * otona) + (5500 * kodomo);
+					if (otona > 0) $('#uchiwake_val').append('大人（6,800円）：　' + otona + '人　' + (6800 * otona).format() + '円' + "\n");
+					if (kodomo > 0) $('#uchiwake_val').append('小人（5,500円）：　' + kodomo + '人　' + (5500 * kodomo).format() + '円' + "\n");
+				}
+			}
+			
+			$('#price').val(price.format() + '円');
+			//$('#msg').html($('#waribiki').val());
+		};
+		
+		// 時間帯、予定日、送迎、参加人数選択メニューをリセットする
+		var resetVal = function(){
+			$('#jikantai').val('');
+			$('#yoteibi').val('');
+			$('#sougei').val('');
+			$('#kodomo_nenrei').val('');
+			$('#jikantai_am,#jikantai_ampm,#jikantai_hanapack,#jikantai_funkayak,#jikantai_funkayak_aug').val('');
+			$('#sougei_menu').val('');
+			$('#sanka_otona,#sanka_kodomo,#sanka_senior,#sanka_gakusei').val('');
+			$('#price').val('');
+		};
+		
+		// 表示設定
+		cont_menu();
+		jikantai_menu();
+		sougei_menu();
+		sanka_menu();
+		raft_waribiki();
+		price_keisan();
+		
+		// アクティビティ選択メニュー
+		$('#act').change(function(){
+			// アクティビティ変更時はアクティビティ内容も含めてクリアする。
+			$('#cont').val('');
+			$('#cont_raft,#cont_bike').val('');
+			resetVal();
+			
+			// アクティビティ内容、時間帯、送迎、参加人数選択メニューの表示設定。
+			cont_menu();
+			jikantai_menu();
+			sougei_menu();
+			sanka_menu();
+			
+			raft_waribiki();
+			price_keisan();
+		});
+		
+		// アクティビティ内容選択メニュー
+		$('#cont_raft,#cont_bike').change(function(){
+			$('#cont').val($(this).val());
+			resetVal();
+			
+			// アクティビティ内容、時間帯、送迎、参加人数選択メニューの表示設定。
+			cont_menu();
+			jikantai_menu();
+			sougei_menu();
+			sanka_menu();
+			
+			raft_waribiki();
+			price_keisan();
+		});
+		
+		// 予定日を変更した場合
+		$('#yoteibi').change(function(){
+			jikantai_menu();
+			raft_waribiki();
+			price_keisan();
+		});
+		
+		// 時間帯選択メニュー
+		$('#jikantai_am,#jikantai_ampm,#jikantai_hanapack,#jikantai_funkayak,#jikantai_funkayak_aug').change(function(){
+			$('#jikantai').val($(this).val());
+		});
+		
+		// 送迎選択メニュー
+		$('#sougei_menu').change(function(){
+			$('#sougei').val($(this).val());
+			if ($(this).val() == '送迎必要') {
+				$('.tr_syukuhaku').show();
+			} else {
+				$('.tr_syukuhaku').hide();
+			}
+		});
+		
+		// 親子割選択メニュー
+		$('#oyakowari_menu').change(function(){
+			sanka_menu();
+			raft_waribiki();
+			price_keisan();
+		});
+		
+		// 人数選択メニュー
+		$('#sanka_otona,#sanka_kodomo,#sanka_senior,#sanka_gakusei').change(function(){
+			/*
+			var act = $('#act').val();
+			var otona = $('#sanka_otona').val().replace('人', '');
+			if (isNaN(otona) || otona == '') otona = 0;
+			
+			if (act == 'ロードバイクツアー' && otona > 6) {
+				
+			}
+			*/
+			price_keisan();
+		});
+		
+		// アクティビティ内容選択メニューの初期値を設定
+		$('#cont_raft,#cont_bike').val($('#cont').val());
+		
+		// 時間帯選択メニューの初期値を設定
+		$('#jikantai_am,#jikantai_ampm,#jikantai_hanapack,#jikantai_funkayak,#jikantai_funkayak_aug').val($('#jikantai').val());
+		
+		// 送迎選択メニューの初期値を設定
+		$('#sougei_menu').val($('#sougei').val());
+	});
+	</script>
+
+<select id="noloadbike_box" class="none"></select>
+
+</body>
+</html>

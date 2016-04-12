@@ -1,0 +1,51 @@
+form table th { text-align : right; }
+
+form table th img { vertical-align : middle; }
+
+div.error {
+	margin : 4px 0 0 0;
+	padding : 4px 8px;
+	font-weight : bold;
+	color : #fff;
+	background-color : #e8383d;
+	-moz-border-radius: 5px;
+	-webkit-border-radius : 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius : 5px;
+}
+
+input.submit {
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #ccc;
+	padding: 10px 40px;
+	margin-top: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	/*color: #636363;*/
+}
+
+input.return {
+	background-color : #676767;
+	border-top: 1px solid #999;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #ccc;
+	padding: 10px 40px;
+	margin-top: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	color: #fff;
+}
+
+textarea.text,
+input.text {
+	/*background-color:#8bbae0;*/
+}
+
+div.ui-state-error { margin: 5px 0 0 0; }
+div.ui-state-error p { padding:3px; }
+div.ui-state-error span.ui-icon { float:left; margin-right:3px; }
+
+.pr73{ padding-right:73px;}

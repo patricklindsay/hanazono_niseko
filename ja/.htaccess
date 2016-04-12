@@ -1,0 +1,7 @@
+<Files ~ "^\.(ini|db|sqlite|tpl|ctp|conf|htaccess|htpasswd)$">
+deny from all
+</Files>
+
+Redirect permanent /ja/summer/golf/ /ja/golf/
+
+ErrorDocument 404 http://hanazononiseko.com/

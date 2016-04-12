@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+.ui-widget { font-size: 100%; }
+
+.ui-datepicker td span, .ui-datepicker td a {
+    text-align: center;
+}
+
+.ui-datepicker select.ui-datepicker-year, .ui-datepicker select.ui-datepicker-month {
+    width: auto;
+}
+
+.ui-datepicker select.ui-datepicker-month {
+    margin-right: 0.6em;
+}
+
+.ui-datepicker-trigger, .hasDatepicker, .ui-datepicker-prev, .ui-datepicker-next {
+	cursor: pointer;
+}
+
+.gcal-holiday .ui-state-default {
+    background: #e45151 !important;
+    border:1px solid #e45151 !important;
+}
+
+.gcal-holiday .ui-state-hover {
+    background: #eb7c7d !important;
+    border:1px solid #eb7c7d !important;
+}
+
+.gcal-sunday .ui-state-default {
+    background: #e45151 !important;
+    border:1px solid #e45151 !important;
+}
+
+.gcal-sunday .ui-state-hover {
+    background: #eb7c7d !important;
+    border:1px solid #eb7c7d !important;
+}
+
+.gcal-saturday .ui-state-default {
+    background: #9e9e9f !important;
+    border:1px solid #9e9e9f !important;
+}
+
+.gcal-saturday .ui-state-hover {
+    background: #c5c5c5 !important;
+    border:1px solid #c5c5c5 !important;
+}

@@ -1,0 +1,73 @@
+[Niseko HANAZONO Resort] HANAZONO FREESTYLE COMP ENTRY
+Dear {$Name.value}
+
+*This email has been sent to you automatically.
+
+Thank you for your entry into the tournament.
+
+============================================================
+Entry contents are as follows
+
+[Competition]
+{$Competition.value}
+
+[Name]
+{$Name.value}
+
+[Sex]
+{$Sex.value}
+
+[DOB]
+{$DOB_Year.value}/{$DOB_Month.value}/{$DOB_Day.value}
+
+[Age]
+{$Age.value}
+
+[Address]
+{$POCode1.value}-{$POCode2.value} (POCode)
+{$Prefecture.value} (Prefecture)
+{$CityTownName.value} (City/Town Name)
+{$StreetAddress.value} (Street Address)
+
+[Phone]
+{$Phone.value}
+
+[Email Address]
+{$EmailAddress.value}
+
+[Confirm Email Address]
+{$ConfirmEmailAddress.value}
+
+[Would you like to e-mail receive updates?]
+{$ReceiveUpdatesEmail.value}
+
+[Emergency Contact (Phone)]
+{$EmergencyContact_Phone.value}
+
+[Emergency Contact Name]
+{$EmergencyContactName.value}
+
+[Category]
+{$Category.value}
+
+[Stance]
+{$Stance.value}
+
+[Insurance Company Name]
+{$InsuranceCompanyName.value}
+
+[Insurance Number]
+{$InsuranceNumber.value}
+
+[Sponsors, Comments Etc]
+{$Sponsors_Comments_Etc.value}
+
+[Full Name]
+{$FullName.value}
+
+============================================================
+
+-- 
+Nihon Harmony Resorts KK
+328-1 Aza-Iwaobetsu, Kutchan-cho Abuta-gun, Hokkaido, 044-0082
+Tel:0136-21-6655(Contact: Hirota)

@@ -1,0 +1,71 @@
+Dear {$Name.value}
+
+*This email has been sent to you automatically.
+*Our staff will contact you shortly and provide a confirmation of
+ availability, please note until such time the booking remains tentative.
+
+Thank you for booking online.
+
+<<<<<<<<<< Details of your booking >>>>>>>>>>
+
+[Activity]
+{$Activity.value}
+
+[Activity Type]
+{$ActivityType.value}
+
+[Tour date]
+{$Tourdate.value}
+{$Waribiki.value}
+
+[Family Discount]
+{$FamilyDiscount.value}
+
+[Time slot]
+{$Timeslot.value}
+
+[Number of participants]
+Adult (13 years old and above): {$Adult.value}
+Child (4 ~ 12 years old): {$Child.value} (Children's age: {$ChildrenAge.value})
+Senior (60 years old and above): {$senior.value}
+Student: {$student.value}
+
+[Prices]
+{$Breakdown.value}
+Total: {$prices.value}(Tax included)
+
+[Accommodation pickup]
+{$Pickup.value}
+
+[Accommodation name]
+{$AccommodationName.value}
+
+[Name]
+{$Name.value}
+
+[Post Code]
+{$PostCode.value}
+
+[Address]
+{$Address.value}
+
+[Phone]
+{$Phone.value}
+
+[FAX]
+{$FAX.value}
+
+[Email address]
+{$EmailAddress.value}
+
+[Email Address (confirmation)]
+{$EmailAddress2.value}
+
+[Notes]
+{$Notes.value}
+
+
+-- 
+Nihon Harmony Resorts KK(Rafting Division)
+328-1 Aza-Iwaobetsu, Kutchan-cho Abuta-gun, Hokkaido, 044-0082
+Tel:0136-21-3333 Fax:0136-22-3884
